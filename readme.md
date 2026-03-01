@@ -24,10 +24,7 @@
 
 </div>
 
-![Status: Active Development](https://img.shields.io/badge/Status-Active%20Development-purple.svg) ![BunnyMo Compatible](https://img.shields.io/badge/BunnyMo-Compatible-pink.svg) [![SillyTavern Preset](https://img.shields.io/badge/SillyTavern-Preset-green.svg)](https://docs.sillytavern.app/)
-
 **Classification:** Narrative Simulation Preset · SillyTavern
-**Companion System:** [BunnyMo](https://github.com/Coneja-Chibi/BunnyMo) · **Extension:** [CarrotKernel](https://github.com/Coneja-Chibi/CarrotKernel)
 
 `⊱ ────── {.⋅ ✧ ⋅.} ────── ⊰`
 
