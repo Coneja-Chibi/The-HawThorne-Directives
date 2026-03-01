@@ -145,7 +145,7 @@ Polyglot is experimental because:
 - **Not easily auditable** — you can't read or modify entries in languages you don't speak
 - **No numbered releases** — Polyglot updates when translations are ready, not on Prime's stable release schedule
 
-If the theory holds, it's a genuinely novel approach to breaking AI writing patterns. If it doesn't, Prime is right there.
+If the theory holds, it's a great idea for breaking AI writing patterns. If it doesn't, Prime is right there.
 
 <div align="center">
 
@@ -280,3 +280,4 @@ For full documentation — Directors, systems, toggles, troubleshooting — see 
 ---
 
 *Built with 🔮 by the same ~~trenchcoat full of bunnies~~ completely normal human developer behind [BunnyMo](https://github.com/Coneja-Chibi/BunnyMo), [CarrotKernel](https://github.com/Coneja-Chibi/CarrotKernel), [VectHare](https://github.com/Coneja-Chibi/VectHare), and the [Rabbit Response Team](https://github.com/Coneja-Chibi/Rabbit-Response-Team).*
+
