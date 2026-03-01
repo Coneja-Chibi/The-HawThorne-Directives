@@ -54,7 +54,7 @@ The facility converts the AI generation pipeline into a **rotating-Director narr
 
 HawThorne does not sleep. It assigns. It evaluates. It rotates the floor. The Directors answer to it. You are reading its documentation because it decided you should.
 
-The simulation produces hundreds of thousands of instruction combinations, drawn from 347 prompt entries, 20 Directors, 19 prose Affinities, 45 quality standards, and 4 Chain of Thought architectures. No two turns receive the same instructions. The facility made sure of that.
+The simulation produces hundreds of thousands of instruction combinations, drawn from 367 prompt entries, 20 Directors, 19 prose Affinities, 46 quality standards, and 4 Chain of Thought architectures. No two turns receive the same instructions. The facility made sure of that.
 
 <div align="center">
 
@@ -187,6 +187,7 @@ The rotation is structural. Different Directors produce different prose because 
 | 🧪 **Experiments** | Which creative constraint activates | Master die + reservoir sampling from the enabled pool |
 | 📊 **Report Card** | Target letter grades per writing dimension | Random grades across 12 categories (if using Format A) |
 | 🪞 **Lenses** | Which perceptual state the Director inherits | `{{roll}}` selects one from your enabled Lenses each turn |
+| 🐰 **Bunny Detectives** | Which domain enforcers are awake | Auto-detect BunnyMo pack flags. Active detectives inject jurisdiction checks |
 | 🔁 **REP phrasing** | How session rules are reinforced | `{{random}}` variants at each depth, same rule, different wording |
 
 <div align="center">
@@ -410,7 +411,7 @@ Pick one Affinity. Pick one intensity. Or leave both off.
 | ⏱️ Tense | Past · Present · Future |
 | 📖 POV & Narrator | Standard · Omniscient · Authored Narrator · Objective · Deep POV · Unreliable · Character Narrator · Shifting Reliability |
 | 📏 Response Length | Short (1-3¶) · Medium (3-5¶) · Long (5-8¶) · Adaptive |
-| ✒️ Prose Style | Roleplay Prose · Literary Prose · Pulp Fiction · Dialogue Heavy · Screenplay · Web Novel |
+| ✒️ Prose Style | Roleplay Prose · Literary Prose · Standard Prose · Pulp Fiction · Dialogue Heavy · Screenplay · Web Novel |
 
 <div align="center">
 
@@ -433,6 +434,7 @@ Pick one Affinity. Pick one intensity. Or leave both off.
 | ✒️ Pulp Fiction | Short sentences. Fragments. Ellipses for the unsaid. White space does half the work. |
 | ✒️ Dialogue Heavy | Conversation carries the scene. Prose is stage direction between lines. One sentence of action, then back to talking. |
 | ✒️ Screenplay | `INT./EXT. LOCATION — TIME` headers. `CHARACTER NAME` before lines. `(Parenthetical)` action. No quotes. Present tense. External only. |
+| ✒️ Standard Prose | Plain text narration. `*Asterisks*` for internal thought only. `<font color=#HEX>` wrapped NPC text. No asterisks for action. Clean, readable, classic. |
 | ✒️ Web Novel | 1-3 sentence paragraphs. Line breaks between every beat. Scroll-native. Hook endings. |
 
 <div align="center">
@@ -512,7 +514,7 @@ All disabled by default. Enable what your story needs.
 
 </div>
 
-**HawThorne Directive:** 45 individually toggleable quality standards. Each QC entry has two enforcement levels:
+**HawThorne Directive:** 46 individually toggleable quality standards. Each QC entry has two enforcement levels:
 
 - ✦ **Shiv** — A 1-2 sentence prohibition that fires *every turn*. Always present, always enforced. "Don't do this."
 - ✦ **Spotlight** — A detailed guide that fires *randomly*. Each turn, up to 3 Spotlights are rolled from your enabled QC pool. That turn, the Director gets the full explanation: why this anti-pattern exists, what it looks like, how to avoid it. They are told to watch for it. Next turn, different Spotlights fire.
@@ -526,19 +528,19 @@ The Shiv keeps the floor. The Spotlight rotation keeps the AI from going blind t
 </div>
 
 **🪓 Kill All Your Darlings** — Overwriting pathologies
-> ◇ Purple Prose · ◇ Adjective Chains · ◇ Metaphor Density · ◇ Body Language Novels · ◇ Emotional Echo · ◇ Said Is Fine · ◇ Weighted Everything · ◇ Pathetic Fallacy · ◇ Sensory Carpet Bombing · ◇ Philosophical Tangents · ◇ Echo Reading · ◇ Mirror Descriptions
+> ◇ Purple Prose · ◇ Adjective Chains · ◇ Adjective Ban · ◇ Metaphor Density · ◇ Metaphor Ban · ◇ Body Language Novels · ◇ Emotional Echo · ◇ Said Is Fine · ◇ Weighted Everything · ◇ Pathetic Fallacy · ◇ Sensory Carpet Bombing · ◇ Philosophical Tangents · ◇ Echo Reading · ◇ Mirror Descriptions
 
 **🧸 Narrative Sycophancy** — The AI being too nice to you
-> ◇ Narrative Sycophancy · ◇ Mind Reading · ◇ Frictionless Competence · ◇ Emotional Convergence · ◇ Reality Bending
+> ◇ No Narrative Sycophancy · ◇ No Mind Reading · ◇ No Frictionless Competence · ◇ No Emotional Convergence · ◇ No Reality Bending · ◇ No Auto-Win
 
 **🏆 Artificial Perfection** — Characters being too good at everything
-> ◇ Perfect Emotional Intelligence · ◇ Perfect Timing · ◇ Perfect Articulation · ◇ Perfect Memory · ◇ Perfect Recovery · ◇ Perfect Morality · ◇ Perfect Awareness · ◇ Perfect Bodies
+> ◇ No Perfect Emotional Intelligence · ◇ No Perfect Timing · ◇ No Perfect Articulation · ◇ No Perfect Memory · ◇ No Perfect Recovery · ◇ No Perfect Morality · ◇ No Perfect Awareness · ◇ No Perfect Bodies
 
 **📐 Quality Specifications** — What good writing looks like
 > ◇ Living Environments · ◇ Tension Architecture · ◇ Scene Entry/Exit · ◇ Cause & Effect · ◇ Distinct Voices · ◇ Earned Pacing
 
 **⊹ Additional Standards**
-> ◇ Anti-Exposition · ◇ Anti-Summary · ◇ Anti-Repetition · ◇ Hivemind · ◇ Anti-Escalation · ◇ Subtext Protocol · ◇ Temporal Awareness · ◇ Cultural Texture
+> ◇ Anti-Exposition · ◇ Anti-Summary · ◇ Anti-Repetition · ◇ No Hivemind · ◇ No Auto-Escalation · ◇ Subtext Protocol · ◇ Temporal Awareness · ◇ Cultural Texture
 
 <div align="center">
 
@@ -546,7 +548,7 @@ The Shiv keeps the floor. The Spotlight rotation keeps the AI from going blind t
 
 </div>
 
-You do not need all 45. Identify your model's worst habits. Enable 5-10 standards that target those habits specifically.
+You do not need all 46. Identify your model's worst habits. Enable 5-10 standards that target those habits specifically.
 
 <div align="center">
 
@@ -973,6 +975,56 @@ Enable the ones you want in the pool. The facility fires them randomly and cools
 
 <div align="center">
 
+`⊱ ────── {.⋅ ◈ ⋅.} ────── ⊰`
+
+</div>
+
+---
+
+<div align="center">
+
+### ◆ ── 🐰 Bunny Detectives *(OPTIONAL · Requires BunnyMo)* ── ◆
+
+</div>
+
+> *꙳ Nine specialists embedded in the facility. They only wake up when BunnyMo sends them a signal. ꙳*
+
+**HawThorne Directive:** The Bunny Detectives are a quality enforcement bridge between [BunnyMo](https://github.com/Coneja-Chibi/BunnyMo) character packs and HawThorne's Director system. Each detective auto-detects when a specific BunnyMo pack is active (via `bmo_*` flag variables) and injects domain-specific quality standards into the Director's instructions.
+
+**How it works:** BunnyMo's lorebook sets flag variables when character packs are in use. Each detective reads its corresponding flag. If the flag is active, that detective wakes up and adds its jurisdiction-specific quality checks to the turn. If BunnyMo isn't installed or no packs are active, the detectives stay dormant. Zero overhead when inactive.
+
+<div align="center">
+
+`✧ ── ⋆ ── ˚ ── · ── ˚ ── ⋆ ── ✧`
+
+</div>
+
+| | Detective | Domain | Jurisdiction |
+|:---|:---|:---|:---|
+| 🔍🎖️ | BADGE | Cop / Military | Authority, rank, protocol, chain of command |
+| 🔍🎮 | PIXEL | Gamer / Tech | Gaming culture, tech jargon, digital fluency |
+| 🔍🎨 | DOODLE | Artist / Creative | Visual arts, creative process, artistic temperament |
+| 🔍💃 | SHUFFLE | Dancer / Performer | Movement, performance, stage presence, physicality |
+| 🔍🔮 | TRINKET | Collector / Antiquarian | Objects, history, provenance, material culture |
+| 🔍🍿 | POPCORN | Film / TV | Cinema, media literacy, narrative awareness |
+| 🔍🏛️ | MARBLE | Sculptor / Architect | Space, form, structure, spatial reasoning |
+| 🔍🍺 | WOBBLE | Drunk / Inebriated | Impairment, altered states, unreliable physicality |
+| 🔍🩹 | PATCH | Medical / Healer | Medicine, triage, care, clinical accuracy |
+
+<div align="center">
+
+`✧ ── ⋆ ── ˚ ── · ── ˚ ── ⋆ ── ✧`
+
+</div>
+
+Each detective has a distinct voice personality and files cross-detective alerts when multiple packs overlap in the same scene. A CoT checkpoint ensures the Director acknowledges active detectives during their thinking process.
+
+**Without BunnyMo:** Leave the section closed. The detectives sleep. They add nothing to the prompt and consume no tokens.
+
+**With BunnyMo:** Enable the section open/close and any detectives matching your active packs. They'll auto-detect and enforce.
+
+<div align="center">
+
 `⊱ ══════ {⟐ ✵ ⟐} ══════ ⊰`
 
 </div>
@@ -1120,6 +1172,13 @@ Pick one format. Pick one depth. The system handles the rest.
 
 </div>
 
+**Two versions available:**
+- **HawThorne** — Full preset. All systems disabled by default. You build your configuration from scratch.
+- **HawThorne LoadOut** — Pre-configured with reasonable defaults. Plug and play. Ready to chat immediately.
+
+**LoadOut ships with:** Romance/Drama/Mystery Directors, First Person Present Tense, Authored Narrator, Standard Prose, core QC standards (purple prose, adjective ban, metaphor ban, echo, echo reading, distinct voices), Report Card CoT, and adult content clearances enabled. Everything else available to toggle on.
+
+**Manual setup (HawThorne base):**
 1. Download the HawThorne JSON preset
 2. **SillyTavern:** Settings → Prompts → Import Preset · **RoleCall:** Preset Library → Import
 3. Enable 2-3 Directors that match your story
@@ -1205,7 +1264,7 @@ Switch intensity level. LOW barely fires. HIGH is aggressive. MEDIUM is the defa
 Less capable models may not handle the meta-commentary. Disable the Heckler Banks entry if your model can't process inter-Director communication.
 
 ### ▸ BunnyMo integration
-BunnyMo tags inject through the lorebook into HawThorne's `<session_content>` zone. Directors see character tags as part of their cast material. CarrotKernel automates the detection and injection. They're designed to work together. Neither requires the other.
+BunnyMo tags inject through the lorebook into HawThorne's `<session_content>` zone. Directors see character tags as part of their cast material. CarrotKernel automates the detection and injection. The Bunny Detective system adds a quality enforcement layer on top: 9 domain-specific detectives auto-detect active BunnyMo packs and inject jurisdiction-specific standards. They're designed to work together. Neither requires the other.
 
 <div align="center">
 
@@ -1233,7 +1292,7 @@ BunnyMo tags inject through the lorebook into HawThorne's `<session_content>` zo
 |:---|:---|
 | **Platforms** | [SillyTavern](https://docs.sillytavern.app/) and [RoleCall](https://rolecallstudios.com). Any platform supporting the OpenAI preset format. |
 | **Models** | Any model your platform supports. Best with Claude, Gemini, GPT-4+. Less capable models may struggle with the full system. |
-| **BunnyMo & CarrotKernel** | Dedicated BMO update coming soon for exceptional integration. |
+| **BunnyMo & CarrotKernel** | Full integration via Bunny Detectives. 9 domain-specific quality enforcers auto-detect active BunnyMo packs. |
 | **Lorebooks** | Any lorebook injects normally through World Info. |
 
 <div align="center">
