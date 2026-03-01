@@ -44,10 +44,10 @@
 
 </div>
 
-| | HawThorne Prime | HawThorne Polyglot |
+| | HawThorne Prime *(recommended)* | HawThorne Polyglot |
 |:---|:---|:---|
 | 📁 **Folder** | `HawThorne Prime/` | `HawThorne Polyglot/` |
-| 🏷️ **File** | `🔮✧˖°. HawThorne .°˖✧🔮.json` | `🔮✧˖°. HawThorne Experimental .°˖✧🔮.json` |
+| 🏷️ **File** | `🔮✧˖°. HawThorne V.1 .°˖✧🔮.json` | `🔮✧˖°. HawThorne Experimental .°˖✧🔮.json` |
 | 🌐 **Directive Language** | English | 12+ languages (one per Director) |
 | 🔄 **Release Track** | Numbered stable releases | Experimental |
 | 🧠 **Philosophy** | Transparent, readable, auditable | Force model diversity through linguistic variety |
@@ -79,7 +79,7 @@
 
 > *꙳ The standard release. Every instruction is in English. Every entry is readable. ꙳*
 
-**HawThorne Prime** is the numbered release track. All 347 prompt entries — Director packages, QC standards, Heckle Banks, Scene Pulse triggers, Subtexts, Experiments, CoT architectures, Report Card — are written entirely in English.
+**HawThorne Prime** is the numbered release track (currently on **V.1**). All prompt entries — Director packages, QC standards, Heckle Banks, Scene Pulse triggers, Subtexts, Experiments, CoT architectures, Report Card — are written entirely in English. Prime also includes a **LoadOut** variant with a different default toggle configuration.
 
 What this means:
 - Every instruction the AI receives is in one language
