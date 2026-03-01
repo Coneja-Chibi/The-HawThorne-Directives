@@ -28,7 +28,7 @@
 
 ![Status: Active Development](https://img.shields.io/badge/Status-Active%20Development-purple.svg) ![BunnyMo Compatible](https://img.shields.io/badge/BunnyMo-Compatible-pink.svg) [![SillyTavern Preset](https://img.shields.io/badge/SillyTavern-Preset-green.svg)](https://docs.sillytavern.app/) [![RoleCall Compatible](https://img.shields.io/badge/RoleCall-Compatible-blue.svg)](https://rolecallstudios.com)
 
-**Classification:** Narrative Simulation Preset · [SillyTavern](https://docs.sillytavern.app/) · [RoleCall](https://rolecallstudios.com)
+**Classification:** Narrative Simulation Preset · Compatible with: [SillyTavern](https://docs.sillytavern.app/) · [RoleCall](https://rolecallstudios.com)
 **Companion System:** [BunnyMo](https://github.com/Coneja-Chibi/BunnyMo) · **Extension:** [CarrotKernel](https://github.com/Coneja-Chibi/CarrotKernel)
 
 `⊱ ────── {.⋅ ✧ ⋅.} ────── ⊰`
@@ -1270,12 +1270,12 @@ The system is large because the problem is large. AI doesn't degrade from lack o
 <div align="center">
 
 ## ╔═══════════════════════════════════════════╗
-## ║ ❖ ── ⊹ ROLECALL ⊹ ── ❖ ║
+## ║ ❖ ── ⊹ **[RoleCall](https://rolecallstudios.com)** ⊹ ── ❖ ║
 ## ╚═══════════════════════════════════════════╝
 
 </div>
 
-**[RoleCall](https://rolecallstudios.com)** is a web-based AI chat application that combines SillyTavern's power — full control over presets, prompts, and AI behavior — with the ease of a modern platform: browse characters, social features, one-click chat. HawThorne is fully compatible with RoleCall's preset system. If you want the facility's capabilities without local installation, RoleCall is the hosted alternative.
+RoleCall is a web-based AI chat application that combines SillyTavern's power — full control over presets, prompts, and AI behavior — with the ease of a modern platform: browse characters, social features, one-click chat. HawThorne is fully compatible with RoleCall's preset system. If you want the facility's capabilities without local installation, RoleCall is the hosted alternative I am creating myself. 
 
 <div align="center">
 
@@ -1309,4 +1309,6 @@ The system is large because the problem is large. AI doesn't degrade from lack o
 
 ---
 
-*Built with 🔮 by the same ~~trenchcoat full of bunnies~~ completely normal human developer behind [BunnyMo](https://github.com/Coneja-Chibi/BunnyMo), [CarrotKernel](https://github.com/Coneja-Chibi/CarrotKernel), [VectHare](https://github.com/Coneja-Chibi/VectHare), and the [Rabbit Response Team](https://github.com/Coneja-Chibi/Rabbit-Response-Team).*
+*Built with 🔮 by the same ~~trenchcoat full of bunnies~~ completely normal human developer behind [BunnyMo](https://github.com/Coneja-Chibi/BunnyMo), [CarrotKernel](https://github.com/Coneja-Chibi/CarrotKernel), [VectHare](https://github.com/Coneja-Chibi/VectHare), [Rabbit Response Team](https://github.com/Coneja-Chibi/Rabbit-Response-Team), and **[RoleCall](https://rolecallstudios.com)***
+*Business Email: Chibiconeja@gmail.com*
+*Personal Website/Portfolio: [BunnyWorks](https://bunnyworks.me)
