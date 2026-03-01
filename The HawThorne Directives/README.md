@@ -12,7 +12,7 @@
 <h2>◈ Edition Selection Guide ◈</h2>
 
 <h3>⊹ ˚ . ⋆ ✧ ⋆ . ˚ ⊹</h3>
-<h4><i>꙳ Two editions. Same facility. Different operational clearance. ꙳</i></h4>
+<h4><i>꙳ Two editions. Same Directors. Different instruction languages. ꙳</i></h4>
 <h3>⊹ ˚ . ⋆ ✧ ⋆ . ˚ ⊹</h3>
 
 <br>
@@ -36,7 +36,7 @@
 
 </div>
 
-> *꙳ The facility ships two editions. Both contain the full Director roster, all operational systems, and the complete HawThorne instruction architecture. The difference is how the directive layer is encoded. ꙳*
+> *꙳ Prime is the stable, readable release. Polyglot is the experimental release that rewrites every Director's instructions in a different human language. ꙳*
 
 <div align="center">
 
@@ -48,9 +48,10 @@
 |:---|:---|:---|
 | 📁 **Folder** | `HawThorne Prime/` | `HawThorne Polyglot/` |
 | 🏷️ **File** | `🔮✧˖°. HawThorne .°˖✧🔮.json` | `🔮✧˖°. HawThorne Experimental .°˖✧🔮.json` |
-| 🌐 **Directive Language** | English | Polyglot-scrambled (12+ languages) |
+| 🌐 **Directive Language** | English | 12+ languages (one per Director) |
 | 🔄 **Release Track** | Numbered stable releases | Experimental |
-| 👤 **Recommended For** | Most users | Advanced users, extraction-resistant setups |
+| 🧠 **Philosophy** | Transparent, readable, auditable | Force model diversity through linguistic variety |
+| 👤 **Recommended For** | Most users | Advanced users, people chasing output variety |
 
 <div align="center">
 
@@ -58,7 +59,7 @@
 
 </div>
 
-**If you're not sure which one to use, use Prime.** It's the stable release. The facility runs the same either way.
+**If you're not sure which one to use, use Prime.** It's the stable release with numbered updates and full English readability.
 
 <div align="center">
 
@@ -76,7 +77,7 @@
 
 </div>
 
-> *꙳ The standard operational configuration. Every directive is in English. Every system is readable. This is what the facility recommends for general deployment. ꙳*
+> *꙳ The standard release. Every instruction is in English. Every entry is readable. ꙳*
 
 **HawThorne Prime** is the numbered release track. All 347 prompt entries — Director packages, QC standards, Heckle Banks, Scene Pulse triggers, Subtexts, Experiments, CoT architectures, Report Card — are written entirely in English.
 
@@ -84,7 +85,7 @@ What this means:
 - Every instruction the AI receives is in one language
 - You can read, audit, and modify any entry directly
 - Compatible with all models and configurations
-- The facility's full instruction architecture is transparent
+- Full transparency — you see exactly what the AI sees
 
 Prime receives version-numbered updates. Each release is tested and stable.
 
@@ -104,9 +105,38 @@ Prime receives version-numbered updates. Each release is tested and stable.
 
 </div>
 
-> *꙳ The directive layer has been scrambled. The facility speaks twelve languages now. The audience still hears English. ꙳*
+> *꙳ Every Director's instructions are written in a different human language. The AI's output stays English. ꙳*
 
-**HawThorne Polyglot** takes the same preset and encrypts the directive architecture across multiple human languages. Each Director's operational content — genre descriptions, QC shivs and spotlights, Heckle Banks, tones, lenses, world pulse entries, experiments, subtexts, content warnings — is translated into that Director's assigned language.
+**HawThorne Polyglot** translates each Director's instruction set into a different human language. GRAZE's entries are in French. LINGER's are in Japanese. SEDIMENT's are in Russian. The AI reads all of them. Its output — every word the user sees — stays English.
+
+<div align="center">
+
+### ◈ ── ✧ Why? ✧ ── ◈
+
+</div>
+
+Most models are massive and trained on enormous datasets. Languages are rich — each one carries its own metaphors, writing styles, sentence rhythms, and default patterns. When you creative write in only one language, you're activating the **Large** part of Large Language Model. The model falls into that language's well-worn pathways — the same lowest-rarity words it reaches for first, the same crutch phrases over and over. You know the ones. "Ozone." "Ethereal." "Palpable tension."
+
+But what if we also took advantage of the **Language** part?
+
+By translating each Director's instructions into a different human language, Polyglot forces the model through different linguistic pathways — different learned representations, different cultural framings, different rhythmic instincts. The AI still responds in English. But the instructions it's following were encoded through Japanese, French, Russian, Korean, Arabic, and more. The theory is that this produces more varied output with fewer of the classic AI writing isms.
+
+<div align="center">
+
+### ◈ ── ✧ Why Is It Experimental? ✧ ── ◈
+
+</div>
+
+Because the different languages might confuse the AI. Lower-capability models may not handle multilingual instructions well — they could misinterpret entries, lose nuance in translation, or just get lost. The theory is sound with frontier models that have strong multilingual training, but it's not guaranteed to work across the board.
+
+Polyglot is experimental because:
+- **It might confuse lower-capability models** — not every model handles 12+ languages in its instruction set gracefully
+- **Untested hypothesis** — the idea that multilingual instructions produce more varied output hasn't been proven at scale
+- **Massive translation surface** — every Director's genre descriptions, QC shivs, spotlights, heckle banks, tones, lenses, world pulse entries, experiments, subtexts, and content clearances all need translating. That's a lot to maintain and verify
+- **Not easily auditable** — you can't read or modify entries in languages you don't speak
+- **No numbered releases** — Polyglot updates when translations are ready, not on Prime's stable release schedule
+
+If the theory holds, it's a genuinely novel approach to breaking AI writing patterns. If it doesn't, Prime is right there.
 
 <div align="center">
 
@@ -135,21 +165,11 @@ Prime receives version-numbered updates. Each release is tested and stable.
 
 <div align="center">
 
-### ◈ ── ✧ Why? ✧ ── ◈
-
-</div>
-
-The polyglot scramble is a **counter-extraction measure**. If a session transcript is intercepted or audited by outside systems, no single language reveals the full operating picture. The scramble is structural, not decorative.
-
-The AI processes all languages. It obeys all of them. But its output — every word of narrative, dialogue, and scene text visible to the user — is in **English. Always.** The polyglot layer is behind the curtain. The audience sees English.
-
-<div align="center">
-
 ### ◈ ── ✧ What Stays English ✧ ── ◈
 
 </div>
 
-Not everything is translated. Structural elements remain in English for system compatibility:
+Structural elements remain in English for system compatibility:
 
 - **Comment blocks** (human-readable annotations)
 - **CoT templates** (Chain of Thought architectures)
@@ -181,16 +201,16 @@ Per-Director creative and operational content:
 </div>
 
 Use Polyglot if:
-- You want maximum extraction resistance
-- You're comfortable with an experimental release track
-- You don't need to read every directive in English
-- You want the AI to process a linguistically diverse instruction set
+- You want to push the model into more varied, less predictable output
+- You're curious whether multilingual instructions actually change prose quality
+- You're comfortable with an experimental release that may behave differently per model
+- You don't need to read every directive yourself
 
 Use Prime if:
 - You want stable, numbered releases
 - You want to read and modify entries directly
 - You're new to HawThorne
-- You want the simplest path to a working facility
+- You want the simplest path to a working setup
 
 <div align="center">
 
@@ -235,9 +255,9 @@ For full documentation — Directors, systems, toggles, troubleshooting — see 
 
 <h3>⊹ ˚ . ⋆ ✧ ⋆ . ˚ ⊹</h3>
 
-<h4><i>Same facility. Same Directors. Same booth.</i></h4>
 <h4><i>One speaks English. The other speaks everything.</i></h4>
-<h4><i>The page doesn't know the difference.</i></h4>
+<h4><i>The theory: different languages activate different parts of the model.</i></h4>
+<h4><i>The experiment: does that make the writing better?</i></h4>
 
 <h3>⊹ ˚ . ⋆ ✧ ⋆ . ˚ ⊹</h3>
 
