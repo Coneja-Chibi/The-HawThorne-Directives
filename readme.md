@@ -24,7 +24,8 @@
 
 </div>
 
-**Classification:** Narrative Simulation Preset · SillyTavern
+**Classification:** Narrative Simulation Preset · 
+Compatible with: SillyTavern | RoleCall
 
 `⊱ ────── {.⋅ ✧ ⋅.} ────── ⊰`
 
