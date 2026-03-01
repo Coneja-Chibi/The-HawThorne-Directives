@@ -19,6 +19,7 @@
 
 <h3>⊹ ˚ ⟡ ⋆ ✧ ˚ ◇ ⋆ ⊹ ˚ ✦ ˚ ⊹ ⋆ ◇ ˚ ✧ ⋆ ⟡ ˚ ⊹</h3>
 <h3>✦ ═══════════════════════════════════════════════ ✦</h3>
+<img width="1024" height="1024" alt="image" src="https://github.com/user-attachments/assets/3e493de1-1f9a-4564-889d-690ef344bf53" />
 
 <br>
 
