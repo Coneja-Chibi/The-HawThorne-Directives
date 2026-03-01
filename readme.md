@@ -40,7 +40,7 @@ HawThorne is a prompt preset for SillyTavern.
 
 It converts the AI generation pipeline into a **rotating-Director narrative simulation**. Each turn, the system selects a Director from a roster of genre-specialized operatives. That Director inherits a full operational package — genre instincts, quality standards, anti-pattern definitions, self-evaluation protocols — and produces one scene. Then they are relieved. Next turn, someone else takes the booth.
 
-The simulation does not sleep. No two turns are the same. Hundreds of thousands of instruction combinations, drawn from 347 prompt entries, 20 Directors, 19 prose Affinities, 45 quality standards, and 4 Chain of Thought architectures. This document will orient you.
+The simulation does not sleep. No two turns are the same. Hundreds of thousands of instruction combinations, drawn from 347 prompt entries, 20 Directors, 19 prose Affinities, 45 quality standards, and 4 Chain of Thought architectures, and more. This document will orient you.
 
 `⊱ ══════ {⟐ ✵ ⟐} ══════ ⊰`
 
