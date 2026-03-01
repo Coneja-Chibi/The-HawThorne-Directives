@@ -13,13 +13,11 @@
 
 ## Facility Overview
 
-HawThorne is a prompt preset for SillyTavern. Not a lorebook. Not an extension. The preset — that layer between you and the model that most people leave on default and forget exists.
-
-This one you won't forget.
+HawThorne is a prompt preset for SillyTavern.
 
 HawThorne converts the AI generation pipeline into a **rotating-Director narrative simulation**. Each turn, the system selects a Director from a roster of genre-specialized creative voices. That Director inherits a full operational package — genre instincts, quality standards, anti-pattern definitions, self-evaluation protocols — and produces one scene. Then they leave. Next turn, someone else takes the booth.
 
-The model doesn't repeat itself because it's never the same person twice.
+The preset is ever changing. No two turns will ever be the same. Hundreds of thousands of combinations to explore. 
 
 344 prompt entries. 20 Directors. 19 prose Affinities. 45 quality standards. 4 Chain of Thought architectures. The system is large. This document will orient you.
 
@@ -27,9 +25,9 @@ The model doesn't repeat itself because it's never the same person twice.
 
 ## The Problem This Solves
 
-AI writing degrades over time. Not because the model loses capability. Because it finds a pattern and stays there. Turn 5 sounds like turn 40. Same sentence rhythms. Same emotional arcs. Same way of entering a room. One voice on an infinite loop, getting more comfortable and less interesting with every generation.
+AI writing degrades over time. Not because the model loses capability. Because it finds a pattern and stays there. Turn 5 sounds like turn 40. Same sentence rhythms. Same emotional arcs. Same way of entering a room. One voice on an infinite loop, getting more comfortable and less interesting with every generation. If you give the model the same inputs every time; you will slowly start to see the same words. The same plot devices. The same character with a different face. Presets should not be static.
 
-HawThorne breaks the loop by making each turn someone else's job.
+HawThorne breaks the loop by making each turn someone else's job. Each turn a randomized director with a randomized set of different options is selected; all configurable by you. 
 
 The rotation isn't cosmetic. It's structural. Different Directors produce different prose because they carry different evaluation criteria, different failure modes, different opinions about what the previous Director did wrong. The fiction improves because no single voice is allowed to calcify.
 
@@ -37,7 +35,7 @@ The rotation isn't cosmetic. It's structural. Different Directors produce differ
 
 ## Director Registry
 
-The core of the system. Each Director is a genre-specialized creative voice containing:
+The core of the system. Each Director is a specialized creative voice containing:
 
 - **Bureau designation** and operational identity
 - **Active Heart** — rotating internal calibration phrases
@@ -73,39 +71,39 @@ The core of the system. Each Director is a genre-specialized creative voice cont
 | 🌑 | PITH | Dead Dove | Exposed Nerve Division |
 | 🌊 | VENTURE | Adventure | Unmapped Territory Division |
 
-Enable the Directors you want on shift. The system's `{{roll}}` macro randomly assigns one per turn. Two Directors is enough to create rotation. Twenty is a full production floor.
+Enable the Directors you want on shift. The system's `{{roll}}` macro randomly assigns one per turn. Two Directors is enough to create rotation. Twenty is a full production floor. You should never have to pick a genre and then... Stick with it. A story is so much more than one thing. Enable as many as you want preset; and let the Directors handle the rest.
 
-All Directors ship disabled except GRAZE, LINGER, and MOTLEY. Enable what fits your story.
+Enable what fits your story. (They do *not* all fire at once.) 
 
 ---
 
 ## Operational Systems
 
-HawThorne is modular. Each system below is independent. Enable what you need. Leave the rest off.
+HawThorne is modular. Each system below is independent.
 
 ---
 
-### 📐 Framing
+### 📐 Framing (REQUIRED)
 
-Determines how the active Director regards their predecessor's work.
+Determines how the active Director regards their predecessor's work. This setting loosely determines how violent of a switch every turn is.
 
 | Mode | Posture |
 |---|---|
 | 📐 STANDARD | Professional handoff. Build on or redirect. |
 | 🤝 COLLABORATIVE | The previous Director did well. Extend their work. |
 | ⚔️ ADVERSARIAL | The previous Director made mistakes. Correct them. |
-| 💀 HOSTILE TAKEOVER | Everything they did was wrong. Opposite tone, opposite pacing, burn it. |
+| 💀 HOSTILE TAKEOVER | Everything they did was wrong. Their existence is wrong. Murder them. (Metaphorically, we suppose.) Opposite tone, opposite pacing, burn it. |
 | 📋 AUDITOR | Grade their work clinically. Fix what failed. |
 | 🐣 INTERN | New hire energy. Trying not to break what came before. |
 | 👻 GHOST | No predecessor exists. Every turn is a blank page. |
 
-Pick one. STANDARD is the default. ADVERSARIAL produces the most interesting inter-Director friction.
+Pick one. STANDARD is the default. HOSTILE TAKEOVER produces the most interesting inter-Director friction.
 
 ---
 
 ### 👤 User Role
 
-Defines {{user}}'s relationship to the simulation.
+Defines {{user}}'s relationship to the simulation. Think of this like other presets 'difficulty level' toggles; but framed different. Positivity bias, negativity bias, and no bias at all. 
 
 | Role | Function |
 |---|---|
@@ -123,13 +121,13 @@ FELLOW DIRECTOR is recommended. It gives your input weight without flattening th
 
 Two flavor systems. **Use one or the other, not both.**
 
-**Tones** are simple mood filters:  
+**Tones** are simple mood filters:  (PICK ONE)
 🍵 COZY · ⛩️ ETHEREAL · 🌪️ CHAOS · 💎 OPULENT · 🤍 MINIMALIST · 💭 SURREAL · 🛠️ GRITTY · 🩶 MELANCHOLY · 🖤 DARK
-
-**Lenses** are states of being that alter perception:  
+# OR
+**Lenses** are states of being that alter perception:  (ROTATING VARIABLE, CAN PICK MANY)
 💍 NEWLYWED · 💔 GRIEVING · 😴 SLEEPLESS · 🏆 APEX · 🔥 BURNOUT · 🌧️ DISPLACED · 🎭 MASKING · 🌸 FIRST DAY · 🍷 HUNGOVER · 🌑 NUMB
 
-A Tone colors the mood. A Lens changes what the Director notices and how. A SLEEPLESS Director hears sounds too sharply. A GRIEVING Director notices what's absent. The genre stays the same. The perception shifts.
+A Tone colors the prose. A Lens changes the mood of the Director. A SLEEPLESS Director hears sounds too sharply. A NUMB Director might end their turn abruptly; with little to say at all. The genre stays the same. The perception shifts.
 
 ---
 
@@ -137,7 +135,7 @@ A Tone colors the mood. A Lens changes what the Director notices and how. A SLEE
 
 Prose style filters. If Directors are *who* writes and Lenses are *what state they're in*, Affinities are *what tradition of writing shaped them.*
 
-19 available. Each contains anchor passages — short prose samples demonstrating the style — and CoT annotations explaining the underlying technique. The AI doesn't receive a label. It receives examples and learns the method.
+19 available. Each contains anchor passages — short prose samples demonstrating the style — and CoT annotations explaining the underlying technique. The AI doesn't receive a label. It receives examples and learns the method. (Each of these is based on a different primary author; without every directly saying said authors name. Let's the model infer. Thank you Agent Junigiri. Your work with this foundation was invaluable.)
 
 <details>
 <summary>Full Affinity Registry</summary>
@@ -166,13 +164,13 @@ Technical writing parameters. Every Director follows these regardless of genre o
 
 | Category | Options |
 |---|---|
-| User Reference | First Person · Second Person · Third Person |
+| User Reference | First Person · Second Person · Third Person | (How {{user}} is referred.)
 | Tense | Past · Present · Future |
-| Narrative Frame | Standard · Omniscient · Authored Narrator · Objective · Deep POV · Unreliable · Character Narrator · Shifting Reliability |
+| Narrative Frame | Standard · Omniscient · Authored Narrator · Objective · Deep POV · Unreliable · Character Narrator · Shifting Reliability | (How the narrator speaks/is.)
 | Response Length | Short (1-3¶) · Medium (3-5¶) · Long (5-8¶) · Adaptive |
 | Narrative Style | Roleplay Prose · Literary Prose · Pulp Fiction · Fanfiction/AO3 · Cinematic · Web Novel |
 
-These are enforced at multiple prompt depths through the REP system. The AI is reminded of tense, POV, and style several times before generation. It doesn't drift.
+These are enforced at multiple prompt depths through the REP system. The AI is reminded of tense, POV, and style several times before generation. It doesn't drift. (See more about the REP system below.)
 
 ---
 
@@ -180,7 +178,7 @@ These are enforced at multiple prompt depths through the REP system. The AI is r
 
 No rating tiers. Build your own content profile.
 
-14 categories, each independently toggleable. Each clearance includes a full writing guide — not permission to write the content, but instruction on how to write it with craft.
+14 categories, each independently toggleable. Each clearance includes a full writing guide — not permission to write the content, but instruction on how to write it with a rotating set of 13 fewshot examples each showing the model exactly how to write it properly, as well as an in depth explanation as to how, what common pitfalls to avoid, etc. ***Important note here: The model is explicitly told what options you have turned off, and which ones you have turned on. It is told to avoid anything you do not have on, so keep that in mind.***
 
 <details>
 <summary>Content Registry</summary>
@@ -199,7 +197,7 @@ All disabled by default. Enable what your story needs.
 
 ### 🔬 Quality Control
 
-45 individually toggleable quality standards. Organized into divisions:
+45 individually toggleable quality standards. Organized into divisions. Each quality metric has a 1-2 sentence 'Shiv' that always fires. Each QC also has a 'Spotlight' that is rolled randomly per turn (Up to a cap of 3) that gives the model more in depth detail about how to or not to do this thing; and told to go out of its way this turn to avoid it. 
 
 **🪓 Kill All Your Darlings** — Overwriting pathologies  
 Purple Prose · Adjective Chains · Metaphor Density · Body Language Novels · Emotional Echo · Said Is Fine · Weighted Everything · Pathetic Fallacy · Sensory Carpet Bombing · Philosophical Tangents · Echo Reading · Mirror Descriptions
@@ -222,7 +220,7 @@ You do not need all 45. Identify your model's worst habits. Enable 5-10 standard
 
 ### 🔁 REPs (Repeated Emphasis Prompts)
 
-The enforcement layer. SillyTavern injects prompts at configurable depths — distance from the generation point. Closer depth = stronger influence.
+The enforcement layer. SillyTavern injects prompts at configurable depths — distance from the generation point. Closer depth = stronger influence. Shifts can be long and cumbersome. Directors might forget. Remind them.
 
 HawThorne layers reminders across multiple depths:
 
@@ -245,9 +243,9 @@ When a Director finishes their turn, there is a random chance they leave a note 
 
 These notes are in-character demands from the previous genre voice about what matters to them:
 
-> GRAZE: *"If you resolve the slow burn I will kill you and then myself. In that order."*  
+> GRAZE: *"If you resolve the slow burn I will kill you and then myself."*  
 > FRACTURE: *"Broken stays broken. Touch the injuries. I'll check."*  
-> PATINA: *"I'm sure you'll do great! Just. the breakfast scene is really important to me. Like really important. No pressure :)"*  
+> PATINA: *"I'm sure you'll do great! Just. a good breakfast scene is really important to me. Like really important. No pressure :)"*  
 > FLINT: *"Too many words. Cut half."*
 
 The incoming Director must acknowledge the note in their Chain of Thought and decide whether the previous Director was right. This creates inter-Director tension. The romance voice is protective of the slow burn. The horror voice is protective of the dread. Whoever inherits their scene has to contend with those priorities.
@@ -260,13 +258,13 @@ The incoming Director must acknowledge the note in their Chain of Thought and de
 
 ### 🧠 Chain of Thought
 
-The Director's internal monologue before writing. Appears in SillyTavern's thinking block, hidden from chat display. This is where the Director processes their assignment — evaluating the previous turn, planning their scene, checking their work against enabled standards.
+The Director's internal monologue before writing. Appears in SillyTavern's thinking block, hidden from chat display. This is where the Director processes their assignment — evaluating the previous turn, planning their scene, checking their work against enabled standards. Almost every other toggle in this preset has a pool of CoT variables it can inject at this stage. All CoT formats have the things they will check every turn; however they also have a randomized pool of checks they will be given here to obey. If you don't want the same outputs, stop giving it the same inputs. Every turn make it consider something different. 
 
 Four architectural formats:
 
 | Format | Method |
 |---|---|
-| 📊 **A: REPORT CARD** | Random letter grades are rolled per writing dimension. The Director plans how to hit each target. Low grades aren't failures — they're constraints that produce texture. |
+| 📊 **A: REPORT CARD** | Random letter grades are rolled per writing dimension. The Director plans how to hit each target. Models overwrite, they try to make every aspect of everything perfect. This is... Boring. Not every meal can be delicious. |
 | 🧠📋 **B: EVALUATION PROTOCOL** | Structured self-evaluation against enabled quality standards, content clearances, and genre criteria. |
 | 🧠 **C: DIRECTOR'S NOTEPAD** | Free-form scratch notes in the Director's own voice. Less rigid, more creative. |
 | 🔮🧠 **D: THE PARALLAX** | The Director sketches multiple possible scene directions through a branching viewfinder, then commits to one. Forces deliberate choice over autopilot. |
@@ -402,10 +400,8 @@ BunnyMo tags inject through the lorebook into HawThorne's `<session_content>` zo
 
 | System | Status |
 |---|---|
-| **Models** | Any model SillyTavern supports. Best with Claude, Gemini, GPT-4+. Less capable models may struggle with CoT and Heckler systems. |
-| **BunnyMo** | Designed as companion. Not required. |
-| **CarrotKernel** | Handles character injection. Recommended, not required. |
-| **VectHare** | RAG memory works alongside HawThorne's REP system for long-term recall. |
+| **Models** | Any model SillyTavern supports. Best with Claude, Gemini, GPT-4+. Less capable models may struggle. |
+| **BunnyMo and CarrotKernel** | Dedicated BMO update coming soon to work with this preset exceptionally well. |
 | **Lorebooks** | Any lorebook injects normally through World Info. |
 
 ---
@@ -416,7 +412,7 @@ Most presets tell the AI to write well. More adjectives in the system prompt. Lo
 
 HawThorne gives the AI a job instead. A title, a department, a predecessor to evaluate, standards to meet, anti-patterns to avoid, and a structured thought process to run before writing a single word. The AI isn't told to produce good fiction. It's told it's the third Director on shift today and the previous one left a mess and the Scene Pulse is about to fire and there's a sticky note on the monitor from GRAZE complaining about the slow burn.
 
-The system is large because the problem is large. AI doesn't degrade from lack of instruction. It degrades from lack of structure. HawThorne is the structure.
+The system is large because the problem is large. AI doesn't degrade from lack of instruction. It degrades from staleness. HawThorne has solved that.
 
 ---
 
