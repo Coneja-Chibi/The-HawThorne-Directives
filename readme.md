@@ -333,12 +333,11 @@ The world doesn't pause between character interactions. These make sure it doesn
 
 ### 🧪 Experiments
 
-Temporary creative constraints. Writing workshop exercises the Director must follow for one turn.
+Temporary creative constraints. Writing workshop exercises the Director must follow for one turn. They randomly roll and inject at different times throughout the story.
 
 🧪 No Metaphors · No Dialogue · No Internal Access · No Description · Single Shot · Silence · Single Sense · Real Time · Dialogue Only · Insect Camera · Bird's Eye · No Adjectives · Unreliable Turn · Montage · Found Footage · Wrong Genre
 
-Toggle one on. The Director writes under that limitation. Constraints produce solutions you wouldn't get otherwise. Toggle it off when you're done.
-
+Toggle a few on. The Director writes under that limitation(s). Constraints produce solutions you wouldn't get otherwise. 
 ---
 
 ## Installation
