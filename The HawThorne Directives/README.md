@@ -79,7 +79,16 @@
 
 > *꙳ The standard release. Every instruction is in English. Every entry is readable. ꙳*
 
-**HawThorne Prime** is the numbered release track (currently on **V.1**). All prompt entries — Director packages, QC standards, Heckle Banks, Scene Pulse triggers, Subtexts, Experiments, CoT architectures, Report Card — are written entirely in English. Prime also includes a **LoadOut** variant with a different default toggle configuration.
+**HawThorne Prime** is the numbered release track (currently on **V.1**). All prompt entries — Director packages, QC standards, Heckle Banks, Scene Pulse triggers, Subtexts, Experiments, CoT architectures, Report Card — are written entirely in English.
+
+Prime includes two files:
+
+| File | What It Is |
+|:---|:---|
+| `🔮✧˖°. HawThorne V.1 .°˖✧🔮.json` | The full preset with all toggles at factory defaults |
+| `🔮✧˖°. HawThorne LoadOut V.1 .°˖✧🔮.json` | **Same preset** — just with recommended default toggles pre-configured |
+
+> **LoadOut is not a different version.** It's the exact same preset with a curated starting toggle configuration — which Directors are on shift, which systems are enabled, which content clearances are set. Think of it as "recommended defaults" so you don't have to configure everything from scratch. You can always change any toggle after importing.
 
 What this means:
 - Every instruction the AI receives is in one language
