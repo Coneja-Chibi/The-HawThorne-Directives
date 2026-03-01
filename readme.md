@@ -26,7 +26,7 @@
 
 <div align="center">
 
-![Status: Active Development](https://img.shields.io/badge/Status-Active%20Development-purple.svg) ![BunnyMo Compatible](https://img.shields.io/badge/BunnyMo-Compatible-pink.svg) [![SillyTavern Preset](https://img.shields.io/badge/SillyTavern-Preset-green.svg)](https://docs.sillytavern.app/) [![RoleCall Compatible](https://img.shields.io/badge/RoleCall-Compatible-blue.svg)](https://rolecallstudios.com)
+![Status: Active Development](https://img.shields.io/badge/Status-Active%20Development-purple.svg) ![BunnyMo Compatible](https://img.shields.io/badge/BunnyMo-Compatible-pink.svg) [![SillyTavern Preset](https://img.shields.io/badge/SillyTavern-Preset-green.svg)](https://docs.sillytavern.app/) [![RoleCall Preset](https://img.shields.io/badge/RoleCall-Compatible-blue.svg)](https://rolecallstudios.com)
 
 **Classification:** Narrative Simulation Preset  Compatible with: [SillyTavern](https://docs.sillytavern.app/) · [RoleCall](https://rolecallstudios.com)
 <br> **Companion Systems:** [BunnyMo](https://github.com/Coneja-Chibi/BunnyMo) 
