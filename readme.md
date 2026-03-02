@@ -19,15 +19,13 @@
 
 <h3>⊹ ˚ ⟡ ⋆ ✧ ˚ ◇ ⋆ ⊹ ˚ ✦ ˚ ⊹ ⋆ ◇ ˚ ✧ ⋆ ⟡ ˚ ⊹</h3>
 <h3>✦ ═══════════════════════════════════════════════ ✦</h3>
-<img width="1024" height="1024" alt="image" src="https://github.com/user-attachments/assets/3e493de1-1f9a-4564-889d-690ef344bf53" />
+<img width="651" height="646" alt="image" src="https://github.com/user-attachments/assets/3b4d100f-50fb-4c99-a173-62ca3a430223" />
 
 <br>
 
 </div>
 
 <div align="center">
-
-<img width="651" height="646" alt="image" src="https://github.com/user-attachments/assets/3b4d100f-50fb-4c99-a173-62ca3a430223" />
 
 
 ![Status: Active Development](https://img.shields.io/badge/Status-Active%20Development-purple.svg) ![BunnyMo Compatible](https://img.shields.io/badge/BunnyMo-Compatible-pink.svg) [![SillyTavern Preset](https://img.shields.io/badge/SillyTavern-Preset-green.svg)](https://docs.sillytavern.app/) [![RoleCall Preset](https://img.shields.io/badge/RoleCall-Compatible-blue.svg)](https://rolecallstudios.com)
