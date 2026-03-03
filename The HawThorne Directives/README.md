@@ -47,7 +47,7 @@
 | | HawThorne Prime *(recommended)* | HawThorne Polyglot |
 |:---|:---|:---|
 | 📁 **Folder** | `HawThorne Prime/` | `HawThorne Polyglot/` |
-| 🏷️ **File** | `🔮✧˖°. HawThorne V.1 .°˖✧🔮.json` | `🔮✧˖°. HawThorne Experimental .°˖✧🔮.json` |
+| 🏷️ **File** | `🔮✧˖°. HawThorne V.2 .°˖✧🔮.json` | `🔮✧˖°. HawThorne Experimental .°˖✧🔮.json` |
 | 🌐 **Directive Language** | English | 12+ languages (one per Director) |
 | 🔄 **Release Track** | Numbered stable releases | Experimental |
 | 🧠 **Philosophy** | Transparent, readable, auditable | Force model diversity through linguistic variety |
@@ -79,16 +79,27 @@
 
 > *꙳ The standard release. Every instruction is in English. Every entry is readable. ꙳*
 
-**HawThorne Prime** is the numbered release track (currently on **V.1**). All prompt entries — Director packages, QC standards, Heckle Banks, Scene Pulse triggers, Subtexts, Experiments, CoT architectures, Report Card — are written entirely in English.
+**HawThorne Prime** is the numbered release track (currently on **V.2**). All prompt entries — Director packages, QC standards, Heckle Banks, Random Events triggers, Subtexts, Experiments, CoT architectures, Report Card — are written entirely in English.
 
-Prime includes two files:
+Prime includes:
 
 | File | What It Is |
 |:---|:---|
-| `🔮✧˖°. HawThorne V.1 .°˖✧🔮.json` | The full preset with all toggles at factory defaults |
-| `🔮✧˖°. HawThorne LoadOut V.1 .°˖✧🔮.json` | **Same preset** — just with recommended default toggles pre-configured |
+| `🔮✧˖°. HawThorne V.2 .°˖✧🔮.json` | The full preset with all toggles at factory defaults (412 entries) |
+| `🔮✧˖°. HawThorne V.2 LoadOut - *.json` | **6 pre-configured LoadOuts** — same preset with different toggle configurations for different vibes |
 
-> **LoadOut is not a different version.** It's the exact same preset with a curated starting toggle configuration — which Directors are on shift, which systems are enabled, which content clearances are set. Think of it as "recommended defaults" so you don't have to configure everything from scratch. You can always change any toggle after importing.
+> **LoadOuts are not different versions.** They're the exact same preset with curated starting toggle configurations — which Directors are on shift, which systems are enabled, which content clearances are set. Think of them as "recommended defaults" so you don't have to configure everything from scratch. You can always change any toggle after importing.
+
+**V.2 LoadOuts:**
+
+| LoadOut | Vibe |
+|:---|:---|
+| 🌐 **General** | 6 Directors, RC Standard, medium length, balanced |
+| 🌶️ **Smutty** | SLICK + HEARTTHROB + MOTLEY, EP Standard, all sexual content unlocked |
+| ⛩️ **Eastern** | KIRIN + Fantasy/Action/Drama/Romance/Adventure, RC Standard, literary prose |
+| 💀 **Dark & Gritty** | LINGER + PITH + SCORIA + TRIPWIRE + REQUIEM, EP Deep, heavy content |
+| 🧸 **Cozy & Wholesome** | PATINA + HEARTTHROB + MOTLEY + SEDIMENT, RC Light, Collaborative |
+| 🎥 **Epic & Cinematic** | FRACTURE + QUASAR + MERIDIAN + MANTLE + VENTURE, RC Standard, long prose |
 
 What this means:
 - Every instruction the AI receives is in one language
@@ -116,7 +127,7 @@ Prime receives version-numbered updates. Each release is tested and stable.
 
 > *꙳ Every Director's instructions are written in a different human language. The AI's output stays English. ꙳*
 
-**HawThorne Polyglot** translates each Director's instruction set into a different human language. GRAZE's entries are in French. LINGER's are in Japanese. SEDIMENT's are in Russian. The AI reads all of them. Its output — every word the user sees — stays English.
+**HawThorne Polyglot** translates each Director's instruction set into a different human language. HEARTTHROB's entries are in French. LINGER's are in Japanese. SEDIMENT's are in Russian. The AI reads all of them. Its output — every word the user sees — stays English.
 
 <div align="center">
 
@@ -155,7 +166,7 @@ If the theory holds, it's a great idea for breaking AI writing patterns. If it d
 
 | Director | Language | Director | Language |
 |:---|:---|:---|:---|
-| 🪨 FLINT | English (Southern) | 🌹 GRAZE | French |
+| 🪨 FLINT | English (Southern) | 💋 HEARTTHROB | French |
 | 🩸 LINGER | Japanese | 🎪 MOTLEY | Italian |
 | 💧 SEDIMENT | Russian | 🌌 MERIDIAN | German |
 | 💫 QUASAR | Korean | ☕ PATINA | Japanese |
@@ -165,6 +176,7 @@ If the theory holds, it's a great idea for breaking AI writing patterns. If it d
 | 🎭 REQUIEM | Russian | 🌀 LIMINAL | Czech |
 | 🌸 KIRIN | Japanese | ⚡ MANTLE | English |
 | 🌑 PITH | Spanish (Mexican) | 🌊 VENTURE | Portuguese (EU) |
+| 🫦 SLICK | *TBD* | | |
 
 <div align="center">
 
@@ -198,7 +210,7 @@ Per-Director creative and operational content:
 - QC Shivs (one-line quality checks) and Spotlight descriptions
 - Heckle Bank lines (15 per Director)
 - Tone and Lens descriptions
-- World Pulse event descriptions
+- Random Event descriptions
 - Experiment constraint instructions
 - Subtext behavioral instructions
 - Content clearance definitions
@@ -280,4 +292,3 @@ For full documentation — Directors, systems, toggles, troubleshooting — see 
 ---
 
 *Built with 🔮 by the same ~~trenchcoat full of bunnies~~ completely normal human developer behind [BunnyMo](https://github.com/Coneja-Chibi/BunnyMo), [CarrotKernel](https://github.com/Coneja-Chibi/CarrotKernel), [VectHare](https://github.com/Coneja-Chibi/VectHare), and the [Rabbit Response Team](https://github.com/Coneja-Chibi/Rabbit-Response-Team).*
-
