@@ -12,7 +12,7 @@
 <h2>◈ Edition Selection Guide ◈</h2>
 
 <h3>⊹ ˚ . ⋆ ✧ ⋆ . ˚ ⊹</h3>
-<h4><i>꙳ Two editions. Same Directors. Different instruction languages. ꙳</i></h4>
+<h4><i>꙳ Four editions. Same Directors. Different weights. ꙳</i></h4>
 <h3>⊹ ˚ . ⋆ ✧ ⋆ . ˚ ⊹</h3>
 
 <br>
@@ -36,7 +36,7 @@
 
 </div>
 
-> *꙳ Prime is the stable, readable release. Polyglot is the experimental release that rewrites every Director's instructions in a different human language. ꙳*
+> *꙳ Prime is the full system. Lowlight is the lightweight edition. Polyglot is the multilingual experiment. The Old Booth is where it all started. ꙳*
 
 <div align="center">
 
@@ -44,14 +44,16 @@
 
 </div>
 
-| | HawThorne Prime *(recommended)* | HawThorne Polyglot |
-|:---|:---|:---|
-| 📁 **Folder** | `HawThorne Prime/` | `HawThorne Polyglot/` |
-| 🏷️ **File** | `🔮✧˖°. HawThorne V.2 .°˖✧🔮.json` | `🔮✧˖°. HawThorne Experimental .°˖✧🔮.json` |
-| 🌐 **Directive Language** | English | 12+ languages (one per Director) |
-| 🔄 **Release Track** | Numbered stable releases | Experimental |
-| 🧠 **Philosophy** | Transparent, readable, auditable | Force model diversity through linguistic variety |
-| 👤 **Recommended For** | Most users | Advanced users, people chasing output variety |
+| | HawThorne Prime *(recommended)* | HawThorne Lowlight | HawThorne Polyglot | The Old Booth *(legacy)* |
+|:---|:---|:---|:---|:---|
+| 📁 **Folder** | `HawThorne Prime/` | `HawThorne Lowlight/` | `HawThorne Polyglot/` | `The Old Booth/` |
+| 🏷️ **File** | `🔮✧˖°. HawThorne V.2 .°˖✧🔮.json` | `🌙✧˖°. HawThorne Lowlight .°˖✧🌙.json` | `🔮✧˖°. HawThorne Experimental .°˖✧🔮.json` | `🔮✧˖°. HawThorne .°˖✧🔮.json` / `V.1` |
+| 📊 **Entries** | 412 | 145 | 412 | Legacy |
+| 🎯 **Token Footprint** | ~52K typical | ~640 typical | ~52K typical | Varies |
+| 🌐 **Directive Language** | English | English | 12+ languages (one per Director) | English |
+| 🔄 **Release Track** | Numbered stable releases | Numbered stable releases | Experimental | Archived |
+| 🧠 **Philosophy** | Maximum modularity — every tool, every lever | The core idea, minimal tokens — one sentence per toggle | Force model diversity through linguistic variety | The original prototype |
+| 👤 **Recommended For** | Users who want control, variable outputs, deep customization | Users who prefer minimal presets, low token counts, clean configs | Advanced users, people chasing output variety | Historians, nostalgia |
 
 <div align="center">
 
@@ -59,7 +61,7 @@
 
 </div>
 
-**If you're not sure which one to use, use Prime.** It's the stable release with numbered updates and full English readability.
+**Want full control?** Use **Prime** — every lever, every system, maximum modularity. **Want it clean and simple?** Use **Lowlight** — same Directors, same philosophy, 98% fewer tokens. Both are stable releases with numbered updates.
 
 <div align="center">
 
@@ -108,6 +110,52 @@ What this means:
 - Full transparency — you see exactly what the AI sees
 
 Prime receives version-numbered updates. Each release is tested and stable.
+
+<div align="center">
+
+`⊱ ══════ {⟐ ✵ ⟐} ══════ ⊰`
+
+</div>
+
+---
+
+<div align="center">
+
+## ╔═══════════════════════════════════════════════════╗
+## ║ ❖ ── ⊹ HAWTHORNE LOWLIGHT ⊹ ── ❖ ║
+## ╚═══════════════════════════════════════════════════╝
+
+</div>
+
+> *꙳ Same Directors. Same philosophy. One sentence per toggle. ~640 tokens instead of ~52,000. ꙳*
+
+**HawThorne Lowlight** is the lightweight edition — for users who prefer minimal presets and low token counts without sacrificing the core idea of HawThorne. Every toggle adds one sentence to the prompt. The collection of enabled sentences forms the AI's creative brief.
+
+Lowlight includes:
+
+| Feature | Prime (V.2) | Lowlight |
+|:---|:---|:---|
+| Directors | 21 (full packages) | 10 (one-sentence rules) |
+| Framings | 7 (full CoT + pressure) | 7 (one sentence each) |
+| User Roles | 6 (full treatment protocols) | 6 (one sentence each) |
+| Tones | 10 (full sensory filters) | 10 (one sentence each) |
+| Lenses | 12 (full emotional states) | 12 (one sentence each) |
+| Affinities | 20 (full philosophy + anchors) | 10 (one sentence each) |
+| Content Warnings | 15 | 14 |
+| REP System | 7 entries, ~18K chars | Removed |
+| Report Card | 15+ entries, ~40K chars | Removed |
+| Heckler Banks | 40K chars | Removed |
+| CoT Formats | 4 options (8 depth levels) | 1 ultra-light checklist |
+| Random Events / World Pulse | 40+ entries | Removed |
+| **Typical token footprint** | **~52,000** | **~640** |
+
+What this means:
+- Same Director rotation, same callsign system, same session rules — the core HawThorne experience
+- Every instruction the AI receives fits in a single brief paragraph
+- Clean, minimal configuration — no systems to learn, no grades to tune
+- Friendly to tight context windows without being designed around them
+
+Lowlight receives version-numbered updates alongside Prime.
 
 <div align="center">
 
@@ -228,10 +276,42 @@ Use Polyglot if:
 - You don't need to read every directive yourself
 
 Use Prime if:
-- You want stable, numbered releases
-- You want to read and modify entries directly
-- You're new to HawThorne
-- You want the simplest path to a working setup
+- You want maximum modularity — every lever, every system
+- You want to read, audit, and modify entries directly
+- You want variable outputs through deep customization (Report Card, REPs, Heckler Banks, etc.)
+
+Use Lowlight if:
+- You prefer minimal presets with low token counts
+- You want the core HawThorne idea without the full apparatus
+- You're new to HawThorne and want the simplest path to a working setup
+- Your model has a tight context window
+
+<div align="center">
+
+`⊱ ══════ {⟐ ✵ ⟐} ══════ ⊰`
+
+</div>
+
+---
+
+<div align="center">
+
+## ╔═══════════════════════════════════════════════════╗
+## ║ ❖ ── ⊹ THE OLD BOOTH ⊹ ── ❖ ║
+## ╚═══════════════════════════════════════════════════╝
+
+</div>
+
+> *꙳ Where it all started. The original HawThorne and V.1 — archived for posterity. ꙳*
+
+**The Old Booth** contains the legacy presets that preceded V.2. The original HawThorne prototype and V.1 are preserved here for anyone curious about where the system came from, but they are no longer maintained or updated.
+
+| File | What It Is |
+|:---|:---|
+| `🔮✧˖°. HawThorne .°˖✧🔮.json` | The original prototype — before versioning, before Divisions |
+| `🔮✧˖°. HawThorne V.1 .°˖✧🔮.json` | First numbered release — the foundation V.2 was built on |
+
+These presets are **archived**. They work, but they don't receive updates. If you're starting fresh, use Prime or Lowlight.
 
 <div align="center">
 
@@ -249,9 +329,9 @@ Use Prime if:
 
 </div>
 
-> *꙳ Both editions install identically. One JSON file. One import. ꙳*
+> *꙳ All editions install identically. One JSON file. One import. ꙳*
 
-1. Choose your edition folder (`HawThorne Prime/` or `HawThorne Polyglot/`)
+1. Choose your edition folder (`HawThorne Prime/`, `HawThorne Lowlight/`, or `HawThorne Polyglot/`)
 2. Copy the `.json` file
 3. **SillyTavern:** AI Response Formatting → Import Preset · **[RoleCall](https://rolecallstudios.com):** Preset Library → Import
 4. Enable the Directors you want on shift
@@ -276,9 +356,9 @@ For full documentation — Directors, systems, toggles, troubleshooting — see 
 
 <h3>⊹ ˚ . ⋆ ✧ ⋆ . ˚ ⊹</h3>
 
-<h4><i>One speaks English. The other speaks everything.</i></h4>
-<h4><i>The theory: different languages activate different parts of the model.</i></h4>
-<h4><i>The experiment: does that make the writing better?</i></h4>
+<h4><i>One is the full facility. One is the lights turned low.</i></h4>
+<h4><i>One speaks every language. One is where it all began.</i></h4>
+<h4><i>Same Directors. Same booth. Different protocols.</i></h4>
 
 <h3>⊹ ˚ . ⋆ ✧ ⋆ . ˚ ⊹</h3>
 
