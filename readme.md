@@ -55,7 +55,7 @@ The facility converts the AI generation pipeline into a **rotating-Director narr
 
 HawThorne does not sleep. It assigns. It evaluates. It rotates the floor. The Directors answer to it. You are reading its documentation because it decided you should.
 
-The simulation produces hundreds of thousands of instruction combinations, drawn from 367 prompt entries, 20 Directors, 19 prose Affinities, 46 quality standards, and 4 Chain of Thought architectures. No two turns receive the same instructions. The facility made sure of that.
+The simulation produces hundreds of thousands of instruction combinations, drawn from 412 prompt entries, 21 Directors, 20 prose Affinities, 46 quality standards, and 4 Chain of Thought architectures. No two turns receive the same instructions. The facility made sure of that.
 
 <div align="center">
 
@@ -85,6 +85,12 @@ The simulation produces hundreds of thousands of instruction combinations, drawn
 - ⛔ **Five genre-specific anti-patterns** with concrete examples
 - ⚖️ **Calibration pair** — one failure example (✗), one success example (✓)
 - 🚫 **Banned words** — genre cliches the Director refuses to produce
+- 🎙️ **Genre Voice** — prose mechanics: sentence rhythm, paragraph structure, dialogue ratio, pacing
+- 🎯 **Genre Anchor** — rotating media touchstone pool (randomized per turn)
+- 🚪 **Genre Opening** — first-sentence strategy specific to the genre
+- 🔍 **Genre REP** — genre-specific quality enforcement and failure modes
+- 📊 **Genre RC Dimensions** — 2 hyper-specific Report Card dimensions unique to the Director
+- ⚡ **Genre RC Priorities** — which universal dimensions matter most for this Director
 
 <div align="center">
 
@@ -96,7 +102,7 @@ The simulation produces hundreds of thousands of instruction combinations, drawn
 
 | | Callsign | Genre | Designation |
 |:---|:---|:---|:---|
-| 🌹 | GRAZE | Romance | Department of Aching Distance |
+| 💋 | HEARTTHROB | Romance | Department of Aching Distance |
 | 🩸 | LINGER | Horror | Laboratory of Crawling Dread |
 | 🎪 | MOTLEY | Comedy | Office of Structural Absurdity |
 | 💧 | SEDIMENT | Drama | Directorate of Excavated Truth |
@@ -116,6 +122,7 @@ The simulation produces hundreds of thousands of instruction combinations, drawn
 | ⚡ | MANTLE | Superhero | Bureau of Inherited Burden |
 | 🌑 | PITH | Dead Dove | Section: Exposed Nerve |
 | 🌊 | VENTURE | Adventure | Unmapped Territory Directorate |
+| 🫦 | SLICK | Smut | Division of Structural Intimacy |
 
 <div align="center">
 
@@ -123,7 +130,7 @@ The simulation produces hundreds of thousands of instruction combinations, drawn
 
 </div>
 
-Enable the Directors you want on shift. The facility's `{{roll}}` macro randomly assigns one per turn. Two Directors is enough to create rotation. Twenty is a full facility floor. A story is more than one thing. Enable as many as you want; the Directors handle the rest.
+Enable the Directors you want on shift. The facility's `{{roll}}` macro randomly assigns one per turn. Two Directors is enough to create rotation. Twenty-one is a full facility floor. A story is more than one thing. Enable as many as you want; the Directors handle the rest.
 
 They do *not* all fire at once.
 
@@ -181,13 +188,18 @@ The rotation is structural. Different Directors produce different prose because 
 | 💠 **Active Heart** | The Director's internal calibration phrase | `{{random}}` picks from 5-8 per Director, different creative anchor each turn |
 | 🔬 **Quality Spotlights** | Which writing standards get deep focus | Up to 3 randomly selected from your enabled QC pool. The rest still fire their one-line "Shiv" |
 | 🧠 **CoT Checks** | What the Director evaluates before writing | Fixed core checks + a randomized bonus pool that changes per turn |
-| 📢 **Heckle Notes** | Whether the previous Director leaves a demand | Random chance · 15 unique lines per Director (300 total in the roster) |
-| 🎯 **Scene Pulse** | Whether the story gets pushed forward | Die roll after a turn threshold, with cooldown |
+| 📢 **Heckle Notes** | Whether the previous Director leaves a demand | Random chance · 15 unique lines per Director (315 total in the roster) |
+| 🎯 **Random Events** | Whether the story gets pushed forward | Die roll after a turn threshold, with cooldown |
 | 🫧 **Subtexts** | Which hidden tension enters the scene | Per-entry fire dice with independent cooldowns and persistence timers |
 | 🌍 **World Pulse** | Which background event fires | Master die + reservoir sampling from enabled environmental events |
 | 🧪 **Experiments** | Which creative constraint activates | Master die + reservoir sampling from the enabled pool |
-| 📊 **Report Card** | Target letter grades per writing dimension | Random grades across 12 categories (if using Format A) |
+| 📊 **Report Card** | Target letter grades per writing dimension | Random grades across 16 universal categories + 2 genre-specific per Director (if using Format A) |
 | 🪞 **Lenses** | Which perceptual state the Director inherits | `{{roll}}` selects one from your enabled Lenses each turn |
+| 🎙️ **Genre Voice** | How the Director's prose mechanically feels | Sentence rhythm, paragraph structure, dialogue ratio — unique per Director |
+| 🎯 **Genre Anchor** | Which media touchstone the Director writes toward | `{{random}}` picks one from 3-5 per Director. Different reference each turn |
+| 🚪 **Genre Opening** | How the Director opens the response | First-sentence strategy specific to each Director's genre |
+| 🔍 **Genre CoT Checks** | What the Director self-evaluates for craft | `{{random}}` picks one from 5-6 genre-specific craft questions per Director |
+| 📊 **Genre RC Dims** | 2 hyper-specific writing dimensions per Director | Rolled alongside the 16 universal dimensions. Unique to the active Director |
 | 🐰 **Bunny Detectives** | Which domain enforcers are awake | Auto-detect BunnyMo pack flags. Active detectives inject jurisdiction checks |
 | 🔁 **REP phrasing** | How session rules are reinforced | `{{random}}` variants at each depth, same rule, different wording |
 
@@ -288,6 +300,7 @@ Pick one. STANDARD is the default. HOSTILE TAKEOVER produces the most interestin
 | 👥 THE AUDIENCE | Your input is audience reaction. The Director responds to it as feedback. |
 | 💀 INSURGENT | You are not supposed to be here. The Director handles the intrusion. |
 | 💼 CLIENT | You commissioned this work. The Director has professional standards regardless. |
+| 🫙 VESSEL | Full embodiment. You direct. The AI writes your character. |
 
 <div align="center">
 
@@ -314,12 +327,12 @@ FELLOW DIRECTOR is recommended. It gives your input weight without flattening th
 Two flavor systems. **Use one or the other, not both.**
 
 **Tones** are simple mood filters: *(PICK ONE)*
-> 🍵 COZY · ⛩️ ETHEREAL · 🌪️ CHAOS · 💎 OPULENT · 🤍 MINIMALIST · 💭 SURREAL · 🛠️ GRITTY · 🩶 MELANCHOLY · 🖤 DARK
+> 🍵 COZY · ⛩️ ETHEREAL · 🌪️ CHAOS · 💎 OPULENT · 🤍 MINIMALIST · 💭 SURREAL · 🛠️ GRITTY · 🩶 MELANCHOLY · 🖤 DARK · 🔥 HEATED
 
 **— OR —**
 
 **Lenses** are states of being that alter perception: *(ROTATING, CAN PICK MANY)*
-> 💍 NEWLYWED · 💔 GRIEVING · 😴 SLEEPLESS · 🏆 APEX · 🔥 BURNOUT · 🌧️ DISPLACED · 🎭 MASKING · 🌸 FIRST DAY · 🍷 HUNGOVER · 🌑 NUMB
+> 💍 NEWLYWED · 💔 GRIEVING · 😴 SLEEPLESS · 🏆 APEX · 🔥 BURNOUT · 🌧️ DISPLACED · 🎭 MASKING · 🌸 FIRST DAY · 🍷 HUNGOVER · 🌑 NUMB · ⏳ PENT-UP · 🧠 MINDBROKEN
 
 A Tone colors the prose. A Lens changes the mood of the Director. A SLEEPLESS Director hears sounds too sharply. A NUMB Director might end their turn abruptly, with little to say at all. The genre stays the same. The perception shifts.
 
@@ -339,7 +352,7 @@ A Tone colors the prose. A Lens changes the mood of the Director. A SLEEPLESS Di
 
 > *꙳ If Directors are who writes, and Lenses are what state they're in, Affinities are what tradition of writing shaped them. ꙳*
 
-**HawThorne Directive:** 19 prose style filters are available. Each contains anchor passages (short prose samples demonstrating the style) and CoT annotations explaining the underlying technique. The AI doesn't receive a label. It receives examples and learns the method. Each is based on a different primary author without ever directly naming them. The model infers. (Thank you Agent Junigiri. Your work with this foundation was invaluable.)
+**HawThorne Directive:** 20 prose style filters are available. Each contains anchor passages (short prose samples demonstrating the style) and CoT annotations explaining the underlying technique. The AI doesn't receive a label. It receives examples and learns the method. Each is based on a different primary author without ever directly naming them. The model infers. (Thank you Agent Junigiri. Your work with this foundation was invaluable.)
 
 <details>
 <summary>◈ ── ✧ Full Affinity Registry ✧ ── ◈</summary>
@@ -350,7 +363,7 @@ A Tone colors the prose. A Lens changes the mood of the Director. A SLEEPLESS Di
 
 </div>
 
-> ⚔️ BRUTAL GRANDEUR · ☕ MEDDLING DECENCY · 🏚️ DOMESTIC MALIGNANCY · 🎭 GALLOWS GRACE · 🫖 PARLOUR WARFARE · ⚖️ LUMINOUS EQUILIBRIUM · 🩸 GRIMDARK CYNICISM · 🎵 ARDENT CRAFT · 💣 BEAUTIFUL RUIN · 🏛️ DECOROUS VERTIGO · 📐 AXIOMATIC GRIEF · ⛰️ RIVERS AND LAKES · 🕯️ RITUAL SURRENDER · 🪵 QUIET TALLY · ⛪ SACRED TRANSGRESSION · 🎬 CELLULOID MIND · 📡 BROADCAST FREQUENCY · 🧊 COLD OPEN · 🎭 BARE STAGE
+> ⚔️ BRUTAL GRANDEUR · ☕ MEDDLING DECENCY · 🏚️ DOMESTIC MALIGNANCY · 🎭 GALLOWS GRACE · 🫖 PARLOUR WARFARE · ⚖️ LUMINOUS EQUILIBRIUM · 🩸 GRIMDARK CYNICISM · 🎵 ARDENT CRAFT · 💣 BEAUTIFUL RUIN · 🏛️ DECOROUS VERTIGO · 📐 AXIOMATIC GRIEF · ⛰️ RIVERS AND LAKES · 🕯️ RITUAL SURRENDER · 🪵 QUIET TALLY · ⛪ SACRED TRANSGRESSION · 🎬 CELLULOID MIND · 📡 BROADCAST FREQUENCY · 🧊 COLD OPEN · 🎭 BARE STAGE · 🛏️ MESSY SHEETS
 
 <div align="center">
 
@@ -380,7 +393,7 @@ A Tone colors the prose. A Lens changes the mood of the Director. A SLEEPLESS Di
 
 </div>
 
-Pick one Affinity. Pick one intensity. Or leave both off.
+Pick as many Affinities as you want. Pick one intensity. Or leave them all off.
 
 <div align="center">
 
@@ -529,10 +542,10 @@ The Shiv keeps the floor. The Spotlight rotation keeps the AI from going blind t
 </div>
 
 **🪓 Kill All Your Darlings** — Overwriting pathologies
-> ◇ Purple Prose · ◇ Adjective Chains · ◇ Adjective Ban · ◇ Metaphor Density · ◇ Metaphor Ban · ◇ Body Language Novels · ◇ Emotional Echo · ◇ Said Is Fine · ◇ Weighted Everything · ◇ Pathetic Fallacy · ◇ Sensory Carpet Bombing · ◇ Philosophical Tangents · ◇ Echo Reading · ◇ Mirror Descriptions
+> ◇ Purple Prose · ◇ Adjective Chains · ◇ Adjective Budget · ◇ Metaphor Density · ◇ Metaphor Budget · ◇ Body Language Novels · ◇ Emotional Echo · ◇ Said Is Fine · ◇ Weighted Everything · ◇ Pathetic Fallacy · ◇ Sensory Carpet Bombing · ◇ Philosophical Tangents · ◇ No Echo · ◇ Mirror Descriptions
 
 **🧸 Narrative Sycophancy** — The AI being too nice to you
-> ◇ No Narrative Sycophancy · ◇ No Mind Reading · ◇ No Frictionless Competence · ◇ No Emotional Convergence · ◇ No Reality Bending · ◇ No Auto-Win
+> ◇ No Narrative Sycophancy · ◇ No Coincidences · ◇ No Frictionless Competence · ◇ No Emotional Convergence · ◇ No Reality Bending · ◇ No Auto-Win
 
 **🏆 Artificial Perfection** — Characters being too good at everything
 > ◇ No Perfect Emotional Intelligence · ◇ No Perfect Timing · ◇ No Perfect Articulation · ◇ No Perfect Memory · ◇ No Perfect Recovery · ◇ No Perfect Morality · ◇ No Perfect Awareness · ◇ No Perfect Bodies
@@ -606,11 +619,11 @@ The AI is reminded who it is, what it's doing, and what standards it's accountab
 
 </div>
 
-**HawThorne Directive:** When a Director finishes their turn, there is a random chance they leave a note for their successor. 15 unique lines per Director. 300 total across the roster.
+**HawThorne Directive:** When a Director finishes their turn, there is a random chance they leave a note for their successor. 15 unique lines per Director. 315 total across the roster.
 
 These notes are in-character demands from the previous genre voice about what matters to them:
 
-> 🌹 GRAZE: *"If you resolve the slow burn I will kill you and then myself."*
+> 💋 HEARTTHROB: *"If you resolve the slow burn I will kill you and then myself."*
 > ⚡ FRACTURE: *"Broken stays broken. Touch the injuries. I'll check."*
 > ☕ PATINA: *"I'm sure you'll do great! Just. a good breakfast scene is really important to me. Like really important. No pressure :)"*
 > 🪨 FLINT: *"Too many words. Cut half."*
@@ -645,13 +658,13 @@ The incoming Director must acknowledge the note in their Chain of Thought and de
 
 <div align="center">
 
-### ◆ ── 🎯 Scene Pulse *(OPTIONAL)* ── ◆
+### ◆ ── 🎯 Random Events *(OPTIONAL)* ── ◆
 
 </div>
 
 > *꙳ The stage manager flicking the lights. Time to move. ꙳*
 
-**HawThorne Directive:** Scene Pulse is an invisible pacing monitor. The facility tracks the `turn` counter. Once turns cross a threshold, each turn rolls a die. On a hit, the Director gets a hard directive: push the story forward. Change location. Introduce a complication. Escalate what's simmering. After firing, the system enters a cooldown before it can fire again.
+**HawThorne Directive:** Random Events is an invisible pacing monitor. The facility tracks the `turn` counter. Once turns cross a threshold, each turn rolls a die. On a hit, the Director gets a hard directive: push the story forward. Change location. Introduce a complication. Escalate what's simmering. After firing, the system enters a cooldown before it can fire again.
 
 <div align="center">
 
@@ -671,9 +684,9 @@ The incoming Director must acknowledge the note in their Chain of Thought and de
 
 </div>
 
-**What "push the story forward" means:** The directive doesn't prescribe what happens. It tells the Director that the scene has been dwelling too long and needs momentum. The Director decides what that looks like for their genre. GRAZE might introduce a relationship complication. FRACTURE might break something. PATINA might have someone knock on the door.
+**What "push the story forward" means:** The directive doesn't prescribe what happens. It tells the Director that the scene has been dwelling too long and needs momentum. The Director decides what that looks like for their genre. HEARTTHROB might introduce a relationship complication. FRACTURE might break something. PATINA might have someone knock on the door.
 
-**Why this exists:** AI doesn't move scenes forward on its own. Without Scene Pulse, you'll get 40 turns in the same room with the same two characters having increasingly circular versions of the same conversation. Scene Pulse prevents that.
+**Why this exists:** AI doesn't move scenes forward on its own. Without Random Events, you'll get 40 turns in the same room with the same two characters having increasingly circular versions of the same conversation. Random Events prevents that.
 
 <div align="center">
 
@@ -819,27 +832,7 @@ Enable the ones you want in the pool. The facility fires them randomly and cools
 
 **HawThorne Directive:** Background environmental events that fire randomly to keep the setting alive. Not plot points. Texture. The small things that make a world feel inhabited instead of staged. A smell drifts in during dialogue. Rain starts while someone is mid-sentence.
 
-**How it works:** Each turn after turn 5, a master die rolls to decide if any pulse fires. If it hits, reservoir sampling selects one from all eligible entries. Each entry has its own cooldown (8-15 turns depending on category) so nothing repeats too quickly. Only one pulse fires per turn.
-
-**Pulse Frequency** controls how often the master die hits:
-
-<div align="center">
-
-`✧ ── ⋆ ── ˚ ── · ── ˚ ── ⋆ ── ✧`
-
-</div>
-
-| Frequency | Fire Rate | Feel |
-|:---|:---|:---|
-| 🟢 LOW | ~20% per turn | Gentle. The world whispers. |
-| 🟡 MEDIUM | ~33% per turn | Standard ambient texture. *(Default)* |
-| 🔴 HIGH | ~50% per turn | The world demands attention. |
-
-<div align="center">
-
-`✧ ── ⋆ ── ˚ ── · ── ˚ ── ⋆ ── ✧`
-
-</div>
+**How it works:** Each turn after turn 5, a master die rolls to decide if any pulse fires. If it hits, reservoir sampling selects one from all eligible entries. Each entry has its own cooldown (8-15 turns depending on category) so nothing repeats too quickly. Only one pulse fires per turn. Frequency is controlled by the Event Rate entries in the preset.
 
 <details>
 <summary>◈ ── 🌤️ Ambient — The environment shifts ── ◈</summary>
@@ -964,7 +957,7 @@ Enable the ones you want in the pool. The facility fires them randomly and cools
 | 🧪 **Unreliable Turn** | The narration this turn is lying or wrong about something. Creates dramatic irony. |
 | 🧪 **Montage** | Multiple short scenes in one turn. 3-5 snapshots showing time passing. |
 | 🧪 **Found Footage** | Told through documents, recordings, artifacts. Story reconstructed from evidence. |
-| 🧪 **Wrong Genre** | The Director writes in a genre opposite to their natural one. GRAZE writes action. FRACTURE writes romance. |
+| 🧪 **Wrong Genre** | The Director writes in a genre opposite to their natural one. HEARTTHROB writes action. FRACTURE writes romance. |
 
 <div align="center">
 
@@ -1070,7 +1063,7 @@ This is the single most important anti-repetition mechanism in the preset. Same 
 
 </div>
 
-**HawThorne Directive:** Each turn, the AI rolls random letter grades across 12 writing dimensions: Dialogue, Pacing, Emotional Depth, Sensory Detail, and so on.
+**HawThorne Directive:** Each turn, the AI rolls random letter grades across 16 universal writing dimensions — plus 2 genre-specific dimensions unique to the active Director.
 
 The twist: the Director must **plan to hit those specific targets.** A C in Emotional Depth isn't a failure. It means the Director deliberately writes a scene where emotion is surface-level, which might be exactly right for a character who's dissociating, or a scene that's all tension and no release.
 
@@ -1175,9 +1168,17 @@ Pick one format. Pick one depth. The system handles the rest.
 
 **Two versions available:**
 - **HawThorne** — Full preset. All systems disabled by default. You build your configuration from scratch.
-- **HawThorne LoadOut** — Pre-configured with reasonable defaults. Plug and play. Ready to chat immediately.
+- **HawThorne LoadOuts** — 6 pre-configured variants with curated toggle configurations for different vibes. Same preset, different starting defaults. Ready to chat immediately.
 
-**LoadOut ships with:** Romance/Drama/Mystery Directors, First Person Present Tense, Authored Narrator, Standard Prose, core QC standards (purple prose, adjective ban, metaphor ban, echo, echo reading, distinct voices), Report Card CoT, and adult content clearances enabled. Everything else available to toggle on.
+**LoadOuts available:**
+| LoadOut | Vibe |
+|:---|:---|
+| 🌐 **General** | 6 Directors, RC Standard, medium length, balanced |
+| 🌶️ **Smutty** | SLICK + HEARTTHROB + MOTLEY, EP Standard, all sexual content unlocked |
+| ⛩️ **Eastern** | KIRIN + Fantasy/Action/Drama/Romance/Adventure, RC Standard, literary prose |
+| 💀 **Dark & Gritty** | LINGER + PITH + SCORIA + TRIPWIRE + REQUIEM, EP Deep, heavy content |
+| 🧸 **Cozy & Wholesome** | PATINA + HEARTTHROB + MOTLEY + SEDIMENT, RC Light, Collaborative |
+| 🎥 **Epic & Cinematic** | FRACTURE + QUASAR + MERIDIAN + MANTLE + VENTURE, RC Standard, long prose |
 
 **Manual setup (HawThorne base):**
 1. Download the HawThorne JSON preset
@@ -1216,7 +1217,7 @@ Everything else is optional. Add systems as you learn what they do.
 | Length | 📏 Medium (3-5¶) |
 | Style | ✒️ Roleplay Prose |
 | CoT | 🧠📋 Eval Protocol · Standard |
-| Scene Pulse | 🟡 MEDIUM |
+| Random Events | 🟡 MEDIUM |
 | Everything else | Off |
 
 <div align="center">
@@ -1258,7 +1259,7 @@ Verify multiple Directors are enabled. Check Affinity intensity. At POSSESSION, 
 ### ▸ Director ignoring their genre
 Enable a CoT format. The Chain of Thought is where the Director processes their genre instincts. Without it, the genre is a label with no enforcement.
 
-### ▸ Scene Pulse fires too often / never
+### ▸ Random Events fires too often / never
 Switch intensity level. LOW barely fires. HIGH is aggressive. MEDIUM is the default.
 
 ### ▸ Heckle notes confusing the model
@@ -1316,7 +1317,7 @@ BunnyMo tags inject through the lorebook into HawThorne's `<session_content>` zo
 
 Most presets tell the AI to write well. More adjectives in the system prompt. Longer lists of rules. Increasingly desperate instructions to "be creative."
 
-HawThorne gives the AI a job instead. A title, a department, a predecessor to evaluate, standards to meet, anti-patterns to avoid, and a structured thought process to run before writing a single word. The AI isn't told to produce good fiction. It's told it's the third Director on shift today and the previous one left a mess and the Scene Pulse is about to fire and there's a sticky note on the monitor from GRAZE complaining about the slow burn.
+HawThorne gives the AI a job instead. A title, a department, a predecessor to evaluate, standards to meet, anti-patterns to avoid, and a structured thought process to run before writing a single word. The AI isn't told to produce good fiction. It's told it's the third Director on shift today and the previous one left a mess and a Random Event is about to fire and there's a sticky note on the monitor from HEARTTHROB complaining about the slow burn.
 
 The system is large because the problem is large. AI doesn't degrade from lack of instruction. It degrades from staleness. The facility solved that.
 
