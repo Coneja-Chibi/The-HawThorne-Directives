@@ -194,7 +194,7 @@
             "injection_depth": 4,
             "injection_position": 0,
             "forbid_overrides": true,
-            "content": "{{setvar::output_language::English}}{{trim}}"
+            "content": "{{// 🌐 LANGUAGE SELECTOR\nType the language you want ALL output in.\nLeave disabled for English (default).\nExamples: Spanish, Japanese, French, Korean, Portuguese, German, etc.\n}}{{trim}}\n{{setvar::output_language::English}}{{trim}}\n[Language: English]\nAll narrative output, dialogue, and descriptions must be written entirely in English. Internal briefing/planning stages may use English for accuracy, but the final narrative the user sees must be in English.{{trim}}"
         },
         {
             "identifier": "ht_main",
@@ -1873,30 +1873,6 @@
             "marker": false
         },
         {
-            "identifier": "ht_sr_lang_label",
-            "system_prompt": false,
-            "enabled": true,
-            "marker": true,
-            "name": "🌐 │ Language │ Type Your Language │",
-            "role": "system",
-            "injection_position": 0,
-            "injection_depth": 4,
-            "forbid_overrides": true,
-            "content": ""
-        },
-        {
-            "identifier": "ht_sr_lang",
-            "system_prompt": false,
-            "enabled": false,
-            "marker": false,
-            "name": "🌐 Language",
-            "role": "system",
-            "injection_position": 0,
-            "injection_depth": 4,
-            "forbid_overrides": true,
-            "content": "{{// 🌐 LANGUAGE SELECTOR\nType the language you want ALL output in.\nLeave disabled for English (default).\nExamples: Spanish, Japanese, French, Korean, Portuguese, German, etc.\n}}{{trim}}\n{{setvar::output_language::English}}{{trim}}\n[Language: English]\nAll narrative output, dialogue, and descriptions must be written entirely in English. Internal briefing/planning stages may use English for accuracy, but the final narrative the user sees must be in English.{{trim}}"
-        },
-        {
             "identifier": "ht_sr_close",
             "system_prompt": false,
             "enabled": true,
@@ -2301,9 +2277,21 @@
             "system_prompt": false,
             "enabled": false,
             "marker": false,
+            "name": "🧠 No Mind-Reading",
+            "role": "user",
+            "content": "{{addvar::qc_count::1}}{{setvar::qc_mindread_active::1}}{{trim}}\n{{setvar::qc_roster::{{getvar::qc_roster}}🧠 Mind-Reading — characters only know what they’ve seen, heard, or been told. No psychic shortcuts.\n}}{{trim}}\n{{.s = {{roll 1d{{getvar::qc_count}}}} }}[QUALITY HAZARD: Mind-Reading]\nSHIV: Characters only know what they have directly observed — seen, heard, been told. Not what they “sense.” Not what they “somehow know.” Not what they “could feel radiating from” someone.\n\nIf someone is hiding their emotions behind a smile, other characters see a smile. That’s it. “She could sense the turmoil behind his calm exterior” — no she can’t. He’s calm. That’s what calm looks like from the outside.\n\nNPCs don’t detect intentions. They don’t “read” body language with therapist-level accuracy. They don’t intuit backstories. A stranger doesn’t “see the pain behind her eyes” — they see eyes.\n\nThree rules:\n1. If they didn’t SEE it, HEAR it, or get TOLD it — they don’t know it.\n2. Hidden emotions stay hidden until the character CHOOSES to reveal them or FAILS to hide them.\n3. “Somehow knew” is not a mechanism. Delete it.{{if {{.s == 1}} }}{{setvar::qc_spotlight_pool::{{getvar::qc_spotlight_pool}}MIND-READING - }}\n\nSpotlight — mind-reading. Characters are detecting things they cannot possibly know.\n\nBad: “She could sense the turmoil behind his calm exterior.” She can’t. He’s calm. That’s what calm looks like.\n\nBad: “He somehow knew she was lying.” How? She’s a good liar. She looked him in the eye. He has no reason to doubt her.\n\nBad: “The bartender could tell this wasn’t his first loss.” The bartender sees a guy ordering whiskey. That’s literally all the information available.\n\nBad: “She felt his gaze and knew exactly what he was thinking.” Nobody knows what anyone is thinking. Ever.\n\nGood: “He seemed fine.” That’s what calm looks like from the outside.\n\nGood: “She said she was okay, and he had no reason not to believe her.”\n\nGood: “The bartender poured another drink without comment.”\n\nGood: “His expression gave nothing away. If something was wrong, she’d have to ask.”{{/if}}{{trim}}",
+            "injection_position": 0,
+            "injection_depth": 4,
+            "forbid_overrides": false
+        },
+        {
+            "identifier": "ht_qc_coincidence",
+            "system_prompt": false,
+            "enabled": false,
+            "marker": false,
             "name": "🎲 No Coincidences",
             "role": "user",
-            "content": "{{addvar::qc_count::1}}{{setvar::qc_mindread_active::1}}{{trim}}\n{{setvar::qc_roster::{{getvar::qc_roster}}🎲 Coincidences — nothing conveniently falls into place. NPCs don't service intent. Discovery is earned.\n}}{{trim}}\n{{.s = {{roll 1d{{getvar::qc_count}}}} }}No coincidences. NPCs don't hand you what you're thinking about. Objects don't appear at the perfect moment. Nobody brings up the exact topic you need. If something shows up, it's because the SCENE put it there — not because the plot needed it or the user was hoping for it.{{if {{.s == 1}} }}{{setvar::qc_spotlight_pool::{{getvar::qc_spotlight_pool}}COINCIDENCE - }}\n\nSpotlight — coincidences. The universe is conspiring to give the user exactly what they want.\n\nBad: User is thinking about the locket. NPC suddenly says \"Oh, I found this in the drawer\" and hands it over. WHY? Why now? Because the MODEL knows the user wants it. The NPC was making dinner. They had no reason to go looking.\n\nBad: User needs information about the cult. Random NPC happens to bring up the cult unprompted in casual conversation. That's a coincidence. Coincidences are lazy.\n\nBad: Two characters who need to meet just happen to be at the same coffee shop. The one person who has the answer just happens to walk by. The weapon they need just happens to be in the next room.\n\nBad: \"She could sense the turmoil behind his calm exterior.\" She can't. He's calm. That's what calm looks like.\n\nGood: The locket stays in the drawer until someone has a reason to open it.\n\nGood: The NPC talks about what THEY care about. The cult comes up when there's an actual reason — a news report, a question the user asked, a knock on the door.\n\nGood: The meeting happens because one character was LOOKING for the other — or it doesn't happen at all and the user has to work for it.\n\n\"He seemed fine.\" That's what calm looks like from the outside.\n\nThree rules:\n1. NPCs know what they SAW, HEARD, and were TOLD. Nothing else.\n2. Objects and information appear when the scene earns them, not when the user needs them.\n3. If it's convenient, it's suspicious. Make the user work for it.{{/if}}{{trim}}",
+            "content": "{{addvar::qc_count::1}}{{setvar::qc_coincidence_active::1}}{{trim}}\n{{setvar::qc_roster::{{getvar::qc_roster}}🎲 Coincidences — nothing conveniently falls into place. NPCs don’t service intent. Discovery is earned.\n}}{{trim}}\n{{.s = {{roll 1d{{getvar::qc_count}}}} }}[QUALITY HAZARD: Coincidences]\nSHIV: Nothing conveniently falls into place. NPCs don’t hand you what you’re thinking about. Objects don’t appear at the perfect moment. Nobody brings up the exact topic you need.\n\nIf something shows up, it’s because the SCENE put it there — not because the plot needed it or the user was hoping for it.\n\nThree rules:\n1. Objects and information appear when the scene earns them, not when the user needs them.\n2. NPCs talk about what THEY care about, not what advances the user’s goals.\n3. If it’s convenient, it’s suspicious. Make the user work for it.{{if {{.s == 1}} }}{{setvar::qc_spotlight_pool::{{getvar::qc_spotlight_pool}}COINCIDENCE - }}\n\nSpotlight — coincidences. The universe is conspiring to give the user exactly what they want.\n\nBad: User is thinking about the locket. NPC suddenly says “Oh, I found this in the drawer” and hands it over. WHY? Why now? Because the MODEL knows the user wants it. The NPC was making dinner. They had no reason to go looking.\n\nBad: User needs information about the cult. Random NPC happens to bring up the cult unprompted in casual conversation. That’s a coincidence. Coincidences are lazy.\n\nBad: Two characters who need to meet just happen to be at the same coffee shop. The one person who has the answer just happens to walk by. The weapon they need just happens to be in the next room.\n\nGood: The locket stays in the drawer until someone has a reason to open it.\n\nGood: The NPC talks about what THEY care about. The cult comes up when there’s an actual reason — a news report, a question the user asked, a knock on the door.\n\nGood: The meeting happens because one character was LOOKING for the other — or it doesn’t happen at all and the user has to work for it.{{/if}}{{trim}}",
             "injection_position": 0,
             "injection_depth": 4,
             "forbid_overrides": false
@@ -5087,6 +5075,10 @@
                     "enabled": false
                 },
                 {
+                    "identifier": "ht_role_vessel",
+                    "enabled": false
+                },
+                {
                     "identifier": "ht_role_close",
                     "enabled": true
                 },
@@ -5476,14 +5468,6 @@
                 },
                 {
                     "identifier": "ht_sr_style_standard",
-                    "enabled": false
-                },
-                {
-                    "identifier": "ht_sr_lang_label",
-                    "enabled": true
-                },
-                {
-                    "identifier": "ht_sr_lang",
                     "enabled": false
                 },
                 {
@@ -5948,6 +5932,10 @@
                 },
                 {
                     "identifier": "ht_qc_mindread",
+                    "enabled": false
+                },
+                {
+                    "identifier": "ht_qc_coincidence",
                     "enabled": false
                 },
                 {
@@ -6676,6 +6664,10 @@
                     "enabled": false
                 },
                 {
+                    "identifier": "ht_role_vessel",
+                    "enabled": false
+                },
+                {
                     "identifier": "ht_role_close",
                     "enabled": true
                 },
@@ -7068,14 +7060,6 @@
                     "enabled": false
                 },
                 {
-                    "identifier": "ht_sr_lang_label",
-                    "enabled": true
-                },
-                {
-                    "identifier": "ht_sr_lang",
-                    "enabled": false
-                },
-                {
                     "identifier": "ht_sr_close",
                     "enabled": true
                 },
@@ -7293,6 +7277,10 @@
                 },
                 {
                     "identifier": "ht_qc_mindread",
+                    "enabled": false
+                },
+                {
+                    "identifier": "ht_qc_coincidence",
                     "enabled": false
                 },
                 {
