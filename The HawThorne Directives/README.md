@@ -49,7 +49,7 @@
 | 📁 **Folder** | `HawThorne Prime/` | `HawThorne Lowlight/` | `HawThorne Polyglot/` | `The Old Booth/` |
 | 🏷️ **File** | `🔮✧˖°. HawThorne V.2 .°˖✧🔮.json` | `🌙✧˖°. HawThorne Lowlight .°˖✧🌙.json` | `🔮✧˖°. HawThorne Experimental .°˖✧🔮.json` | `🔮✧˖°. HawThorne .°˖✧🔮.json` / `V.1` |
 | 📊 **Entries** | 412 | 145 | 412 | Legacy |
-| 🎯 **Token Footprint** | ~52K typical | ~640 typical | ~52K typical | Varies |
+| 🎯 **Token Footprint** | ~10K typical | ~640 typical | ~10K typical | Varies |
 | 🌐 **Directive Language** | English | English | 12+ languages (one per Director) | English |
 | 🔄 **Release Track** | Numbered stable releases | Numbered stable releases | Experimental | Archived |
 | 🧠 **Philosophy** | Maximum modularity — every tool, every lever | The core idea, minimal tokens — one sentence per toggle | Force model diversity through linguistic variety | The original prototype |
@@ -61,7 +61,7 @@
 
 </div>
 
-**Want full control?** Use **Prime** — every lever, every system, maximum modularity. **Want it clean and simple?** Use **Lowlight** — same Directors, same philosophy, 98% fewer tokens. Both are stable releases with numbered updates.
+**Want full control?** Use **Prime** — every lever, every system, maximum modularity. **Want it clean and simple?** Use **Lowlight** — same Directors, same philosophy, ~94% fewer tokens. Both are stable releases with numbered updates.
 
 <div align="center">
 
@@ -127,7 +127,7 @@ Prime receives version-numbered updates. Each release is tested and stable.
 
 </div>
 
-> *꙳ Same Directors. Same philosophy. One sentence per toggle. ~640 tokens instead of ~52,000. ꙳*
+> *꙳ Same Directors. Same philosophy. One sentence per toggle. ~640 tokens instead of ~10,000. ꙳*
 
 **HawThorne Lowlight** is the lightweight edition — for users who prefer minimal presets and low token counts without sacrificing the core idea of HawThorne. Every toggle adds one sentence to the prompt. The collection of enabled sentences forms the AI's creative brief.
 
@@ -147,7 +147,7 @@ Lowlight includes:
 | Heckler Banks | 40K chars | Removed |
 | CoT Formats | 4 options (8 depth levels) | 1 ultra-light checklist |
 | Random Events / World Pulse | 40+ entries | Removed |
-| **Typical token footprint** | **~52,000** | **~640** |
+| **Typical token footprint** | **~10,000** | **~640** |
 
 What this means:
 - Same Director rotation, same callsign system, same session rules — the core HawThorne experience
