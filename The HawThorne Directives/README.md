@@ -49,10 +49,10 @@
 | 📁 **Folder** | `HawThorne Prime/` | `HawThorne Lowlight/` | `HawThorne Polyglot/` | `The Old Booth/` |
 | 🏷️ **File** | `🔮✧˖°. HawThorne V.2 .°˖✧🔮.json` | `🌙✧˖°. HawThorne Lowlight .°˖✧🌙.json` | `🔮✧˖°. HawThorne Experimental .°˖✧🔮.json` | `🔮✧˖°. HawThorne .°˖✧🔮.json` / `V.1` |
 | 📊 **Entries** | 412 | 145 | 412 | Legacy |
-| 🎯 **Token Footprint** | ~10K typical | ~640 typical | ~10K typical | Varies |
-| 🌐 **Directive Language** | English | English | 12+ languages (one per Director) | English |
+| 🎯 **Token Footprint** | ~10K-15k typical | ~2-3k typical | ~10K typical | Varies |
+| 🌐 **Directive Language** | English | English | 12+ languages (one per Director) | Varies |
 | 🔄 **Release Track** | Numbered stable releases | Numbered stable releases | Experimental | Archived |
-| 🧠 **Philosophy** | Maximum modularity — every tool, every lever | The core idea, minimal tokens — one sentence per toggle | Force model diversity through linguistic variety | The original prototype |
+| 🧠 **Philosophy** | Maximum modularity — every tool, every lever | The core idea, minimal tokens — one sentence per toggle | Force model diversity through linguistic variety | The Oldguard |
 | 👤 **Recommended For** | Users who want control, variable outputs, deep customization | Users who prefer minimal presets, low token counts, clean configs | Advanced users, people chasing output variety | Historians, nostalgia |
 
 <div align="center">
@@ -372,3 +372,4 @@ For full documentation — Directors, systems, toggles, troubleshooting — see 
 ---
 
 *Built with 🔮 by the same ~~trenchcoat full of bunnies~~ completely normal human developer behind [BunnyMo](https://github.com/Coneja-Chibi/BunnyMo), [CarrotKernel](https://github.com/Coneja-Chibi/CarrotKernel), [VectHare](https://github.com/Coneja-Chibi/VectHare), and the [Rabbit Response Team](https://github.com/Coneja-Chibi/Rabbit-Response-Team).*
+
