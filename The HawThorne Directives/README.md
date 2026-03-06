@@ -47,12 +47,12 @@
 | | HawThorne Prime *(recommended)* | HawThorne Lowlight | HawThorne Polyglot | The Old Booth *(legacy)* |
 |:---|:---|:---|:---|:---|
 | 📁 **Folder** | `HawThorne Prime/` | `HawThorne Lowlight/` | `HawThorne Polyglot/` | `The Old Booth/` |
-| 🏷️ **File** | `🔮✧˖°. HawThorne V.2 .°˖✧🔮.json` | `🌙✧˖°. HawThorne Lowlight .°˖✧🌙.json` | `🔮✧˖°. HawThorne Experimental .°˖✧🔮.json` | `🔮✧˖°. HawThorne .°˖✧🔮.json` / `V.1` |
-| 📊 **Entries** | 412 | 145 | 412 | Legacy |
+| 🏷️ **File** | `🔮✧˖°. HawThorne V.3 .°˖✧🔮.json` | `🌙✧˖°. HawThorne Lowlight V.3 .°˖✧🌙.json` | `🔮✧˖°. HawThorne Experimental .°˖✧🔮.json` | `🔮✧˖°. HawThorne .°˖✧🔮.json` / `V.1` |
+| 📊 **Entries** | 408 | 176 | 346 | Legacy |
 | 🎯 **Token Footprint** | ~10K-15k typical | ~2-3k typical | ~10K typical | Varies |
 | 🌐 **Directive Language** | English | English | 12+ languages (one per Director) | Varies |
 | 🔄 **Release Track** | Numbered stable releases | Numbered stable releases | Experimental | Archived |
-| 🧠 **Philosophy** | Maximum modularity — every tool, every lever | The core idea, minimal tokens — one sentence per toggle | Force model diversity through linguistic variety | The Oldguard |
+| 🧠 **Philosophy** | Maximum modularity — every tool, every lever | Full Director roster, one sentence per toggle, optional QC shivs | Force model diversity through linguistic variety | The Oldguard |
 | 👤 **Recommended For** | Users who want control, variable outputs, deep customization | Users who prefer minimal presets, low token counts, clean configs | Advanced users, people chasing output variety | Historians, nostalgia |
 
 <div align="center">
@@ -81,18 +81,18 @@
 
 > *꙳ The standard release. Every instruction is in English. Every entry is readable. ꙳*
 
-**HawThorne Prime** is the numbered release track (currently on **V.2**). All prompt entries — Director packages, QC standards, Heckle Banks, Random Events triggers, Subtexts, Experiments, CoT architectures, Report Card — are written entirely in English.
+**HawThorne Prime** is the numbered release track (currently on **V.3**). All prompt entries — Director packages, QC standards, Heckle Banks, Random Events triggers, Subtexts, Experiments, CoT architectures, Report Card — are written entirely in English.
 
 Prime includes:
 
 | File | What It Is |
 |:---|:---|
-| `🔮✧˖°. HawThorne V.2 .°˖✧🔮.json` | The full preset with all toggles at factory defaults (412 entries) |
-| `🔮✧˖°. HawThorne V.2 LoadOut - *.json` | **6 pre-configured LoadOuts** — same preset with different toggle configurations for different vibes |
+| `🔮✧˖°. HawThorne V.3 .°˖✧🔮.json` | The full preset with all toggles at factory defaults (408 entries) |
+| `🔮✧˖°. HawThorne V.3 LoadOut - *.json` | **6 pre-configured LoadOuts** — same preset with different toggle configurations for different vibes |
 
 > **LoadOuts are not different versions.** They're the exact same preset with curated starting toggle configurations — which Directors are on shift, which systems are enabled, which content clearances are set. Think of them as "recommended defaults" so you don't have to configure everything from scratch. You can always change any toggle after importing.
 
-**V.2 LoadOuts:**
+**V.3 LoadOuts:**
 
 | LoadOut | Vibe |
 |:---|:---|
@@ -133,9 +133,10 @@ Prime receives version-numbered updates. Each release is tested and stable.
 
 Lowlight includes:
 
-| Feature | Prime (V.2) | Lowlight |
+| Feature | Prime (V.3) | Lowlight (V.3) |
 |:---|:---|:---|
-| Directors | 21 (full packages) | 10 (one-sentence rules) |
+| Directors | 21 (full packages) | 21 (one-sentence rules) |
+| QC System | 49 entries (toggleable) | 16 entries (one-sentence shivs) |
 | Framings | 7 (full CoT + pressure) | 7 (one sentence each) |
 | User Roles | 6 (full treatment protocols) | 6 (one sentence each) |
 | Tones | 10 (full sensory filters) | 10 (one sentence each) |

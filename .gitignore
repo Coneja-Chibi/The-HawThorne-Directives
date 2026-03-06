@@ -1,0 +1,25 @@
+# Build/transform scripts
+*.py
+
+# Working/intermediate files
+*Fixed*.json
+
+# Changelogs (local only)
+*CHANGELOG*
+
+# Claude Code
+.claude/
+
+# OMC
+.omc/
+
+# OS
+Thumbs.db
+.DS_Store
+
+# Editors
+*.swp
+*.swo
+*~
+.vscode/
+.idea/
