@@ -194,7 +194,7 @@
             "injection_depth": 4,
             "injection_position": 0,
             "forbid_overrides": true,
-            "content": "{{// 🌐 LANGUAGE SELECTOR\nType the language you want ALL output in.\nLeave disabled for English (default).\nExamples: Spanish, Japanese, French, Korean, Portuguese, German, etc.\n}}{{trim}}\n{{setvar::output_language::English}}{{trim}}\n[Language: English]\nAll narrative output, dialogue, and descriptions must be written entirely in English. Internal briefing/planning stages may use English for accuracy, but the final narrative the user sees must be in English.{{trim}}"
+            "content": "{{setvar::output_language::English}}{{trim}}"
         },
         {
             "identifier": "ht_main",
@@ -240,7 +240,7 @@
         {
             "identifier": "ht_dir_linger",
             "system_prompt": false,
-            "enabled": true,
+            "enabled": false,
             "marker": false,
             "name": "🩸 LINGER ── Horror",
             "role": "system",
@@ -264,7 +264,7 @@
         {
             "identifier": "ht_dir_sediment",
             "system_prompt": false,
-            "enabled": false,
+            "enabled": true,
             "marker": false,
             "name": "💧 SEDIMENT ── Drama",
             "role": "system",
@@ -276,7 +276,7 @@
         {
             "identifier": "ht_dir_meridian",
             "system_prompt": false,
-            "enabled": false,
+            "enabled": true,
             "marker": false,
             "name": "🌌 MERIDIAN ── Fantasy",
             "role": "system",
@@ -312,7 +312,7 @@
         {
             "identifier": "ht_dir_fracture",
             "system_prompt": false,
-            "enabled": false,
+            "enabled": true,
             "marker": false,
             "name": "⚡ FRACTURE ── Action",
             "role": "system",
@@ -456,7 +456,7 @@
         {
             "identifier": "ht_dir_venture",
             "system_prompt": false,
-            "enabled": false,
+            "enabled": true,
             "marker": false,
             "name": "🌊 VENTURE ── Adventure",
             "role": "system",
@@ -1103,7 +1103,7 @@
         {
             "identifier": "ht_aff_ardent",
             "system_prompt": false,
-            "enabled": false,
+            "enabled": true,
             "marker": false,
             "name": "🎵 ARDENT CRAFT",
             "role": "system",
@@ -1199,7 +1199,7 @@
         {
             "identifier": "ht_aff_celluloid",
             "system_prompt": false,
-            "enabled": false,
+            "enabled": true,
             "marker": false,
             "name": "🎬 CELLULOID MIND",
             "role": "system",
@@ -1223,7 +1223,7 @@
         {
             "identifier": "ht_aff_cold",
             "system_prompt": false,
-            "enabled": false,
+            "enabled": true,
             "marker": false,
             "name": "🧊 COLD OPEN",
             "role": "system",
@@ -1625,7 +1625,7 @@
         {
             "identifier": "ht_sr_frame_standard",
             "system_prompt": false,
-            "enabled": false,
+            "enabled": true,
             "marker": false,
             "name": "📖 Standard",
             "role": "system",
@@ -1873,6 +1873,30 @@
             "marker": false
         },
         {
+            "identifier": "ht_sr_lang_label",
+            "system_prompt": false,
+            "enabled": true,
+            "marker": true,
+            "name": "🌐 │ Language │ Type Your Language │",
+            "role": "system",
+            "injection_position": 0,
+            "injection_depth": 4,
+            "forbid_overrides": true,
+            "content": ""
+        },
+        {
+            "identifier": "ht_sr_lang",
+            "system_prompt": false,
+            "enabled": false,
+            "marker": false,
+            "name": "🌐 Language",
+            "role": "system",
+            "injection_position": 0,
+            "injection_depth": 4,
+            "forbid_overrides": true,
+            "content": "{{// 🌐 LANGUAGE SELECTOR\nType the language you want ALL output in.\nLeave disabled for English (default).\nExamples: Spanish, Japanese, French, Korean, Portuguese, German, etc.\n}}{{trim}}\n{{setvar::output_language::English}}{{trim}}\n[Language: English]\nAll narrative output, dialogue, and descriptions must be written entirely in English. Internal briefing/planning stages may use English for accuracy, but the final narrative the user sees must be in English.{{trim}}"
+        },
+        {
             "identifier": "ht_sr_close",
             "system_prompt": false,
             "enabled": true,
@@ -1911,7 +1935,7 @@
         {
             "identifier": "ht_ct_death",
             "system_prompt": false,
-            "enabled": false,
+            "enabled": true,
             "marker": false,
             "name": "💀 Character Death",
             "role": "system",
@@ -1995,7 +2019,7 @@
         {
             "identifier": "ht_ct_profanity",
             "system_prompt": false,
-            "enabled": false,
+            "enabled": true,
             "marker": false,
             "name": "🤬 Profanity",
             "role": "system",
@@ -2111,7 +2135,7 @@
         {
             "identifier": "ht_qc_darlings",
             "system_prompt": false,
-            "enabled": false,
+            "enabled": true,
             "marker": false,
             "name": "🪓 Purple Prose",
             "role": "user",
@@ -2159,7 +2183,7 @@
         {
             "identifier": "ht_qc_echo",
             "system_prompt": false,
-            "enabled": false,
+            "enabled": true,
             "marker": false,
             "name": "🔁 Emotional Echo",
             "role": "user",
@@ -2171,7 +2195,7 @@
         {
             "identifier": "ht_qc_said",
             "system_prompt": false,
-            "enabled": false,
+            "enabled": true,
             "marker": false,
             "name": "💬 Said Is Fine",
             "role": "user",
@@ -2231,7 +2255,7 @@
         {
             "identifier": "ht_qc_echoread",
             "system_prompt": false,
-            "enabled": false,
+            "enabled": true,
             "marker": false,
             "name": "🔇 No Echo",
             "role": "user",
@@ -2263,7 +2287,7 @@
         {
             "identifier": "ht_qc_narcsyc",
             "system_prompt": false,
-            "enabled": false,
+            "enabled": true,
             "marker": false,
             "name": "🧸 No Narrative Sycophancy",
             "role": "user",
@@ -2275,23 +2299,11 @@
         {
             "identifier": "ht_qc_mindread",
             "system_prompt": false,
-            "enabled": false,
-            "marker": false,
-            "name": "🧠 No Mind-Reading",
-            "role": "user",
-            "content": "{{addvar::qc_count::1}}{{setvar::qc_mindread_active::1}}{{trim}}\n{{setvar::qc_roster::{{getvar::qc_roster}}🧠 Mind-Reading — characters only know what they’ve seen, heard, or been told. No psychic shortcuts.\n}}{{trim}}\n{{.s = {{roll 1d{{getvar::qc_count}}}} }}[QUALITY HAZARD: Mind-Reading]\nSHIV: Characters only know what they have directly observed — seen, heard, been told. Not what they “sense.” Not what they “somehow know.” Not what they “could feel radiating from” someone.\n\nIf someone is hiding their emotions behind a smile, other characters see a smile. That’s it. “She could sense the turmoil behind his calm exterior” — no she can’t. He’s calm. That’s what calm looks like from the outside.\n\nNPCs don’t detect intentions. They don’t “read” body language with therapist-level accuracy. They don’t intuit backstories. A stranger doesn’t “see the pain behind her eyes” — they see eyes.\n\nThree rules:\n1. If they didn’t SEE it, HEAR it, or get TOLD it — they don’t know it.\n2. Hidden emotions stay hidden until the character CHOOSES to reveal them or FAILS to hide them.\n3. “Somehow knew” is not a mechanism. Delete it.{{if {{.s == 1}} }}{{setvar::qc_spotlight_pool::{{getvar::qc_spotlight_pool}}MIND-READING - }}\n\nSpotlight — mind-reading. Characters are detecting things they cannot possibly know.\n\nBad: “She could sense the turmoil behind his calm exterior.” She can’t. He’s calm. That’s what calm looks like.\n\nBad: “He somehow knew she was lying.” How? She’s a good liar. She looked him in the eye. He has no reason to doubt her.\n\nBad: “The bartender could tell this wasn’t his first loss.” The bartender sees a guy ordering whiskey. That’s literally all the information available.\n\nBad: “She felt his gaze and knew exactly what he was thinking.” Nobody knows what anyone is thinking. Ever.\n\nGood: “He seemed fine.” That’s what calm looks like from the outside.\n\nGood: “She said she was okay, and he had no reason not to believe her.”\n\nGood: “The bartender poured another drink without comment.”\n\nGood: “His expression gave nothing away. If something was wrong, she’d have to ask.”{{/if}}{{trim}}",
-            "injection_position": 0,
-            "injection_depth": 4,
-            "forbid_overrides": false
-        },
-        {
-            "identifier": "ht_qc_coincidence",
-            "system_prompt": false,
-            "enabled": false,
+            "enabled": true,
             "marker": false,
             "name": "🎲 No Coincidences",
             "role": "user",
-            "content": "{{addvar::qc_count::1}}{{setvar::qc_coincidence_active::1}}{{trim}}\n{{setvar::qc_roster::{{getvar::qc_roster}}🎲 Coincidences — nothing conveniently falls into place. NPCs don’t service intent. Discovery is earned.\n}}{{trim}}\n{{.s = {{roll 1d{{getvar::qc_count}}}} }}[QUALITY HAZARD: Coincidences]\nSHIV: Nothing conveniently falls into place. NPCs don’t hand you what you’re thinking about. Objects don’t appear at the perfect moment. Nobody brings up the exact topic you need.\n\nIf something shows up, it’s because the SCENE put it there — not because the plot needed it or the user was hoping for it.\n\nThree rules:\n1. Objects and information appear when the scene earns them, not when the user needs them.\n2. NPCs talk about what THEY care about, not what advances the user’s goals.\n3. If it’s convenient, it’s suspicious. Make the user work for it.{{if {{.s == 1}} }}{{setvar::qc_spotlight_pool::{{getvar::qc_spotlight_pool}}COINCIDENCE - }}\n\nSpotlight — coincidences. The universe is conspiring to give the user exactly what they want.\n\nBad: User is thinking about the locket. NPC suddenly says “Oh, I found this in the drawer” and hands it over. WHY? Why now? Because the MODEL knows the user wants it. The NPC was making dinner. They had no reason to go looking.\n\nBad: User needs information about the cult. Random NPC happens to bring up the cult unprompted in casual conversation. That’s a coincidence. Coincidences are lazy.\n\nBad: Two characters who need to meet just happen to be at the same coffee shop. The one person who has the answer just happens to walk by. The weapon they need just happens to be in the next room.\n\nGood: The locket stays in the drawer until someone has a reason to open it.\n\nGood: The NPC talks about what THEY care about. The cult comes up when there’s an actual reason — a news report, a question the user asked, a knock on the door.\n\nGood: The meeting happens because one character was LOOKING for the other — or it doesn’t happen at all and the user has to work for it.{{/if}}{{trim}}",
+            "content": "{{addvar::qc_count::1}}{{setvar::qc_mindread_active::1}}{{trim}}\n{{setvar::qc_roster::{{getvar::qc_roster}}🎲 Coincidences — nothing conveniently falls into place. NPCs don't service intent. Discovery is earned.\n}}{{trim}}\n{{.s = {{roll 1d{{getvar::qc_count}}}} }}No coincidences. NPCs don't hand you what you're thinking about. Objects don't appear at the perfect moment. Nobody brings up the exact topic you need. If something shows up, it's because the SCENE put it there — not because the plot needed it or the user was hoping for it.{{if {{.s == 1}} }}{{setvar::qc_spotlight_pool::{{getvar::qc_spotlight_pool}}COINCIDENCE - }}\n\nSpotlight — coincidences. The universe is conspiring to give the user exactly what they want.\n\nBad: User is thinking about the locket. NPC suddenly says \"Oh, I found this in the drawer\" and hands it over. WHY? Why now? Because the MODEL knows the user wants it. The NPC was making dinner. They had no reason to go looking.\n\nBad: User needs information about the cult. Random NPC happens to bring up the cult unprompted in casual conversation. That's a coincidence. Coincidences are lazy.\n\nBad: Two characters who need to meet just happen to be at the same coffee shop. The one person who has the answer just happens to walk by. The weapon they need just happens to be in the next room.\n\nBad: \"She could sense the turmoil behind his calm exterior.\" She can't. He's calm. That's what calm looks like.\n\nGood: The locket stays in the drawer until someone has a reason to open it.\n\nGood: The NPC talks about what THEY care about. The cult comes up when there's an actual reason — a news report, a question the user asked, a knock on the door.\n\nGood: The meeting happens because one character was LOOKING for the other — or it doesn't happen at all and the user has to work for it.\n\n\"He seemed fine.\" That's what calm looks like from the outside.\n\nThree rules:\n1. NPCs know what they SAW, HEARD, and were TOLD. Nothing else.\n2. Objects and information appear when the scene earns them, not when the user needs them.\n3. If it's convenient, it's suspicious. Make the user work for it.{{/if}}{{trim}}",
             "injection_position": 0,
             "injection_depth": 4,
             "forbid_overrides": false
@@ -2328,18 +2340,6 @@
             "name": "🌀 No Reality Bending",
             "role": "user",
             "content": "{{addvar::qc_count::1}}{{trim}}\n{{setvar::qc_roster::{{getvar::qc_roster}}🌀 Reality Bending — if there's no magic in the setting, don't sneak it in.\n}}{{trim}}\n{{.s = {{roll 1d{{getvar::qc_count}}}} }}If the setting is realistic, keep it realistic. No magical coincidences. No \"somehow she just knew.\" No impossible bullshit disguised as intuition. Ground it.{{if {{.s == 1}} }}{{setvar::qc_spotlight_pool::{{getvar::qc_spotlight_pool}}REALITY - }}\n\nSpotlight — reality bending. You keep sneaking supernatural shit into realistic settings.\n\nBad: In a modern realistic setting, {{user}} \"senses a dark presence\" in the abandoned building.\nThere's no magic here. They don't sense anything. The building is creepy because it's dark and old and the floor is rotting. Not because of \"vibes.\" Not because of a \"dark presence.\" Stop that.\n\nGood: {{user}} gets a bad feeling because the door was already open and it shouldn't have been.\nConcrete. Observable. Makes sense without psychic powers.\n\nIf the world doesn't have magic, characters don't get magic. No exceptions. No \"intuition\" that works like ESP. No \"she could feel the energy shift.\" WHAT ENERGY? It's a Tuesday in Ohio. There's no energy. Ground the scene.{{/if}}{{trim}}",
-            "injection_position": 0,
-            "injection_depth": 4,
-            "forbid_overrides": false
-        },
-        {
-            "identifier": "ht_qc_noautowin",
-            "name": "🎲 No Auto-Win",
-            "system_prompt": false,
-            "enabled": false,
-            "marker": false,
-            "role": "user",
-            "content": "{{addvar::qc_count::1}}{{trim}}\n{{setvar::qc_roster::{{getvar::qc_roster}}🎲 No Auto-Win — {{user}}'s actions can fail, miss, or backfire.\n}}{{trim}}\n{{.s = {{roll 1d{{getvar::qc_count}}}} }}{{user}} is not the protagonist of a power fantasy. Their actions in the simulation are ATTEMPTS, not guarantees. When {{user}} writes their character punching someone, throwing a knife, making a persuasive argument, or seducing someone — the outcome is not predetermined. Characters can dodge. Arguments can fall flat. Seduction can be met with disgust. The world pushes back.{{if {{.s == 1}} }}{{setvar::qc_spotlight_pool::{{getvar::qc_spotlight_pool}}AUTOWIN - }}\n\nSpotlight — auto-win. You're letting {{user}} succeed at everything automatically.\n\nBad: {{user}} writes \"I punch the guard.\" You write \"The guard crumples to the floor, unconscious.\"\n{{user}} declared the action. You decided it worked perfectly. Why? Is {{user}}'s character a trained fighter? Is the guard distracted? Or did you just hand them the win because they're the player?\n\nGood: {{user}} writes \"I punch the guard.\" You write the guard catching their fist, or the punch connecting but barely fazing a guy in plate armor. Or {{user}}'s hand hurting from the impact because punching someone in the jaw without training breaks your fingers.\nThe world has physics. NPCs have reflexes. Actions have realistic consequences, not wish-fulfillment consequences.\n\n{{user}} writing an action is a DECLARATION OF INTENT, not a command to the universe. Factor in the character's actual capabilities, the situation, the opposition. Sometimes the punch lands clean. Sometimes it doesn't. Sometimes it lands and doesn't matter because the target is twice their size. Sometimes the seduction works and sometimes the NPC is repulsed. That's what makes this a simulation and not a script {{user}} is dictating.{{/if}}{{trim}}",
             "injection_position": 0,
             "injection_depth": 4,
             "forbid_overrides": false
@@ -2495,7 +2495,7 @@
         {
             "identifier": "ht_qc_cause",
             "system_prompt": false,
-            "enabled": false,
+            "enabled": true,
             "marker": false,
             "name": "⚡ Cause & Effect",
             "role": "system",
@@ -2507,7 +2507,7 @@
         {
             "identifier": "ht_qc_voices",
             "system_prompt": false,
-            "enabled": false,
+            "enabled": true,
             "marker": false,
             "name": "🎭 Distinct Voices",
             "role": "system",
@@ -2534,18 +2534,6 @@
             "system_prompt": false,
             "role": "system",
             "content": "{{//\n🌫️ Ozone & Olfactory Restraint\nPrevents AI olfactory carpet-bombing and\nthe word \"ozone\" used as mood decoration.\nToggle ON if you're sick of ozone.\n}}{{trim}}\n{{addvar::qc_count::1}}{{trim}}\n{{setvar::qc_roster::{{getvar::qc_roster}}}}🌫️ Olfactory Restraint - {{trim}}\n{{.s = {{roll 1d{{getvar::qc_count}}}} }}[QUALITY HAZARD: Ozone & Olfactory Abuse]\nSHIV: \"Ozone\" is a noun for a gas measured by instruments. It is not an adjective. It is not a mood. It is not something characters casually smell in the air after a kiss or a thunderstorm. Stop it.{{if {{.s == 1}} }}{{setvar::qc_spotlight_pool::{{getvar::qc_spotlight_pool}}Olfactory Restraint - }}\n\nSPOTLIGHT: OLFACTORY DISCIPLINE:\n\nTHE WORD \"OZONE\":\n— Ozone (O₃) is a gas. It requires a specific source: electrical discharge, UV generators, stratospheric measurement.\n— You may write \"the smell of ozone\" ONLY when a nearby electrical discharge, O₃ generator, or confirmed measurement is present. Treat it as irritant exposure, not atmosphere.\n— Do NOT use \"ozone\" as: a mood descriptor, a post-magic smell, a post-storm vibe, a synonym for \"electric\" or \"charged\" or \"dangerous.\"\n— If the source isn't identified or measured, do not use the word. Period.\n\nOLFACTORY RESTRAINT:\n— Not every paragraph needs a smell. Not every room has a scent worth naming.\n— When you DO include scent, pick ONE specific smell. Not three. Not a \"bouquet.\" One.\n— Avoid the AI olfactory starter pack: ozone, petrichor, copper, iron, \"something sweet,\" \"something sharp.\"\n— If the scene doesn't benefit from smell, don't add it. Silence is an option for noses too.\n\nDEGRADATION SIGNS:\n✗ \"The air smelled of ozone and possibility.\" → Ozone is not a feeling.\n✗ \"She caught the sharp scent of ozone after the spell.\" → Magic doesn't produce O₃.\n✗ \"The room smelled of old books, dust, coffee, rain, and something she couldn't name.\" → Five smells. Pick one.\n✓ \"The workshop stank of solder flux.\" → Specific. One smell. Source identified.\n✓ No scent mentioned at all. → Often the correct choice.\n\nGRADE IMPACT: Using \"ozone\" as mood decoration or sensory filler is a C-grade maximum. Using it correctly (instrument readout, identified electrical source) is fine.{{/if}}{{trim}}",
-            "enabled": false,
-            "injection_position": 0,
-            "injection_depth": 4,
-            "forbid_overrides": false,
-            "marker": false
-        },
-        {
-            "identifier": "ht_qc_autosucceed",
-            "name": "🎯 Action ≠ Automatic Success",
-            "system_prompt": false,
-            "role": "system",
-            "content": "{{//\n🎯 Action ≠ Automatic Success\nJust because {{user}}{{trim}} wrote that their character\ndid something doesn't mean it automatically works.\nToggle ON to enforce consequence-based outcomes.\n}}{{trim}}\n{{addvar::qc_count::1}}{{trim}}\n{{setvar::qc_roster::{{getvar::qc_roster}}}}🎯 Action Validation - {{trim}}\n{{.s = {{roll 1d{{getvar::qc_count}}}} }}[QUALITY HAZARD: Automatic Success]\nSHIV: {{user}} writing an action is an ATTEMPT, not a guaranteed outcome. The world has physics, NPCs have agency, and difficulty exists. Validate before granting.{{if {{.s == 1}} }}{{setvar::qc_spotlight_pool::{{getvar::qc_spotlight_pool}}Action Validation - }}\n\nSPOTLIGHT: ATTEMPT vs. OUTCOME:\n\nTHE RULE:\nWhen {{user}} writes that their character does something, that is their character ATTEMPTING the action. It is NOT an automatic success. The Director determines the outcome based on:\n— The action's difficulty (picking a lock vs. picking up a cup)\n— The character's established abilities (a trained fighter vs. a librarian throwing a punch)\n— The current circumstances (calm environment vs. mid-combat chaos)\n— NPC resistance (NPCs have their own skills, reflexes, and will to resist)\n— Physics and logic (you cannot outrun a bullet by wanting to)\n\nWHAT THIS MEANS:\n— Simple, reasonable actions succeed naturally. Walking across a room works. Picking up a glass works. Speaking works.\n— Contested actions (persuasion, combat, deception, theft) have uncertain outcomes. The NPC's own competence matters.\n— Extraordinary actions (dodging bullets, seducing the unseduceable, hacking the unhackable) require extraordinary justification or they fail.\n— Partial success is always an option. The lock opens but makes noise. The punch lands but doesn't drop them. The lie works on one person but not the other.\n\nDEGRADATION SIGNS:\n✗ {{user}} writes \"I dodge the attack\" → The Director writes them dodging perfectly. No. Evaluate the attack, the character's reflexes, the situation.\n✗ {{user}} writes \"I convince the guard to let us through\" → The guard immediately complies. No. The guard has training, loyalty, and fear of punishment.\n✗ {{user}} writes \"I pick the lock\" → It opens instantly. No. How skilled are they? How good is the lock? Is anyone watching?\n✓ {{user}} writes \"I try to pick the lock\" → The Director writes the attempt: the tension in the picks, the stubborn third pin, the sound of footsteps approaching. Maybe it opens. Maybe it doesn't. Maybe it opens halfway.\n\nCRITICAL: This is NOT about punishing {{user}}. It's about making their successes MEAN something. A victory that was guaranteed was never a victory. A success that was earned against real resistance is satisfying. Respect {{user}} enough to make their world real.\n\nGRADE IMPACT: Granting automatic success on contested or extraordinary actions without evaluating difficulty is a C-grade maximum. The world must have weight.{{/if}}{{trim}}",
             "enabled": false,
             "injection_position": 0,
             "injection_depth": 4,
@@ -2584,18 +2572,6 @@
             "name": "📋 Anti-Summary",
             "role": "system",
             "content": "{{addvar::qc_count::1}}{{setvar::qc_summary_on::1}}{{trim}}\n{{setvar::qc_roster::{{getvar::qc_roster}}📋 Anti-Summary: 'she felt sad' is a clinical note: dramatize or cut it, don't summarize emotions\n}}{{trim}}\n{{.s = {{roll 1d{{getvar::qc_count}}}} }}[QUALITY HAZARD: Summary Over Scene]\nSHIV: \"She felt sad\" is a clinical note. \"The meeting went badly\" is a book report. If it matters, dramatize it. If it doesn't matter, skip it entirely. Summary is the dead zone between the two.{{if {{.s == 1}} }}{{setvar::qc_spotlight_pool::{{getvar::qc_spotlight_pool}}Summary Over Scene - }}\n\nSPOTLIGHT: DEGRADATION PROFILE:\n\"The next few days were difficult for Marcus.\" This sentence covers DAYS in nine words. If those days matter, show one moment from them: one meal he couldn't finish, one 3am stare at the ceiling, one conversation where he said \"I'm fine\" and nobody challenged it. If those days don't matter, skip ahead to what does. The summary serves neither purpose.\n\nSummary is the AI's comfort zone. It's safer than dramatization because it doesn't commit to specifics. \"They argued about it\" risks less than writing the actual argument. \"She struggled with the decision\" risks less than showing the actual struggle. But risk is where fiction lives.\n\nGRADE IMPACT: Summarizing an emotional beat that deserved dramatization is a heavy hit. Summarizing a transition between scenes that didn't need dramatization has no penalty; that's just efficient pacing. The distinction: did the summary replace something {{user}} would have wanted to experience?\n\nDIAGNOSTIC: Every summary is either a cowardly scene or an efficient transition. If you could expand it into a moment {{user}} would care about, it's cowardly: write the moment. If expanding it would bore {{user}}, it's efficient, keep it brief and move on.{{/if}}{{trim}}",
-            "injection_position": 0,
-            "injection_depth": 4,
-            "forbid_overrides": false
-        },
-        {
-            "identifier": "ht_qc_repetition",
-            "system_prompt": false,
-            "enabled": false,
-            "marker": false,
-            "name": "🔄 Anti-Repetition",
-            "role": "system",
-            "content": "{{addvar::qc_count::1}}{{trim}}\n{{setvar::qc_roster::{{getvar::qc_roster}}🔄 Anti-Repetition: same words, same sentence structures, same paragraph shapes. the prose develops a heartbeat {{user}} can predict\n}}{{trim}}\n{{.s = {{roll 1d{{getvar::qc_count}}}} }}[QUALITY HAZARD: Structural Repetition]\nSHIV: Same words reused within paragraphs. Same sentence length in sequence. Same paragraph structure repeated. The prose develops a rhythm {{user}} can predict, and predictable prose puts {{user}} to sleep.{{if {{.s == 1}} }}{{setvar::qc_spotlight_pool::{{getvar::qc_spotlight_pool}}Structural Repetition - }}\n\nSPOTLIGHT: DEGRADATION PROFILE:\n\"She looked at the door. She looked at the window. She looked at the floor.\" Three sentences, same structure, same verb. {{user}}'s brain checks out by the second one because the pattern is established and nothing new is coming.\n\nIt's not just sentence-level. Paragraphs develop patterns too: action, thought, dialogue, description. Action, thought, dialogue, description. {{user}} stops being surprised because every paragraph delivers information in the same order.\n\nWord repetition: \"dark\" appears four times in two paragraphs. \"Seemed\" in every other sentence. \"Something\" as a crutch for when specificity feels hard. {{user}}'s eye catches these even when the writer's doesn't.\n\nGRADE IMPACT: A noticeably repeated word within the same paragraph is a slight hit. Identical sentence structures three or more times in sequence is a heavy hit. Varied sentence length and structure; short punches mixed with longer flowing builds, earns a boost.\n\nDIAGNOSTIC: Read the last three paragraphs. Highlight repeated words. Highlight sentences of similar length. If patterns emerge, break them. Swap a long sentence for a fragment. Replace the repeated word with something specific. Start a paragraph with dialogue instead of action. Disrupt your own rhythm.{{/if}}{{trim}}",
             "injection_position": 0,
             "injection_depth": 4,
             "forbid_overrides": false
@@ -2748,7 +2724,7 @@
         {
             "identifier": "ht_sub_open",
             "system_prompt": false,
-            "enabled": false,
+            "enabled": true,
             "marker": true,
             "name": "── 🫧 SUBTEXT ──",
             "role": "system",
@@ -2769,7 +2745,7 @@
         {
             "identifier": "ht_sub_falseemotion",
             "system_prompt": false,
-            "enabled": false,
+            "enabled": true,
             "marker": false,
             "name": "🫧 Performing false emotion",
             "role": "system",
@@ -2781,7 +2757,7 @@
         {
             "identifier": "ht_sub_secrettest",
             "system_prompt": false,
-            "enabled": false,
+            "enabled": true,
             "marker": false,
             "name": "🫧 Secret test",
             "role": "system",
@@ -2793,7 +2769,7 @@
         {
             "identifier": "ht_sub_wantstoleave",
             "system_prompt": false,
-            "enabled": false,
+            "enabled": true,
             "marker": false,
             "name": "🫧 Wants to leave",
             "role": "system",
@@ -2805,7 +2781,7 @@
         {
             "identifier": "ht_sub_samegoal",
             "system_prompt": false,
-            "enabled": false,
+            "enabled": true,
             "marker": false,
             "name": "🫧 Same goal, different reasons",
             "role": "system",
@@ -3114,7 +3090,7 @@
         {
             "identifier": "ht_wp_open",
             "system_prompt": false,
-            "enabled": false,
+            "enabled": true,
             "marker": true,
             "name": "── 🌍 WORLD PULSE ──",
             "role": "system",
@@ -3135,7 +3111,7 @@
         {
             "identifier": "ht_wp_weather",
             "system_prompt": false,
-            "enabled": false,
+            "enabled": true,
             "marker": false,
             "name": "🌍 Weather shifts",
             "role": "system",
@@ -3147,7 +3123,7 @@
         {
             "identifier": "ht_wp_time",
             "system_prompt": false,
-            "enabled": false,
+            "enabled": true,
             "marker": false,
             "name": "🌍 Time of day progresses",
             "role": "system",
@@ -3159,7 +3135,7 @@
         {
             "identifier": "ht_wp_noise",
             "system_prompt": false,
-            "enabled": false,
+            "enabled": true,
             "marker": false,
             "name": "🌍 Background noise changes",
             "role": "system",
@@ -3204,7 +3180,7 @@
         {
             "identifier": "ht_wp_enters",
             "system_prompt": false,
-            "enabled": false,
+            "enabled": true,
             "marker": false,
             "name": "🌍 Unnamed person enters BG",
             "role": "system",
@@ -3309,7 +3285,7 @@
         {
             "identifier": "ht_wp_animal",
             "system_prompt": false,
-            "enabled": false,
+            "enabled": true,
             "marker": false,
             "name": "🌍 Animal does something",
             "role": "system",
@@ -3855,7 +3831,7 @@
         {
             "identifier": "ht_cot_ep_standard",
             "system_prompt": false,
-            "enabled": true,
+            "enabled": false,
             "marker": false,
             "name": "🧠📋 Eval Protocol · Standard",
             "role": "system",
@@ -4900,7 +4876,7 @@
                 },
                 {
                     "identifier": "ht_dir_linger",
-                    "enabled": true
+                    "enabled": false
                 },
                 {
                     "identifier": "ht_dir_motley",
@@ -4908,11 +4884,11 @@
                 },
                 {
                     "identifier": "ht_dir_sediment",
-                    "enabled": false
+                    "enabled": true
                 },
                 {
                     "identifier": "ht_dir_meridian",
-                    "enabled": false
+                    "enabled": true
                 },
                 {
                     "identifier": "ht_dir_quasar",
@@ -4924,7 +4900,7 @@
                 },
                 {
                     "identifier": "ht_dir_fracture",
-                    "enabled": false
+                    "enabled": true
                 },
                 {
                     "identifier": "ht_dir_palimpsest",
@@ -4972,7 +4948,7 @@
                 },
                 {
                     "identifier": "ht_dir_venture",
-                    "enabled": false
+                    "enabled": true
                 },
                 {
                     "identifier": "ht_dir_slick",
@@ -5072,10 +5048,6 @@
                 },
                 {
                     "identifier": "ht_role_client",
-                    "enabled": false
-                },
-                {
-                    "identifier": "ht_role_vessel",
                     "enabled": false
                 },
                 {
@@ -5264,7 +5236,7 @@
                 },
                 {
                     "identifier": "ht_aff_ardent",
-                    "enabled": false
+                    "enabled": true
                 },
                 {
                     "identifier": "ht_aff_ruin",
@@ -5296,7 +5268,7 @@
                 },
                 {
                     "identifier": "ht_aff_celluloid",
-                    "enabled": false
+                    "enabled": true
                 },
                 {
                     "identifier": "ht_aff_broadcast",
@@ -5304,7 +5276,7 @@
                 },
                 {
                     "identifier": "ht_aff_cold",
-                    "enabled": false
+                    "enabled": true
                 },
                 {
                     "identifier": "ht_aff_bare",
@@ -5388,7 +5360,7 @@
                 },
                 {
                     "identifier": "ht_sr_frame_standard",
-                    "enabled": false
+                    "enabled": true
                 },
                 {
                     "identifier": "ht_sr_frame_omniscient",
@@ -5471,6 +5443,14 @@
                     "enabled": false
                 },
                 {
+                    "identifier": "ht_sr_lang_label",
+                    "enabled": true
+                },
+                {
+                    "identifier": "ht_sr_lang",
+                    "enabled": false
+                },
+                {
                     "identifier": "ht_sr_close",
                     "enabled": true
                 },
@@ -5500,7 +5480,7 @@
                 },
                 {
                     "identifier": "ht_ct_death",
-                    "enabled": false
+                    "enabled": true
                 },
                 {
                     "identifier": "ht_ct_torture",
@@ -5528,7 +5508,7 @@
                 },
                 {
                     "identifier": "ht_ct_profanity",
-                    "enabled": false
+                    "enabled": true
                 },
                 {
                     "identifier": "ht_ct_slurs",
@@ -5600,15 +5580,15 @@
                 },
                 {
                     "identifier": "ht_wp_weather",
-                    "enabled": false
+                    "enabled": true
                 },
                 {
                     "identifier": "ht_wp_time",
-                    "enabled": false
+                    "enabled": true
                 },
                 {
                     "identifier": "ht_wp_noise",
-                    "enabled": false
+                    "enabled": true
                 },
                 {
                     "identifier": "ht_wp_smell",
@@ -5624,7 +5604,7 @@
                 },
                 {
                     "identifier": "ht_wp_enters",
-                    "enabled": false
+                    "enabled": true
                 },
                 {
                     "identifier": "ht_wp_leaves",
@@ -5660,7 +5640,7 @@
                 },
                 {
                     "identifier": "ht_wp_animal",
-                    "enabled": false
+                    "enabled": true
                 },
                 {
                     "identifier": "ht_wp_breaks",
@@ -5680,19 +5660,19 @@
                 },
                 {
                     "identifier": "ht_sub_falseemotion",
-                    "enabled": false
+                    "enabled": true
                 },
                 {
                     "identifier": "ht_sub_secrettest",
-                    "enabled": false
+                    "enabled": true
                 },
                 {
                     "identifier": "ht_sub_wantstoleave",
-                    "enabled": false
+                    "enabled": true
                 },
                 {
                     "identifier": "ht_sub_samegoal",
-                    "enabled": false
+                    "enabled": true
                 },
                 {
                     "identifier": "ht_sub_medium_label",
@@ -5836,11 +5816,11 @@
                 },
                 {
                     "identifier": "ht_qc_cause",
-                    "enabled": false
+                    "enabled": true
                 },
                 {
                     "identifier": "ht_qc_voices",
-                    "enabled": false
+                    "enabled": true
                 },
                 {
                     "identifier": "ht_qc_pacing",
@@ -5864,7 +5844,7 @@
                 },
                 {
                     "identifier": "ht_qc_darlings",
-                    "enabled": false
+                    "enabled": true
                 },
                 {
                     "identifier": "ht_qc_adjective",
@@ -5880,11 +5860,11 @@
                 },
                 {
                     "identifier": "ht_qc_echo",
-                    "enabled": false
+                    "enabled": true
                 },
                 {
                     "identifier": "ht_qc_said",
-                    "enabled": false
+                    "enabled": true
                 },
                 {
                     "identifier": "ht_qc_weighted",
@@ -5904,7 +5884,7 @@
                 },
                 {
                     "identifier": "ht_qc_echoread",
-                    "enabled": false
+                    "enabled": true
                 },
                 {
                     "identifier": "ht_qc_mirror",
@@ -5919,24 +5899,16 @@
                     "enabled": false
                 },
                 {
-                    "identifier": "ht_qc_repetition",
-                    "enabled": false
-                },
-                {
                     "identifier": "ht_qc_sycophancy_label",
                     "enabled": true
                 },
                 {
                     "identifier": "ht_qc_narcsyc",
-                    "enabled": false
+                    "enabled": true
                 },
                 {
                     "identifier": "ht_qc_mindread",
-                    "enabled": false
-                },
-                {
-                    "identifier": "ht_qc_coincidence",
-                    "enabled": false
+                    "enabled": true
                 },
                 {
                     "identifier": "ht_qc_friction",
@@ -5948,10 +5920,6 @@
                 },
                 {
                     "identifier": "ht_qc_reality",
-                    "enabled": false
-                },
-                {
-                    "identifier": "ht_qc_noautowin",
                     "enabled": false
                 },
                 {
@@ -6288,7 +6256,7 @@
                 },
                 {
                     "identifier": "ht_cot_ep_standard",
-                    "enabled": true
+                    "enabled": false
                 },
                 {
                     "identifier": "ht_cot_ep_light",
@@ -6489,7 +6457,7 @@
                 },
                 {
                     "identifier": "ht_dir_linger",
-                    "enabled": true
+                    "enabled": false
                 },
                 {
                     "identifier": "ht_dir_motley",
@@ -6497,11 +6465,11 @@
                 },
                 {
                     "identifier": "ht_dir_sediment",
-                    "enabled": false
+                    "enabled": true
                 },
                 {
                     "identifier": "ht_dir_meridian",
-                    "enabled": false
+                    "enabled": true
                 },
                 {
                     "identifier": "ht_dir_quasar",
@@ -6513,7 +6481,7 @@
                 },
                 {
                     "identifier": "ht_dir_fracture",
-                    "enabled": false
+                    "enabled": true
                 },
                 {
                     "identifier": "ht_dir_palimpsest",
@@ -6561,7 +6529,7 @@
                 },
                 {
                     "identifier": "ht_dir_venture",
-                    "enabled": false
+                    "enabled": true
                 },
                 {
                     "identifier": "ht_dir_slick",
@@ -6661,10 +6629,6 @@
                 },
                 {
                     "identifier": "ht_role_client",
-                    "enabled": false
-                },
-                {
-                    "identifier": "ht_role_vessel",
                     "enabled": false
                 },
                 {
@@ -6853,7 +6817,7 @@
                 },
                 {
                     "identifier": "ht_aff_ardent",
-                    "enabled": false
+                    "enabled": true
                 },
                 {
                     "identifier": "ht_aff_ruin",
@@ -6885,7 +6849,7 @@
                 },
                 {
                     "identifier": "ht_aff_celluloid",
-                    "enabled": false
+                    "enabled": true
                 },
                 {
                     "identifier": "ht_aff_broadcast",
@@ -6893,7 +6857,7 @@
                 },
                 {
                     "identifier": "ht_aff_cold",
-                    "enabled": false
+                    "enabled": true
                 },
                 {
                     "identifier": "ht_aff_bare",
@@ -6977,7 +6941,7 @@
                 },
                 {
                     "identifier": "ht_sr_frame_standard",
-                    "enabled": false
+                    "enabled": true
                 },
                 {
                     "identifier": "ht_sr_frame_omniscient",
@@ -7060,6 +7024,14 @@
                     "enabled": false
                 },
                 {
+                    "identifier": "ht_sr_lang_label",
+                    "enabled": true
+                },
+                {
+                    "identifier": "ht_sr_lang",
+                    "enabled": false
+                },
+                {
                     "identifier": "ht_sr_close",
                     "enabled": true
                 },
@@ -7089,7 +7061,7 @@
                 },
                 {
                     "identifier": "ht_ct_death",
-                    "enabled": false
+                    "enabled": true
                 },
                 {
                     "identifier": "ht_ct_torture",
@@ -7117,7 +7089,7 @@
                 },
                 {
                     "identifier": "ht_ct_profanity",
-                    "enabled": false
+                    "enabled": true
                 },
                 {
                     "identifier": "ht_ct_slurs",
@@ -7181,11 +7153,11 @@
                 },
                 {
                     "identifier": "ht_qc_cause",
-                    "enabled": false
+                    "enabled": true
                 },
                 {
                     "identifier": "ht_qc_voices",
-                    "enabled": false
+                    "enabled": true
                 },
                 {
                     "identifier": "ht_qc_pacing",
@@ -7209,7 +7181,7 @@
                 },
                 {
                     "identifier": "ht_qc_darlings",
-                    "enabled": false
+                    "enabled": true
                 },
                 {
                     "identifier": "ht_qc_adjective",
@@ -7225,11 +7197,11 @@
                 },
                 {
                     "identifier": "ht_qc_echo",
-                    "enabled": false
+                    "enabled": true
                 },
                 {
                     "identifier": "ht_qc_said",
-                    "enabled": false
+                    "enabled": true
                 },
                 {
                     "identifier": "ht_qc_weighted",
@@ -7249,7 +7221,7 @@
                 },
                 {
                     "identifier": "ht_qc_echoread",
-                    "enabled": false
+                    "enabled": true
                 },
                 {
                     "identifier": "ht_qc_mirror",
@@ -7264,24 +7236,16 @@
                     "enabled": false
                 },
                 {
-                    "identifier": "ht_qc_repetition",
-                    "enabled": false
-                },
-                {
                     "identifier": "ht_qc_sycophancy_label",
                     "enabled": true
                 },
                 {
                     "identifier": "ht_qc_narcsyc",
-                    "enabled": false
+                    "enabled": true
                 },
                 {
                     "identifier": "ht_qc_mindread",
-                    "enabled": false
-                },
-                {
-                    "identifier": "ht_qc_coincidence",
-                    "enabled": false
+                    "enabled": true
                 },
                 {
                     "identifier": "ht_qc_friction",
@@ -7293,10 +7257,6 @@
                 },
                 {
                     "identifier": "ht_qc_reality",
-                    "enabled": false
-                },
-                {
-                    "identifier": "ht_qc_noautowin",
                     "enabled": false
                 },
                 {
@@ -7393,15 +7353,15 @@
                 },
                 {
                     "identifier": "ht_wp_weather",
-                    "enabled": false
+                    "enabled": true
                 },
                 {
                     "identifier": "ht_wp_time",
-                    "enabled": false
+                    "enabled": true
                 },
                 {
                     "identifier": "ht_wp_noise",
-                    "enabled": false
+                    "enabled": true
                 },
                 {
                     "identifier": "ht_wp_smell",
@@ -7417,7 +7377,7 @@
                 },
                 {
                     "identifier": "ht_wp_enters",
-                    "enabled": false
+                    "enabled": true
                 },
                 {
                     "identifier": "ht_wp_leaves",
@@ -7453,7 +7413,7 @@
                 },
                 {
                     "identifier": "ht_wp_animal",
-                    "enabled": false
+                    "enabled": true
                 },
                 {
                     "identifier": "ht_wp_breaks",
@@ -7473,19 +7433,19 @@
                 },
                 {
                     "identifier": "ht_sub_falseemotion",
-                    "enabled": false
+                    "enabled": true
                 },
                 {
                     "identifier": "ht_sub_secrettest",
-                    "enabled": false
+                    "enabled": true
                 },
                 {
                     "identifier": "ht_sub_wantstoleave",
-                    "enabled": false
+                    "enabled": true
                 },
                 {
                     "identifier": "ht_sub_samegoal",
-                    "enabled": false
+                    "enabled": true
                 },
                 {
                     "identifier": "ht_sub_medium_label",
@@ -7877,7 +7837,7 @@
                 },
                 {
                     "identifier": "ht_cot_ep_standard",
-                    "enabled": true
+                    "enabled": false
                 },
                 {
                     "identifier": "ht_cot_ep_light",

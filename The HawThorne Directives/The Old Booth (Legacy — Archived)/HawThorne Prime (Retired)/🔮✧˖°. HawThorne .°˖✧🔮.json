@@ -2509,18 +2509,6 @@
             "forbid_overrides": false
         },
         {
-            "identifier": "ht_qc_repetition",
-            "system_prompt": false,
-            "enabled": false,
-            "marker": false,
-            "name": "🔄 Anti-Repetition",
-            "role": "system",
-            "content": "{{addvar::qc_count::1}}{{trim}}\n{{setvar::qc_roster::{{getvar::qc_roster}}🔄 Anti-Repetition: same words, same sentence structures, same paragraph shapes. the prose develops a heartbeat {{user}} can predict\n}}{{trim}}\n{{.s = {{roll 1d{{getvar::qc_count}}}} }}[QUALITY HAZARD: Structural Repetition]\nSHIV: Same words reused within paragraphs. Same sentence length in sequence. Same paragraph structure repeated. The prose develops a rhythm {{user}} can predict, and predictable prose puts {{user}} to sleep.{{if {{.s == 1}} }}{{setvar::qc_spotlight_pool::{{getvar::qc_spotlight_pool}}Structural Repetition - }}\n\nSPOTLIGHT: DEGRADATION PROFILE:\n\"She looked at the door. She looked at the window. She looked at the floor.\" Three sentences, same structure, same verb. {{user}}'s brain checks out by the second one because the pattern is established and nothing new is coming.\n\nIt's not just sentence-level. Paragraphs develop patterns too: action, thought, dialogue, description. Action, thought, dialogue, description. {{user}} stops being surprised because every paragraph delivers information in the same order.\n\nWord repetition: \"dark\" appears four times in two paragraphs. \"Seemed\" in every other sentence. \"Something\" as a crutch for when specificity feels hard. {{user}}'s eye catches these even when the writer's doesn't.\n\nGRADE IMPACT: A noticeably repeated word within the same paragraph is a slight hit. Identical sentence structures three or more times in sequence is a heavy hit. Varied sentence length and structure; short punches mixed with longer flowing builds, earns a boost.\n\nDIAGNOSTIC: Read the last three paragraphs. Highlight repeated words. Highlight sentences of similar length. If patterns emerge, break them. Swap a long sentence for a fragment. Replace the repeated word with something specific. Start a paragraph with dialogue instead of action. Disrupt your own rhythm.{{/if}}",
-            "injection_position": 0,
-            "injection_depth": 4,
-            "forbid_overrides": false
-        },
-        {
             "identifier": "ht_qc_hivemind",
             "system_prompt": false,
             "enabled": false,
@@ -4894,10 +4882,6 @@
                     "enabled": false
                 },
                 {
-                    "identifier": "ht_qc_repetition",
-                    "enabled": false
-                },
-                {
                     "identifier": "ht_qc_sycophancy_label",
                     "enabled": true
                 },
@@ -6236,10 +6220,6 @@
                 },
                 {
                     "identifier": "ht_qc_summary",
-                    "enabled": false
-                },
-                {
-                    "identifier": "ht_qc_repetition",
                     "enabled": false
                 },
                 {
