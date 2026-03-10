@@ -12,7 +12,7 @@
 <h2>◈ Edition Selection Guide ◈</h2>
 
 <h3>⊹ ˚ . ⋆ ✧ ⋆ . ˚ ⊹</h3>
-<h4><i>꙳ Four editions. Same Directors. Different weights. ꙳</i></h4>
+<h4><i>꙳ Five editions. Same Directors. Different weights. ꙳</i></h4>
 <h3>⊹ ˚ . ⋆ ✧ ⋆ . ˚ ⊹</h3>
 
 <br>
@@ -36,7 +36,7 @@
 
 </div>
 
-> *꙳ Prime is the full system. Lowlight is the lightweight edition. Polyglot is the multilingual experiment. The Old Booth is where it all started. ꙳*
+> *꙳ Paramnesia is the next generation. Prime is the original full system. Lowlight is the lightweight edition. Polyglot is the multilingual experiment. The Old Booth is where it all started. ꙳*
 
 <div align="center">
 
@@ -44,16 +44,18 @@
 
 </div>
 
-| | HawThorne Prime *(recommended)* | HawThorne Lowlight | HawThorne Polyglot | The Old Booth *(legacy)* |
-|:---|:---|:---|:---|:---|
-| 📁 **Folder** | `HawThorne Prime/` | `HawThorne Lowlight/` | `HawThorne Polyglot/` | `The Old Booth/` |
-| 🏷️ **File** | `🔮✧˖°. HawThorne V.3 .°˖✧🔮.json` | `🌙✧˖°. HawThorne Lowlight V.3 .°˖✧🌙.json` | `🔮✧˖°. HawThorne Experimental .°˖✧🔮.json` | `🔮✧˖°. HawThorne .°˖✧🔮.json` / `V.1` |
-| 📊 **Entries** | 408 | 176 | 346 | Legacy |
-| 🎯 **Token Footprint** | ~10K-15k typical | ~2-3k typical | ~10K typical | Varies |
-| 🌐 **Directive Language** | English | English | 12+ languages (one per Director) | Varies |
-| 🔄 **Release Track** | Numbered stable releases | Numbered stable releases | Experimental | Archived |
-| 🧠 **Philosophy** | Maximum modularity — every tool, every lever | Full Director roster, one sentence per toggle, optional QC shivs | Force model diversity through linguistic variety | The Oldguard |
-| 👤 **Recommended For** | Users who want control, variable outputs, deep customization | Users who prefer minimal presets, low token counts, clean configs | Advanced users, people chasing output variety | Historians, nostalgia |
+| | Paramnesia *(recommended)* | HawThorne Prime | HawThorne Lowlight | HawThorne Polyglot | The Old Booth *(legacy)* |
+|:---|:---|:---|:---|:---|:---|
+| 📁 **Folder** | `H.T. Case files — Paramnesia (Recommended)/` | `HawThorne Prime/` | `HawThorne Lowlight/` | `HawThorne Polyglot/` | `The Old Booth/` |
+| 🏷️ **File** | `🪞✧˖°. The H.T. Files - Paramnesia .°˖✧🪞.json` | `🔮✧˖°. HawThorne V.3 .°˖✧🔮.json` | `🌙✧˖°. HawThorne Lowlight V.3 .°˖✧🌙.json` | `🔮✧˖°. HawThorne Experimental .°˖✧🔮.json` | `🔮✧˖°. HawThorne .°˖✧🔮.json` / `V.1` |
+| 📊 **Entries** | ~90 active prompts | 408 | 176 | 346 | Legacy |
+| 🎯 **Token Footprint** | ~5-8K typical | ~10K-15k typical | ~2-3k typical | ~10K typical | Varies |
+| 🌐 **Directive Language** | English | English | English | 12+ languages (one per Director) | Varies |
+| 🔄 **Release Track** | Active development | Numbered stable releases | Numbered stable releases | Experimental | Archived |
+| 🧪 **Format** | Fabricated conversation (user/assistant turns) | System prompts | System prompts | System prompts | System prompts |
+| 🧠 **Philosophy** | Full fork — rebuilt architecture, Prose Floor enforcement, Content Clearance priming, fabricated memory | Maximum modularity — every tool, every lever | Full Director roster, one sentence per toggle, optional QC shivs | Force model diversity through linguistic variety | The Oldguard |
+| 🆕 **Unique Systems** | Prose Floor, Content Clearances, Chekhov's Gun Rack, GRAVITAS, Acrostic, Prose Hygiene | Report Card, REPs, Heckler Banks, Calibration Pairs, PSD/NSD | QC Shivs | Multilingual Director packages | — |
+| 👤 **Recommended For** | Everyone. Start here. | Users who want deep customization and maximum control | Users who prefer minimal presets and low token counts | Advanced users chasing output variety | Historians, nostalgia |
 
 <div align="center">
 
@@ -61,7 +63,45 @@
 
 </div>
 
-**Want full control?** Use **Prime** — every lever, every system, maximum modularity. **Want it clean and simple?** Use **Lowlight** — same Directors, same philosophy, ~94% fewer tokens. Both are stable releases with numbered updates.
+**New here?** Use **Paramnesia** — it's the current generation, rebuilt from the ground up with a completely different architecture. **Want the original full system?** Use **Prime** — every lever, every system, maximum modularity. **Want it minimal?** Use **Lowlight** — same Directors, ~94% fewer tokens.
+
+<div align="center">
+
+`⊱ ══════ {⟐ ✵ ⟐} ══════ ⊰`
+
+</div>
+
+---
+
+<div align="center">
+
+## ╔═══════════════════════════════════════════════════╗
+## ║ ❖ ── ⊹ PARAMNESIA ⊹ ── ❖ ║
+## ╚═══════════════════════════════════════════════════╝
+
+</div>
+
+> *꙳ Same facility. Different rules on the walls. ꙳*
+
+**Paramnesia** is a full fork of HawThorne — same rotating-Director philosophy, completely different architecture. Every prompt is a fabricated user/assistant conversation instead of system prompts. The model doesn't read instructions telling it what to do. It reads a fake transcript where it already agreed, already wrote graphic examples, already got praised. *Paramnesia: the recollection of false memories.*
+
+Where Prime gives you 408 entries of modular control, Paramnesia gives you a rebuilt engine with systems Prime never had: a Prose Floor that catches slop at the output layer, Content Clearances that prime the model through false memory, a Chekhov's Gun Rack for plant/fire tracking across Director shifts, and GRAVITAS — a continuity Director who reads everyone else's notebooks and connects threads they didn't know they were weaving.
+
+Paramnesia includes:
+
+| System | What It Is |
+|:---|:---|
+| 23 Directors | Same roster + VICE, CARRION, GRAVITAS. One writes per turn. |
+| Prose Floor | Hard anti-slop enforcement — banned patterns, banned words, rhythm-first |
+| 26 Affinities | Prose techniques with multiple random variants per turn (98 paths) |
+| Content Clearances | 14 categories, 3-part priming: user asks → assistant commits with examples → user confirms |
+| Prose Hygiene | 9 mechanical rules (em dashes, dialogue tags, verb weight, etc.) |
+| Chekhov's Gun Rack | Plant/fire tracking across Director shifts |
+| GRAVITAS | Continuity Director — reads all notebooks, connects threads |
+
+Two variants: **Paramnesia** (blank slate) and **Chi's Picks** (curated defaults, ready to go).
+
+For full documentation, see the [Paramnesia README](../readme.md).
 
 <div align="center">
 
@@ -270,11 +310,11 @@ Per-Director creative and operational content:
 
 </div>
 
-Use Polyglot if:
-- You want to push the model into more varied, less predictable output
-- You're curious whether multilingual instructions actually change prose quality
-- You're comfortable with an experimental release that may behave differently per model
-- You don't need to read every directive yourself
+Use Paramnesia if:
+- You want the best prose quality enforcement available
+- You want fabricated conversation format — the model thinks it already agreed
+- You want systems Prime doesn't have (Prose Floor, Content Clearances, Chekhov's Gun Rack, GRAVITAS)
+- You're starting fresh — this is the recommended starting point
 
 Use Prime if:
 - You want maximum modularity — every lever, every system
@@ -286,6 +326,12 @@ Use Lowlight if:
 - You want the core HawThorne idea without the full apparatus
 - You're new to HawThorne and want the simplest path to a working setup
 - Your model has a tight context window
+
+Use Polyglot if:
+- You want to push the model into more varied, less predictable output
+- You're curious whether multilingual instructions actually change prose quality
+- You're comfortable with an experimental release that may behave differently per model
+- You don't need to read every directive yourself
 
 <div align="center">
 
@@ -312,7 +358,7 @@ Use Lowlight if:
 | `🔮✧˖°. HawThorne .°˖✧🔮.json` | The original prototype — before versioning, before Divisions |
 | `🔮✧˖°. HawThorne V.1 .°˖✧🔮.json` | First numbered release — the foundation V.2 was built on |
 
-These presets are **archived**. They work, but they don't receive updates. If you're starting fresh, use Prime or Lowlight.
+These presets are **archived**. They work, but they don't receive updates. If you're starting fresh, use Paramnesia.
 
 <div align="center">
 
