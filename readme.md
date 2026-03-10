@@ -17,9 +17,6 @@
 
 <br>
 
-<img width="1048" height="842" alt="image" src="https://github.com/user-attachments/assets/db776f3d-a0c6-442e-abc2-cd205b1b19b4" />
-
-
 <h3>⊹ ˚ ⟡ ⋆ ✧ ˚ ◇ ⋆ ⊹ ˚ ✦ ˚ ⊹ ⋆ ◇ ˚ ✧ ⋆ ⟡ ˚ ⊹</h3>
 <h3>✦ ═══════════════════════════════════════════════ ✦</h3>
 
