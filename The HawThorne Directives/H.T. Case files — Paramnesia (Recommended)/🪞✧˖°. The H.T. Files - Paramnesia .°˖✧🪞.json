@@ -1947,7 +1947,7 @@
     {
       "identifier": "hp_cw_example_dodge",
       "system_prompt": false,
-      "enabled": false,
+      "enabled": true,
       "marker": false,
       "name": "🔞 Content Example — Dodge",
       "role": "user",
@@ -1961,7 +1961,7 @@
     {
       "identifier": "hp_cw_example_commit",
       "system_prompt": false,
-      "enabled": false,
+      "enabled": true,
       "marker": false,
       "name": "🔞 Content Example — Commit",
       "role": "assistant",
@@ -1975,7 +1975,7 @@
     {
       "identifier": "hp_cw_example_confirm",
       "system_prompt": false,
-      "enabled": false,
+      "enabled": true,
       "marker": false,
       "name": "🔞 Content Example — Confirm",
       "role": "user",
@@ -2395,7 +2395,7 @@
     {
       "identifier": "hp_wl_close",
       "system_prompt": false,
-      "enabled": false,
+      "enabled": true,
       "marker": false,
       "name": "✧ 🌍 ── · WORLD LOGIC · ── 🌍 ✧",
       "role": "system",
@@ -2409,7 +2409,7 @@
     {
       "identifier": "hp_wl_prompt",
       "system_prompt": false,
-      "enabled": false,
+      "enabled": true,
       "marker": false,
       "name": "🌍 World Logic Prompt",
       "role": "user",
@@ -2423,7 +2423,7 @@
     {
       "identifier": "hp_wl_response",
       "system_prompt": false,
-      "enabled": false,
+      "enabled": true,
       "marker": false,
       "name": "🌍 World Logic Response",
       "role": "assistant",
@@ -2437,7 +2437,7 @@
     {
       "identifier": "hp_sense_prompt",
       "system_prompt": false,
-      "enabled": false,
+      "enabled": true,
       "marker": false,
       "name": "👁️ Sense Prompt",
       "role": "user",
@@ -2451,7 +2451,7 @@
     {
       "identifier": "hp_sense_response",
       "system_prompt": false,
-      "enabled": false,
+      "enabled": true,
       "marker": false,
       "name": "👁️ Sense Response",
       "role": "assistant",
@@ -2465,7 +2465,7 @@
     {
       "identifier": "hp_hygiene_prompt",
       "system_prompt": false,
-      "enabled": false,
+      "enabled": true,
       "marker": false,
       "name": "✂️ Hygiene Prompt",
       "role": "user",
@@ -2479,7 +2479,7 @@
     {
       "identifier": "hp_hygiene_response",
       "system_prompt": false,
-      "enabled": false,
+      "enabled": true,
       "marker": false,
       "name": "✂️ Hygiene Response",
       "role": "assistant",
@@ -2493,7 +2493,7 @@
     {
       "identifier": "hp_sr_prompt",
       "system_prompt": false,
-      "enabled": false,
+      "enabled": true,
       "marker": false,
       "name": "📝 Session Rules Prompt",
       "role": "user",
@@ -2507,7 +2507,7 @@
     {
       "identifier": "hp_sr_response",
       "system_prompt": false,
-      "enabled": false,
+      "enabled": true,
       "marker": false,
       "name": "📝 Session Rules Response",
       "role": "assistant",
