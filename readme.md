@@ -476,6 +476,8 @@ Plus four additional technique toggles: 🎭 Purposeful Mistake, 🪞 Contradict
 
 **Total:** 26 techniques. 98 variant paths (MEDDLING DECENCY alone has 23). Every turn rolls fresh.
 
+</details>
+
 <div align="center">
 
 `⊱ ────── {.⋅ ◈ ⋅.} ────── ⊰`
