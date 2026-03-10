@@ -12,7 +12,7 @@
 <h2>◈ The H.T. Files ◈</h2>
 
 <h3>⊹ ˚ . ⋆ ✧ ⋆ . ˚ ⊹</h3>
-<h4><i>꙳ The Directors don't remember what happened last shift. That's by design. ꙳</i></h4>
+<h4><i>꙳ The Directors all have pounding heaches... New faces, new Hawthorne, Same Facility (We think?) ꙳</i></h4>
 <h3>⊹ ˚ . ⋆ ✧ ⋆ . ˚ ⊹</h3>
 
 <br>
