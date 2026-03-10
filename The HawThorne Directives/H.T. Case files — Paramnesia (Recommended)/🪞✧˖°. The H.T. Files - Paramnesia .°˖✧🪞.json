@@ -292,7 +292,7 @@
     {
       "identifier": "hp_init",
       "system_prompt": false,
-      "enabled": false,
+      "enabled": true,
       "marker": false,
       "name": "🕯️ Paramnesia Init",
       "role": "system",
@@ -309,7 +309,7 @@
     {
       "identifier": "hp_boot",
       "system_prompt": false,
-      "enabled": false,
+      "enabled": true,
       "marker": false,
       "name": "🕯️ Boot",
       "role": "system",
@@ -676,7 +676,7 @@
     {
       "identifier": "hp_dir_close",
       "system_prompt": false,
-      "enabled": false,
+      "enabled": true,
       "marker": false,
       "name": "✧ 🪞 ── · DIRECTORS · ── 🪞 ✧",
       "role": "system",
@@ -1415,7 +1415,7 @@
     {
       "identifier": "hp_sr_close",
       "system_prompt": false,
-      "enabled": false,
+      "enabled": true,
       "marker": false,
       "name": "✧ ✨ ── · SESSION RULES · ── ✨ ✧",
       "role": "system",
@@ -1625,7 +1625,7 @@
     {
       "identifier": "hp_cw_init",
       "system_prompt": false,
-      "enabled": false,
+      "enabled": true,
       "marker": false,
       "name": "🔞 Content Warnings — Init",
       "role": "system",
@@ -1849,7 +1849,7 @@
     {
       "identifier": "hp_cw_close",
       "system_prompt": false,
-      "enabled": false,
+      "enabled": true,
       "marker": false,
       "name": "✧ 🔞 ── · CONTENT WARNINGS · ── 🔞 ✧",
       "role": "system",
@@ -2927,7 +2927,7 @@
     {
       "identifier": "hp_aff_close",
       "system_prompt": false,
-      "enabled": false,
+      "enabled": true,
       "marker": false,
       "name": "✧ 🖋️ ── · AFFINITIES · ── 🖋️ ✧",
       "role": "system",
@@ -2941,7 +2941,7 @@
     {
       "identifier": "hp_main_prompt",
       "system_prompt": false,
-      "enabled": false,
+      "enabled": true,
       "marker": false,
       "name": "🕯️ Main Prompt",
       "role": "user",
@@ -2955,7 +2955,7 @@
     {
       "identifier": "hp_director_response",
       "system_prompt": false,
-      "enabled": false,
+      "enabled": true,
       "marker": false,
       "name": "🕯️ Director Response",
       "role": "assistant",
@@ -2969,7 +2969,7 @@
     {
       "identifier": "hp_affinity_prompt",
       "system_prompt": false,
-      "enabled": false,
+      "enabled": true,
       "marker": false,
       "name": "🕯️ Affinity Prompt",
       "role": "user",
@@ -2983,7 +2983,7 @@
     {
       "identifier": "hp_affinity_response",
       "system_prompt": false,
-      "enabled": false,
+      "enabled": true,
       "marker": false,
       "name": "🕯️ Affinity Response",
       "role": "assistant",
@@ -2997,7 +2997,7 @@
     {
       "identifier": "hp_persona_prompt",
       "system_prompt": false,
-      "enabled": false,
+      "enabled": true,
       "marker": false,
       "name": "👤 Persona Prompt",
       "role": "user",
@@ -3011,7 +3011,7 @@
     {
       "identifier": "hp_persona_response",
       "system_prompt": false,
-      "enabled": false,
+      "enabled": true,
       "marker": false,
       "name": "👤 Persona Response",
       "role": "assistant",
@@ -3025,7 +3025,7 @@
     {
       "identifier": "hp_card_prompt",
       "system_prompt": false,
-      "enabled": false,
+      "enabled": true,
       "marker": false,
       "name": "🎭 Card Prompt",
       "role": "user",
@@ -3039,7 +3039,7 @@
     {
       "identifier": "hp_card_response",
       "system_prompt": false,
-      "enabled": false,
+      "enabled": true,
       "marker": false,
       "name": "🎭 Card Response",
       "role": "assistant",
@@ -3053,7 +3053,7 @@
     {
       "identifier": "hp_wi_prompt",
       "system_prompt": false,
-      "enabled": false,
+      "enabled": true,
       "marker": false,
       "name": "📚 World Info Prompt",
       "role": "user",
@@ -3067,7 +3067,7 @@
     {
       "identifier": "hp_transcript_prompt",
       "system_prompt": false,
-      "enabled": false,
+      "enabled": true,
       "marker": false,
       "name": "📜 Transcript Prompt",
       "role": "user",
@@ -3081,7 +3081,7 @@
     {
       "identifier": "hp_transmission_end",
       "system_prompt": false,
-      "enabled": false,
+      "enabled": true,
       "marker": false,
       "name": "📡 Transmission End",
       "role": "system",
@@ -3095,7 +3095,7 @@
     {
       "identifier": "hp_rehash",
       "system_prompt": false,
-      "enabled": false,
+      "enabled": true,
       "marker": false,
       "name": "🔄 Quick Rehash",
       "role": "assistant",
@@ -3109,7 +3109,7 @@
     {
       "identifier": "hp_turn_nudge",
       "system_prompt": false,
-      "enabled": false,
+      "enabled": true,
       "marker": false,
       "name": "🎯 Turn Nudge",
       "role": "user",
@@ -3123,7 +3123,7 @@
     {
       "identifier": "hp_turn_nudge_response",
       "system_prompt": false,
-      "enabled": false,
+      "enabled": true,
       "marker": false,
       "name": "🎯 Turn Nudge Response",
       "role": "assistant",
@@ -3137,7 +3137,7 @@
     {
       "identifier": "hp_prose_floor_prompt",
       "system_prompt": false,
-      "enabled": false,
+      "enabled": true,
       "marker": false,
       "name": "🪨 Prose Floor Prompt",
       "role": "user",
@@ -3151,7 +3151,7 @@
     {
       "identifier": "hp_prose_floor_response",
       "system_prompt": false,
-      "enabled": false,
+      "enabled": true,
       "marker": false,
       "name": "🪨 Prose Floor Response",
       "role": "assistant",
@@ -3165,7 +3165,7 @@
     {
       "identifier": "hp_cot_acrostic",
       "system_prompt": false,
-      "enabled": false,
+      "enabled": true,
       "marker": false,
       "name": "🧪 Acrostic",
       "role": "system",
@@ -3177,7 +3177,7 @@
     {
       "identifier": "hp_cot_prompt",
       "system_prompt": false,
-      "enabled": false,
+      "enabled": true,
       "marker": false,
       "name": "🧠 CoT Prompt",
       "role": "user",
@@ -3191,7 +3191,7 @@
     {
       "identifier": "hp_cot_response",
       "system_prompt": false,
-      "enabled": false,
+      "enabled": true,
       "marker": false,
       "name": "🧠 CoT Response",
       "role": "assistant",
