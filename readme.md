@@ -7,8 +7,6 @@
 
 <br>
 
-<img width="600" alt="H.T. Case Files: Paramnesia" src="paramnesia-header.png" />
-
 <h1>🪞 P A R A M N E S I A 🪞</h1>
 
 <h2>◈ The H.T. Files ◈</h2>
@@ -23,6 +21,8 @@
 <h3>✦ ═══════════════════════════════════════════════ ✦</h3>
 
 <br>
+
+<img width="600" alt="H.T. Case Files: Paramnesia" src="paramnesia-header.png" />
 
 </div>
 
