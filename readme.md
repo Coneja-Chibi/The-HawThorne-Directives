@@ -7,6 +7,8 @@
 
 <br>
 
+<img width="1048" height="842" alt="H.T. Case Files: Paramnesia" src="https://github.com/user-attachments/assets/db776f3d-a0c6-442e-abc2-cd205b1b19b4" />
+
 <h1>🪞 P A R A M N E S I A 🪞</h1>
 
 <h2>◈ The H.T. Files ◈</h2>
