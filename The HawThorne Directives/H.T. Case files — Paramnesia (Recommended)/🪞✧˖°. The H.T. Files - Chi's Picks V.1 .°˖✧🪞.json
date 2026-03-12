@@ -127,8 +127,871 @@
         "runOnEdit": true,
         "substituteRegex": 0,
         "minDepth": null,
-        "maxDepth": null,
-        "id": "d107b658-4c03-42c3-ab03-87c2a57638e3"
+        "maxDepth": null
+      },
+      {
+        "id": "hp-visual-phone",
+        "scriptName": "Paramnesia Visual - Phone Message",
+        "findRegex": "/\\[PHONE(?:\\s+from=\\\"([^\\\"]*)\\\")?\\]\\s*([\\s\\S]*?)\\s*\\[\\/PHONE\\]/gs",
+        "replaceString": "<div style=\"background:#1c1c1e;border-radius:16px;padding:14px;max-width:380px;font-family:-apple-system,Helvetica Neue,sans-serif;margin:8px 0;\"><div style=\"text-align:center;font-size:0.7em;color:#8e8e93;margin-bottom:10px;\">Message</div><div style=\"font-size:0.7em;color:#8e8e93;margin-bottom:4px;padding-left:4px;\">$1</div><div style=\"background:#3a3a3c;color:#f0f0f0;padding:10px 14px;border-radius:18px 18px 18px 4px;font-size:0.92em;line-height:1.4;max-width:75%;word-wrap:break-word;\">$2</div><div style=\"text-align:right;font-size:0.65em;color:#0b93f6;margin-top:4px;padding-right:4px;\">Delivered</div></div>",
+        "trimStrings": [],
+        "placement": [
+          1,
+          2
+        ],
+        "disabled": false,
+        "markdownOnly": true,
+        "promptOnly": false,
+        "runOnEdit": true,
+        "substituteRegex": 0,
+        "minDepth": null,
+        "maxDepth": null
+      },
+      {
+        "id": "hp-visual-call",
+        "scriptName": "Paramnesia Visual - Phone Call",
+        "findRegex": "/\\[CALL(?:\\s+from=\\\"([^\\\"]*)\\\")?\\]\\s*([\\s\\S]*?)\\s*\\[\\/CALL\\]/gs",
+        "replaceString": "<style>@keyframes hp-call-ring { 0%, 100% { box-shadow: 0 0 0 0 rgba(76,175,80,0.4); } 50% { box-shadow: 0 0 0 12px rgba(76,175,80,0); } }</style><div style=\"background:linear-gradient(160deg,#0a0a0a,#1a1a2e);border-radius:20px;padding:28px 24px;max-width:300px;font-family:-apple-system,Helvetica Neue,sans-serif;text-align:center;border:1px solid #2a2a3a;box-shadow:0 8px 24px rgba(0,0,0,0.5);margin:8px 0;\"><div style=\"width:64px;height:64px;border-radius:50%;background:linear-gradient(135deg,#667eea,#764ba2);margin:0 auto 12px;display:flex;align-items:center;justify-content:center;font-size:1.6em;color:white;font-weight:700;overflow:hidden;text-overflow:clip;white-space:nowrap;animation:hp-call-ring 2s ease-out infinite;\">📞</div><div style=\"font-size:0.7em;color:#66bb6a;text-transform:uppercase;letter-spacing:2px;margin-bottom:6px;\">incoming call</div><div style=\"color:#fff;font-size:1.4em;font-weight:600;margin-bottom:4px;\">$1</div><div style=\"color:#8e8e93;font-size:0.8em;\">$2</div><div style=\"display:flex;justify-content:center;gap:24px;margin-top:20px;\"><div style=\"width:48px;height:48px;border-radius:50%;background:#ff3b30;display:flex;align-items:center;justify-content:center;font-size:1.3em;color:white;\">✕</div><div style=\"width:48px;height:48px;border-radius:50%;background:#34c759;display:flex;align-items:center;justify-content:center;font-size:1.3em;color:white;\">✓</div></div></div>",
+        "trimStrings": [],
+        "placement": [
+          1,
+          2
+        ],
+        "disabled": false,
+        "markdownOnly": true,
+        "promptOnly": false,
+        "runOnEdit": true,
+        "substituteRegex": 0,
+        "minDepth": null,
+        "maxDepth": null
+      },
+      {
+        "id": "hp-visual-email",
+        "scriptName": "Paramnesia Visual - Email",
+        "findRegex": "/\\[EMAIL(?:\\s+from=\\\"([^\\\"]*)\\\")(?:\\s+addr=\\\"([^\\\"]*)\\\")(?:\\s+to=\\\"([^\\\"]*)\\\")(?:\\s+subject=\\\"([^\\\"]*)\\\")(?:\\s+date=\\\"([^\\\"]*)\\\")?\\]\\s*([\\s\\S]*?)\\s*\\[\\/EMAIL\\]/gs",
+        "replaceString": "<div style=\"background:#fff;border-radius:8px;max-width:520px;font-family:Google Sans,Roboto,-apple-system,sans-serif;border:1px solid #dadce0;box-shadow:0 1px 3px rgba(0,0,0,0.12);overflow:hidden;margin:8px 0;\"><div style=\"background:#f2f2f2;padding:6px 12px;display:flex;align-items:center;gap:4px;border-bottom:1px solid #e0e0e0;font-size:0.75em;color:#5f6368;\"><span style=\"padding:4px 8px;\">← </span><span style=\"padding:4px 8px;\">🗑</span><span style=\"padding:4px 8px;\">📁</span></div><div style=\"padding:16px 20px 8px;font-size:1.2em;font-weight:400;color:#202124;\">$4</div><div style=\"padding:8px 20px 12px;display:flex;align-items:flex-start;gap:12px;border-bottom:1px solid #efefef;\"><div style=\"width:40px;height:40px;border-radius:50%;background:linear-gradient(135deg,#1a73e8,#4285f4);display:flex;align-items:center;justify-content:center;font-size:16px;font-weight:500;color:white;flex-shrink:0;overflow:hidden;white-space:nowrap;text-overflow:clip;\">✉</div><div style=\"flex:1;\"><div style=\"display:flex;align-items:baseline;gap:6px;\"><span style=\"font-size:0.88em;font-weight:500;color:#202124;\">$1</span><span style=\"font-size:0.72em;color:#5f6368;\">&lt;$2&gt;</span><span style=\"font-size:0.72em;color:#5f6368;margin-left:auto;\">$5</span></div><div style=\"font-size:0.72em;color:#5f6368;margin-top:2px;\">to $3</div></div></div><div style=\"padding:18px 20px 20px;padding-left:72px;color:#3c4043;font-size:0.88em;line-height:1.7;\">$6</div><div style=\"padding:12px 20px;padding-left:72px;display:flex;gap:8px;border-top:1px solid #efefef;\"><span style=\"padding:6px 20px;border-radius:18px;border:1px solid #dadce0;font-size:0.78em;color:#5f6368;\">↩ Reply</span><span style=\"padding:6px 20px;border-radius:18px;border:1px solid #dadce0;font-size:0.78em;color:#5f6368;\">↪ Forward</span></div></div>",
+        "trimStrings": [],
+        "placement": [
+          1,
+          2
+        ],
+        "disabled": false,
+        "markdownOnly": true,
+        "promptOnly": false,
+        "runOnEdit": true,
+        "substituteRegex": 0,
+        "minDepth": null,
+        "maxDepth": null
+      },
+      {
+        "id": "hp-visual-letter",
+        "scriptName": "Paramnesia Visual - Letter",
+        "findRegex": "/\\[LETTER(?:\\s+from=\\\"([^\\\"]*)\\\")?\\]\\s*([\\s\\S]*?)\\s*\\[\\/LETTER\\]/gs",
+        "replaceString": "<div style=\"background-color:#f4e4bc;background-image:radial-gradient(ellipse at 20% 20%,rgba(180,120,40,0.12) 0%,transparent 60%),radial-gradient(ellipse at 80% 80%,rgba(160,100,20,0.15) 0%,transparent 60%);border:1px solid rgba(150,100,30,0.4);border-radius:2px;padding:28px 32px;max-width:460px;font-family:Georgia,Times New Roman,serif;box-shadow:0 2px 4px rgba(0,0,0,0.3),0 10px 0 -5px #e8d8b0,0 10px 1px -4px rgba(0,0,0,0.1),inset 0 0 40px rgba(140,90,20,0.1);color:#3a2a10;line-height:1.8;font-size:0.95em;margin:8px 0;\"><div style=\"font-size:0.8em;color:#8b7355;font-style:italic;margin-bottom:14px;border-bottom:1px solid rgba(150,100,30,0.25);padding-bottom:10px;\">From the desk of $1</div><div>$2</div><div style=\"display:block;width:44px;height:44px;border-radius:50%;background:radial-gradient(circle at 35% 35%,#c0392b,#7b0d0d);margin:18px auto 0;box-shadow:0 2px 6px rgba(0,0,0,0.4),inset 0 1px 2px rgba(255,100,80,0.3);text-align:center;line-height:44px;color:rgba(255,200,180,0.7);font-size:1.2em;\">✦</div></div>",
+        "trimStrings": [],
+        "placement": [
+          1,
+          2
+        ],
+        "disabled": false,
+        "markdownOnly": true,
+        "promptOnly": false,
+        "runOnEdit": true,
+        "substituteRegex": 0,
+        "minDepth": null,
+        "maxDepth": null
+      },
+      {
+        "id": "hp-visual-note",
+        "scriptName": "Paramnesia Visual - Handwritten Note",
+        "findRegex": "/\\[NOTE\\]\\s*([\\s\\S]*?)\\s*\\[\\/NOTE\\]/gs",
+        "replaceString": "<style>.hp-note{position:relative;overflow:hidden} .hp-note::before{content:'';position:absolute;top:0;left:0;right:0;bottom:0; background:repeating-linear-gradient(0deg,transparent,transparent 27px,rgba(150,100,30,0.06) 27px,rgba(150,100,30,0.06) 28px); pointer-events:none}</style><div class=\"hp-note\" style=\"background:#fdf6e3;border:1px solid #bfaa7e;border-radius:2px;padding:18px 22px;max-width:320px;font-family:Segoe Script,Bradley Hand,cursive;transform:rotate(-1deg);box-shadow:2px 3px 10px rgba(0,0,0,0.15);color:#4a3c28;font-size:0.95em;line-height:1.9;margin:8px 0;\">$1</div>",
+        "trimStrings": [],
+        "placement": [
+          1,
+          2
+        ],
+        "disabled": false,
+        "markdownOnly": true,
+        "promptOnly": false,
+        "runOnEdit": true,
+        "substituteRegex": 0,
+        "minDepth": null,
+        "maxDepth": null
+      },
+      {
+        "id": "hp-visual-chat",
+        "scriptName": "Paramnesia Visual - Chat Message",
+        "findRegex": "/\\[CHAT(?:\\s+from=\\\"([^\\\"]*)\\\")(?:\\s+react=\\\"([^\\\"]*)\\\")?\\]\\s*([\\s\\S]*?)\\s*\\[\\/CHAT\\]/gs",
+        "replaceString": "<style>.hp-react{display:inline-flex;align-items:center;gap:4px; background:rgba(88,101,242,0.15);border:1px solid rgba(88,101,242,0.3); border-radius:8px;padding:2px 8px;font-size:0.82em}</style><div style=\"background:#313338;padding:8px 16px;border-radius:8px;font-family:gg sans,Noto Sans,Helvetica Neue,sans-serif;font-size:15px;color:#dbdee1;max-width:480px;margin:8px 0;\"><div style=\"display:flex;gap:16px;padding:6px 0;\"><div style=\"width:40px;height:40px;border-radius:50%;background:#5865f2;display:flex;align-items:center;justify-content:center;font-size:16px;font-weight:bold;color:white;flex-shrink:0;\">$1</div><div><div style=\"display:flex;align-items:baseline;gap:8px;margin-bottom:2px;\"><span style=\"font-weight:500;color:#f2a2d8;font-size:0.95em;\">$1</span></div><div style=\"color:#dbdee1;line-height:1.375;\">$3</div><div class=\"hp-react\" style=\"margin-top:6px;\">$2</div></div></div></div>",
+        "trimStrings": [],
+        "placement": [
+          1,
+          2
+        ],
+        "disabled": false,
+        "markdownOnly": true,
+        "promptOnly": false,
+        "runOnEdit": true,
+        "substituteRegex": 0,
+        "minDepth": null,
+        "maxDepth": null
+      },
+      {
+        "id": "hp-visual-terminal",
+        "scriptName": "Paramnesia Visual - Terminal",
+        "findRegex": "/\\[TERMINAL\\]\\s*([\\s\\S]*?)\\s*\\[\\/TERMINAL\\]/gs",
+        "replaceString": "<style>@keyframes hp-crt-flicker { 0% { opacity:0.97; } 5% { opacity:0.94; } 10% { opacity:0.98; } 15% { opacity:0.91; } 50% { opacity:0.95; } 90% { opacity:0.92; } 100% { opacity:0.98; } } @keyframes hp-cursor-blink { 0%,49% { opacity:1; } 50%,100% { opacity:0; } } @keyframes hp-crt-scan { 0% { top:-30%; } 100% { top:110%; } } .hp-term{position:relative;overflow:hidden} .hp-term::before{content:'';position:absolute;top:0;left:0;width:100%;height:100%; background:repeating-linear-gradient(0deg,rgba(0,0,0,0.15),rgba(0,0,0,0.15) 1px,transparent 1px,transparent 2px); pointer-events:none;z-index:2} .hp-term::after{content:'';position:absolute;left:0;width:100%;height:30%; background:linear-gradient(transparent,rgba(0,255,0,0.04),transparent); animation:hp-crt-scan 4s linear infinite;pointer-events:none;z-index:3}</style><div class=\"hp-term\" style=\"background-color:#0a0a00;background-image:radial-gradient(ellipse at center,rgba(0,180,0,0.12) 0%,transparent 70%);color:#00ff00;font-family:Courier New,monospace;font-size:0.88em;padding:20px;border-radius:6px;max-width:500px;animation:hp-crt-flicker 0.15s infinite;box-shadow:0 0 20px rgba(0,255,0,0.2),inset 0 0 60px rgba(0,0,0,0.5);margin:8px 0;\"><div style=\"position:relative;z-index:1;text-shadow:0 0 4px #00ff00,0 0 8px rgba(0,255,0,0.4);line-height:1.7;\">$1<span style=\"display:inline-block;width:8px;height:1.1em;background:#00ff00;vertical-align:text-bottom;animation:hp-cursor-blink 1s step-end infinite;box-shadow:0 0 6px #00ff00;\"></span></div></div>",
+        "trimStrings": [],
+        "placement": [
+          1,
+          2
+        ],
+        "disabled": false,
+        "markdownOnly": true,
+        "promptOnly": false,
+        "runOnEdit": true,
+        "substituteRegex": 0,
+        "minDepth": null,
+        "maxDepth": null
+      },
+      {
+        "id": "hp-visual-screen",
+        "scriptName": "Paramnesia Visual - Screen",
+        "findRegex": "/\\[SCREEN\\]\\s*([\\s\\S]*?)\\s*\\[\\/SCREEN\\]/gs",
+        "replaceString": "<style>@keyframes hp-screen-glow { 0%,100% { box-shadow:0 0 8px rgba(100,140,255,0.3),inset 0 0 20px rgba(0,0,0,0.3); } 50% { box-shadow:0 0 16px rgba(100,140,255,0.5),inset 0 0 30px rgba(0,0,0,0.2); } }</style><div style=\"background:#0c0c14;color:#b8c4e0;max-width:460px;font-family:-apple-system,sans-serif;font-size:0.9em;border-radius:12px;border:2px solid #2a2a44;overflow:hidden;animation:hp-screen-glow 3s ease-in-out infinite;margin:8px 0;\"><div style=\"background:#1a1a2e;padding:6px 12px;display:flex;align-items:center;gap:6px;border-bottom:1px solid #2a2a44;\"><div style=\"width:8px;height:8px;border-radius:50%;background:#ff5f57;\"></div><div style=\"width:8px;height:8px;border-radius:50%;background:#febc2e;\"></div><div style=\"width:8px;height:8px;border-radius:50%;background:#28c840;\"></div></div><div style=\"padding:16px 18px;line-height:1.6;\">$1</div></div>",
+        "trimStrings": [],
+        "placement": [
+          1,
+          2
+        ],
+        "disabled": false,
+        "markdownOnly": true,
+        "promptOnly": false,
+        "runOnEdit": true,
+        "substituteRegex": 0,
+        "minDepth": null,
+        "maxDepth": null
+      },
+      {
+        "id": "hp-visual-error",
+        "scriptName": "Paramnesia Visual - Error",
+        "findRegex": "/\\[ERROR\\]\\s*([\\s\\S]*?)\\s*\\[\\/ERROR\\]/gs",
+        "replaceString": "<style>@keyframes hp-error-pulse { 0%,100% { border-color:#ff2222; box-shadow:0 0 10px rgba(255,0,0,0.15); } 50% { border-color:#ff6666; box-shadow:0 0 20px rgba(255,0,0,0.3); } } @keyframes hp-error-icon { 0%,100% { opacity:1; } 50% { opacity:0.4; } }</style><div style=\"background:linear-gradient(135deg,#1a0000,#200000);color:#ff4444;padding:16px 20px;max-width:460px;font-family:Courier New,monospace;font-size:0.85em;border-radius:4px;border:1px solid #ff2222;line-height:1.6;animation:hp-error-pulse 2s ease-in-out infinite;margin:8px 0;\"><div style=\"display:flex;align-items:center;gap:8px;margin-bottom:10px;font-weight:bold;font-size:0.9em;text-transform:uppercase;letter-spacing:1px;\"><span style=\"animation:hp-error-icon 1s step-end infinite;font-size:1.2em;\">⚠</span> SYSTEM ERROR</div>$1</div>",
+        "trimStrings": [],
+        "placement": [
+          1,
+          2
+        ],
+        "disabled": false,
+        "markdownOnly": true,
+        "promptOnly": false,
+        "runOnEdit": true,
+        "substituteRegex": 0,
+        "minDepth": null,
+        "maxDepth": null
+      },
+      {
+        "id": "hp-visual-hud",
+        "scriptName": "Paramnesia Visual - HUD Display",
+        "findRegex": "/\\[HUD\\]\\s*([\\s\\S]*?)\\s*\\[\\/HUD\\]/gs",
+        "replaceString": "<style>@keyframes hp-hud-pulse { 0%,100% { box-shadow:0 0 8px rgba(0,200,255,0.3),inset 0 0 8px rgba(0,200,255,0.05); } 50% { box-shadow:0 0 20px rgba(0,200,255,0.6),inset 0 0 16px rgba(0,200,255,0.1); } } @keyframes hp-hud-blink { 0%,49% { opacity:1; } 50%,100% { opacity:0; } } @keyframes hp-hud-scan { 0% { top:0%;opacity:0.8; } 90% { top:100%;opacity:0.8; } 100% { top:100%;opacity:0; } } .hp-hud{position:relative;overflow:hidden} .hp-hud::before{content:'';position:absolute;top:0;left:0;right:0;bottom:0; background:repeating-linear-gradient(0deg,transparent,transparent 3px,rgba(0,200,255,0.03) 3px,rgba(0,200,255,0.03) 4px); pointer-events:none} .hp-hud-corner-tl{position:absolute;top:0;left:0;width:12px;height:12px;border-top:2px solid #00c8ff;border-left:2px solid #00c8ff} .hp-hud-corner-br{position:absolute;bottom:0;right:0;width:12px;height:12px;border-bottom:2px solid #00c8ff;border-right:2px solid #00c8ff}</style><div class=\"hp-hud\" style=\"background:rgba(0,8,20,0.95);border:1px solid rgba(0,200,255,0.4);border-radius:4px;padding:18px 22px;max-width:460px;color:#00c8ff;font-family:Courier New,monospace;font-size:0.82em;animation:hp-hud-pulse 3s ease-in-out infinite;margin:8px 0;\"><div class=\"hp-hud-corner-tl\"></div><div class=\"hp-hud-corner-br\"></div><div style=\"position:relative;z-index:1;\"><div style=\"display:flex;justify-content:space-between;border-bottom:1px solid rgba(0,200,255,0.25);padding-bottom:8px;margin-bottom:12px;color:rgba(0,200,255,0.6);font-size:0.85em;letter-spacing:0.1em;text-transform:uppercase;\"><span>TACTICAL DISPLAY</span><span style=\"animation:hp-hud-blink 1s step-end infinite;\">● LIVE</span></div><div style=\"line-height:1.8;\">$1</div></div></div>",
+        "trimStrings": [],
+        "placement": [
+          1,
+          2
+        ],
+        "disabled": false,
+        "markdownOnly": true,
+        "promptOnly": false,
+        "runOnEdit": true,
+        "substituteRegex": 0,
+        "minDepth": null,
+        "maxDepth": null
+      },
+      {
+        "id": "hp-visual-camera",
+        "scriptName": "Paramnesia Visual - Camera Feed",
+        "findRegex": "/\\[CAMERA\\]\\s*([\\s\\S]*?)\\s*\\[\\/CAMERA\\]/gs",
+        "replaceString": "<style>@keyframes hp-cam-flicker { 0%,100% { opacity:1; } 92% { opacity:1; } 93% { opacity:0.5; } 94% { opacity:1; } 96% { opacity:0.7; } 97% { opacity:1; } } @keyframes hp-rec-blink { 0%,49% { opacity:1; } 50%,100% { opacity:0; } }</style><style>.hp-cam-screen{position:relative} .hp-cam-screen::after{content:'';position:absolute;top:0;left:0;right:0;bottom:0; background:radial-gradient(ellipse at center,transparent 40%,rgba(0,0,0,0.6) 100%); pointer-events:none}</style><div style=\"background:#0a0a0a;border-radius:4px;max-width:480px;overflow:hidden;font-family:Courier New,monospace;animation:hp-cam-flicker 6s infinite;margin:8px 0;\"><div class=\"hp-cam-screen\" style=\"padding:40px 20px 20px;background:repeating-linear-gradient(0deg,rgba(0,0,0,0.12) 0px,rgba(0,0,0,0.12) 1px,transparent 1px,transparent 3px);color:#c0c0c0;font-size:0.82em;line-height:1.6;min-height:80px;\"><div style=\"position:absolute;top:8px;left:10px;right:10px;display:flex;justify-content:space-between;font-size:0.65em;color:#e0e0d0;z-index:2;\"><span style=\"background:rgba(0,0,0,0.6);padding:2px 8px;border:1px solid rgba(255,255,255,0.15);letter-spacing:0.08em;\">SURVEILLANCE</span><span style=\"display:flex;align-items:center;gap:4px;background:rgba(0,0,0,0.6);padding:2px 8px;\"><span style=\"width:6px;height:6px;border-radius:50%;background:#cc0000;animation:hp-rec-blink 1s step-end infinite;display:inline-block;\"></span> REC</span></div>$1</div><div style=\"background:#050505;padding:5px 10px;display:flex;justify-content:space-between;font-size:0.6em;color:#666;border-top:1px solid #222;\"><span>ENCRYPTED FEED</span><span>✓</span></div></div>",
+        "trimStrings": [],
+        "placement": [
+          1,
+          2
+        ],
+        "disabled": false,
+        "markdownOnly": true,
+        "promptOnly": false,
+        "runOnEdit": true,
+        "substituteRegex": 0,
+        "minDepth": null,
+        "maxDepth": null
+      },
+      {
+        "id": "hp-visual-sign",
+        "scriptName": "Paramnesia Visual - Sign",
+        "findRegex": "/\\[SIGN\\]\\s*([\\s\\S]*?)\\s*\\[\\/SIGN\\]/gs",
+        "replaceString": "<style>.hp-sign{position:relative} .hp-sign::before{content:'';position:absolute;top:4px;left:4px;right:4px;bottom:4px; border:1px solid rgba(212,196,160,0.15);pointer-events:none}</style><div class=\"hp-sign\" style=\"background:#2c2416;color:#d4c4a0;padding:18px 28px;max-width:360px;font-family:Georgia,serif;text-align:center;border:4px solid #5a4a30;border-radius:2px;letter-spacing:1.5px;line-height:1.8;box-shadow:2px 3px 10px rgba(0,0,0,0.4),inset 0 0 20px rgba(0,0,0,0.3);margin:8px 0;\">$1</div>",
+        "trimStrings": [],
+        "placement": [
+          1,
+          2
+        ],
+        "disabled": false,
+        "markdownOnly": true,
+        "promptOnly": false,
+        "runOnEdit": true,
+        "substituteRegex": 0,
+        "minDepth": null,
+        "maxDepth": null
+      },
+      {
+        "id": "hp-visual-scroll",
+        "scriptName": "Paramnesia Visual - Scroll",
+        "findRegex": "/\\[SCROLL\\]\\s*([\\s\\S]*?)\\s*\\[\\/SCROLL\\]/gs",
+        "replaceString": "<style>.hp-scroll{position:relative;overflow:hidden} .hp-scroll::before,.hp-scroll::after{content:'';display:block;height:20px; background:linear-gradient(to bottom,rgba(180,140,80,0.3),rgba(180,140,80,0.1) 30%,transparent 60%,rgba(180,140,80,0.08)); margin:-30px -34px 16px;border-bottom:1px solid rgba(150,100,30,0.2)} .hp-scroll::after{margin:16px -34px -30px; background:linear-gradient(to top,rgba(180,140,80,0.3),rgba(180,140,80,0.1) 30%,transparent 60%); border-bottom:none;border-top:1px solid rgba(150,100,30,0.2)}</style><div class=\"hp-scroll\" style=\"background-color:#f4e4bc;background-image:radial-gradient(ellipse at 30% 20%,rgba(180,120,40,0.1) 0%,transparent 50%),radial-gradient(ellipse at 70% 80%,rgba(160,100,20,0.12) 0%,transparent 50%);color:#3e2f1c;padding:30px 34px;max-width:460px;font-family:Georgia,serif;font-size:0.95em;border:1px solid #c4a96a;line-height:1.8;font-style:italic;box-shadow:0 3px 12px rgba(0,0,0,0.2),inset 0 0 30px rgba(140,90,20,0.08);margin:8px 0;\">$1</div>",
+        "trimStrings": [],
+        "placement": [
+          1,
+          2
+        ],
+        "disabled": false,
+        "markdownOnly": true,
+        "promptOnly": false,
+        "runOnEdit": true,
+        "substituteRegex": 0,
+        "minDepth": null,
+        "maxDepth": null
+      },
+      {
+        "id": "hp-visual-book",
+        "scriptName": "Paramnesia Visual - Book Page",
+        "findRegex": "/\\[BOOK\\]\\s*([\\s\\S]*?)\\s*\\[\\/BOOK\\]/gs",
+        "replaceString": "<style>.hp-book{position:relative} .hp-book::before{content:'';position:absolute;top:0;left:3px;bottom:0;width:20px; background:linear-gradient(to right,rgba(0,0,0,0.04),transparent);pointer-events:none}</style><div class=\"hp-book\" style=\"background:#f8f4eb;color:#2a2420;padding:28px 34px;max-width:440px;font-family:Palatino,Georgia,serif;font-size:0.95em;line-height:1.9;box-shadow:5px 5px 15px rgba(0,0,0,0.15),-2px 0 8px rgba(0,0,0,0.05),inset -2px 0 6px rgba(0,0,0,0.03);border-left:3px solid #d4c8b0;margin:8px 0;\">$1</div>",
+        "trimStrings": [],
+        "placement": [
+          1,
+          2
+        ],
+        "disabled": false,
+        "markdownOnly": true,
+        "promptOnly": false,
+        "runOnEdit": true,
+        "substituteRegex": 0,
+        "minDepth": null,
+        "maxDepth": null
+      },
+      {
+        "id": "hp-visual-newspaper",
+        "scriptName": "Paramnesia Visual - Newspaper",
+        "findRegex": "/\\[NEWSPAPER\\]\\s*([\\s\\S]*?)\\s*\\[\\/NEWSPAPER\\]/gs",
+        "replaceString": "<div style=\"background:#f5f0e4;color:#1a1a1a;padding:22px 26px;max-width:480px;font-family:Times New Roman,Times,serif;border:1px solid #ccc;margin:8px 0;\"><div style=\"text-align:center;border-bottom:3px double #1a1a1a;padding-bottom:10px;margin-bottom:14px;\"><div style=\"font-size:0.6em;text-transform:uppercase;letter-spacing:4px;color:#666;margin-bottom:4px;\">THE DAILY CHRONICLE</div><div style=\"font-size:1.5em;font-weight:900;line-height:1.2;\">BREAKING NEWS</div></div><div style=\"font-size:0.88em;line-height:1.6;column-count:2;column-gap:20px;column-rule:1px solid #ddd;\">$1</div></div>",
+        "trimStrings": [],
+        "placement": [
+          1,
+          2
+        ],
+        "disabled": false,
+        "markdownOnly": true,
+        "promptOnly": false,
+        "runOnEdit": true,
+        "substituteRegex": 0,
+        "minDepth": null,
+        "maxDepth": null
+      },
+      {
+        "id": "hp-visual-poster",
+        "scriptName": "Paramnesia Visual - Poster",
+        "findRegex": "/\\[POSTER\\]\\s*([\\s\\S]*?)\\s*\\[\\/POSTER\\]/gs",
+        "replaceString": "<div style=\"background:#f0e6d0;color:#2a1f14;padding:24px 28px;max-width:340px;font-family:Georgia,serif;text-align:center;border:4px double #4a3828;line-height:1.6;box-shadow:3px 4px 12px rgba(0,0,0,0.25);margin:8px 0;\">$1</div>",
+        "trimStrings": [],
+        "placement": [
+          1,
+          2
+        ],
+        "disabled": false,
+        "markdownOnly": true,
+        "promptOnly": false,
+        "runOnEdit": true,
+        "substituteRegex": 0,
+        "minDepth": null,
+        "maxDepth": null
+      },
+      {
+        "id": "hp-visual-grave",
+        "scriptName": "Paramnesia Visual - Gravestone",
+        "findRegex": "/\\[GRAVE\\]\\s*([\\s\\S]*?)\\s*\\[\\/GRAVE\\]/gs",
+        "replaceString": "<div style=\"background:linear-gradient(to bottom,#4a4a4a,#333);color:#b8b8b8;padding:24px 28px;max-width:280px;font-family:Georgia,serif;text-align:center;border-radius:50px 50px 4px 4px;border:2px solid #5a5a5a;line-height:1.8;letter-spacing:0.5px;box-shadow:3px 5px 14px rgba(0,0,0,0.5),inset 0 2px 4px rgba(255,255,255,0.05);margin:8px 0;\"><div style=\"font-size:1.6em;color:#888;margin-bottom:8px;\">✟</div><div style=\"white-space:pre-line;\">$1</div></div>",
+        "trimStrings": [],
+        "placement": [
+          1,
+          2
+        ],
+        "disabled": false,
+        "markdownOnly": true,
+        "promptOnly": false,
+        "runOnEdit": true,
+        "substituteRegex": 0,
+        "minDepth": null,
+        "maxDepth": null
+      },
+      {
+        "id": "hp-visual-carving",
+        "scriptName": "Paramnesia Visual - Carving",
+        "findRegex": "/\\[CARVING\\]\\s*([\\s\\S]*?)\\s*\\[\\/CARVING\\]/gs",
+        "replaceString": "<div style=\"color:#a08060;font-family:Georgia,serif;font-style:italic;letter-spacing:0.2em;opacity:0.85;padding:10px 0;text-align:center;font-size:0.95em;line-height:1.7;text-shadow:1px 1px 2px rgba(0,0,0,0.3);margin:8px 0;\">$1</div>",
+        "trimStrings": [],
+        "placement": [
+          1,
+          2
+        ],
+        "disabled": false,
+        "markdownOnly": true,
+        "promptOnly": false,
+        "runOnEdit": true,
+        "substituteRegex": 0,
+        "minDepth": null,
+        "maxDepth": null
+      },
+      {
+        "id": "hp-visual-contract",
+        "scriptName": "Paramnesia Visual - Contract",
+        "findRegex": "/\\[CONTRACT\\]\\s*([\\s\\S]*?)\\s*\\[\\/CONTRACT\\]/gs",
+        "replaceString": "<div style=\"background:#fefefe;color:#1a1a1a;padding:28px 32px;max-width:480px;font-family:Times New Roman,serif;font-size:0.9em;border:2px solid #222;line-height:1.7;position:relative;box-shadow:0 2px 8px rgba(0,0,0,0.15);margin:8px 0;\"><div style=\"position:absolute;top:16px;right:16px;color:#cc0000;font-weight:bold;font-size:0.7em;text-transform:uppercase;letter-spacing:2px;border:2px solid #cc0000;padding:2px 8px;transform:rotate(12deg);opacity:0.8;\">OFFICIAL</div>$1</div>",
+        "trimStrings": [],
+        "placement": [
+          1,
+          2
+        ],
+        "disabled": false,
+        "markdownOnly": true,
+        "promptOnly": false,
+        "runOnEdit": true,
+        "substituteRegex": 0,
+        "minDepth": null,
+        "maxDepth": null
+      },
+      {
+        "id": "hp-visual-receipt",
+        "scriptName": "Paramnesia Visual - Receipt",
+        "findRegex": "/\\[RECEIPT\\]\\s*([\\s\\S]*?)\\s*\\[\\/RECEIPT\\]/gs",
+        "replaceString": "<pre style=\"background:#fefefe;color:#333;padding:14px 18px;max-width:260px;font-family:Courier New,monospace;font-size:0.78em;border:1px dashed #bbb;line-height:1.5;text-align:center;box-shadow:0 1px 4px rgba(0,0,0,0.08);margin:8px 0;white-space:pre-wrap;\">$1</pre>",
+        "trimStrings": [],
+        "placement": [
+          1,
+          2
+        ],
+        "disabled": false,
+        "markdownOnly": true,
+        "promptOnly": false,
+        "runOnEdit": true,
+        "substituteRegex": 0,
+        "minDepth": null,
+        "maxDepth": null
+      },
+      {
+        "id": "hp-visual-map",
+        "scriptName": "Paramnesia Visual - Map",
+        "findRegex": "/\\[MAP\\]\\s*([\\s\\S]*?)\\s*\\[\\/MAP\\]/gs",
+        "replaceString": "<div style=\"background:#e8dcc8;color:#3e2f1c;padding:20px 24px;max-width:420px;font-family:Georgia,serif;font-size:0.9em;border:2px solid #8b7355;border-radius:4px;line-height:1.6;box-shadow:inset 0 0 20px rgba(0,0,0,0.08),2px 3px 10px rgba(0,0,0,0.15);position:relative;margin:8px 0;\"><div style=\"position:absolute;top:10px;right:14px;font-size:1.6em;color:rgba(100,80,50,0.3);\">⊕</div>$1</div>",
+        "trimStrings": [],
+        "placement": [
+          1,
+          2
+        ],
+        "disabled": false,
+        "markdownOnly": true,
+        "promptOnly": false,
+        "runOnEdit": true,
+        "substituteRegex": 0,
+        "minDepth": null,
+        "maxDepth": null
+      },
+      {
+        "id": "hp-visual-diary",
+        "scriptName": "Paramnesia Visual - Diary Entry",
+        "findRegex": "/\\[DIARY\\]\\s*([\\s\\S]*?)\\s*\\[\\/DIARY\\]/gs",
+        "replaceString": "<div style=\"background:#fdf6ee;color:#4a3c28;padding:20px 24px;max-width:380px;font-family:Segoe Script,Bradley Hand,cursive;font-size:0.9em;border-left:4px solid #c4a070;line-height:2.1;box-shadow:1px 2px 8px rgba(0,0,0,0.08);margin:8px 0;\">$1</div>",
+        "trimStrings": [],
+        "placement": [
+          1,
+          2
+        ],
+        "disabled": false,
+        "markdownOnly": true,
+        "promptOnly": false,
+        "runOnEdit": true,
+        "substituteRegex": 0,
+        "minDepth": null,
+        "maxDepth": null
+      },
+      {
+        "id": "hp-visual-report",
+        "scriptName": "Paramnesia Visual - Report",
+        "findRegex": "/\\[REPORT\\]\\s*([\\s\\S]*?)\\s*\\[\\/REPORT\\]/gs",
+        "replaceString": "<div style=\"background:#f5f5f0;color:#1a1a1a;padding:22px 26px;max-width:480px;font-family:Courier New,monospace;font-size:0.83em;border:1px solid #999;line-height:1.6;position:relative;box-shadow:0 1px 6px rgba(0,0,0,0.1);margin:8px 0;\"><div style=\"position:absolute;top:14px;right:14px;color:#cc0000;font-weight:bold;font-size:0.65em;border:2px solid #cc0000;padding:2px 8px;transform:rotate(-8deg);opacity:0.6;letter-spacing:1px;\">CLASSIFIED</div><div style=\"color:#cc0000;font-weight:bold;font-size:0.8em;text-transform:uppercase;letter-spacing:2px;border-bottom:2px solid #cc0000;padding-bottom:6px;margin-bottom:12px;\">INCIDENT REPORT</div>$1</div>",
+        "trimStrings": [],
+        "placement": [
+          1,
+          2
+        ],
+        "disabled": false,
+        "markdownOnly": true,
+        "promptOnly": false,
+        "runOnEdit": true,
+        "substituteRegex": 0,
+        "minDepth": null,
+        "maxDepth": null
+      },
+      {
+        "id": "hp-visual-rune",
+        "scriptName": "Paramnesia Visual - Rune",
+        "findRegex": "/\\[RUNE\\]\\s*([\\s\\S]*?)\\s*\\[\\/RUNE\\]/gs",
+        "replaceString": "<style>@keyframes hp-rune-glow { 0%,100% { text-shadow:0 0 4px rgba(192,160,96,0.3);filter:brightness(1); } 50% { text-shadow:0 0 12px rgba(192,160,96,0.7),0 0 30px rgba(192,160,96,0.4),0 0 50px rgba(192,160,96,0.15);filter:brightness(1.2); } } @keyframes hp-rune-flicker { 0%,100% { opacity:1; } 15% { opacity:0.7; } 17% { opacity:1; } 60% { opacity:1; } 62% { opacity:0.6; } 64% { opacity:1; } } .hp-rune{animation:hp-rune-glow 3s ease-in-out infinite,hp-rune-flicker 5s ease-in-out infinite}</style><div class=\"hp-rune\" style=\"color:#c0a060;font-family:Georgia,serif;font-style:italic;letter-spacing:0.25em;padding:14px 0;text-align:center;font-size:1.1em;line-height:1.6;margin:8px 0;\">$1</div>",
+        "trimStrings": [],
+        "placement": [
+          1,
+          2
+        ],
+        "disabled": false,
+        "markdownOnly": true,
+        "promptOnly": false,
+        "runOnEdit": true,
+        "substituteRegex": 0,
+        "minDepth": null,
+        "maxDepth": null
+      },
+      {
+        "id": "hp-visual-spell",
+        "scriptName": "Paramnesia Visual - Spell",
+        "findRegex": "/\\[SPELL\\]\\s*([\\s\\S]*?)\\s*\\[\\/SPELL\\]/gs",
+        "replaceString": "<style>@keyframes hp-spell-shimmer { 0%,100% { text-shadow:0 0 6px #7eb8f7,0 0 12px rgba(68,136,255,0.3);filter:brightness(1); } 50% { text-shadow:0 0 14px #7eb8f7,0 0 35px rgba(68,136,255,0.5),0 0 60px rgba(68,136,255,0.2);filter:brightness(1.15); } } @keyframes hp-spell-float { 0%,100% { transform:translateY(0); } 50% { transform:translateY(-2px); } } .hp-spell{animation:hp-spell-shimmer 2s ease-in-out infinite,hp-spell-float 3s ease-in-out infinite}</style><div class=\"hp-spell\" style=\"color:#7eb8f7;font-family:Georgia,serif;font-style:italic;letter-spacing:0.1em;padding:10px 0;text-align:center;font-size:1.05em;line-height:1.6;margin:8px 0;\">$1</div>",
+        "trimStrings": [],
+        "placement": [
+          1,
+          2
+        ],
+        "disabled": false,
+        "markdownOnly": true,
+        "promptOnly": false,
+        "runOnEdit": true,
+        "substituteRegex": 0,
+        "minDepth": null,
+        "maxDepth": null
+      },
+      {
+        "id": "hp-visual-prophecy",
+        "scriptName": "Paramnesia Visual - Prophecy",
+        "findRegex": "/\\[PROPHECY\\]\\s*([\\s\\S]*?)\\s*\\[\\/PROPHECY\\]/gs",
+        "replaceString": "<style>@keyframes hp-prophecy-glow { 0%,100% { text-shadow:0 0 10px rgba(212,175,55,0.4);border-color:rgba(212,175,55,0.2);filter:brightness(1); } 50% { text-shadow:0 0 22px rgba(212,175,55,0.7),0 0 50px rgba(212,175,55,0.3);border-color:rgba(212,175,55,0.5);filter:brightness(1.1); } } @keyframes hp-prophecy-breathe { 0%,100% { opacity:1;transform:scale(1); } 50% { opacity:0.85;transform:scale(1.01); } } .hp-prophecy{animation:hp-prophecy-glow 3s ease-in-out infinite,hp-prophecy-breathe 4s ease-in-out infinite}</style><div class=\"hp-prophecy\" style=\"color:#d4af37;font-family:Georgia,serif;font-style:italic;letter-spacing:0.1em;padding:18px 24px;text-align:center;font-size:1.05em;line-height:1.9;border-top:1px solid rgba(212,175,55,0.2);border-bottom:1px solid rgba(212,175,55,0.2);margin:8px 0;\">$1</div>",
+        "trimStrings": [],
+        "placement": [
+          1,
+          2
+        ],
+        "disabled": false,
+        "markdownOnly": true,
+        "promptOnly": false,
+        "runOnEdit": true,
+        "substituteRegex": 0,
+        "minDepth": null,
+        "maxDepth": null
+      },
+      {
+        "id": "hp-visual-enchant",
+        "scriptName": "Paramnesia Visual - Enchanted Item",
+        "findRegex": "/\\[ENCHANT\\]\\s*([\\s\\S]*?)\\s*\\[\\/ENCHANT\\]/gs",
+        "replaceString": "<style>@keyframes hp-enchant-pulse { 0%,100% { border-color:#9b59b6;box-shadow:0 0 4px rgba(155,89,182,0.1);text-shadow:none; } 50% { border-color:#bb77dd;box-shadow:0 0 16px rgba(155,89,182,0.35),0 0 30px rgba(155,89,182,0.1);text-shadow:0 0 8px rgba(155,89,182,0.2); } } .hp-enchant{animation:hp-enchant-pulse 2s ease-in-out infinite}</style><div class=\"hp-enchant\" style=\"background:rgba(75,0,130,0.08);color:#dda0dd;padding:14px 20px;max-width:400px;font-family:Georgia,serif;font-size:0.92em;border-left:3px solid #9b59b6;line-height:1.7;border-radius:0 6px 6px 0;margin:8px 0;\">$1</div>",
+        "trimStrings": [],
+        "placement": [
+          1,
+          2
+        ],
+        "disabled": false,
+        "markdownOnly": true,
+        "promptOnly": false,
+        "runOnEdit": true,
+        "substituteRegex": 0,
+        "minDepth": null,
+        "maxDepth": null
+      },
+      {
+        "id": "hp-visual-post",
+        "scriptName": "Paramnesia Visual - Social Post",
+        "findRegex": "/\\[POST(?:\\s+by=\\\"([^\\\"]*)\\\")(?:\\s+platform=\\\"([^\\\"]*)\\\")?\\]\\s*([\\s\\S]*?)\\s*\\[\\/POST\\]/gs",
+        "replaceString": "<div style=\"background:#000;border:1px solid #2f3336;border-radius:16px;padding:16px;max-width:480px;font-family:-apple-system,Helvetica Neue,Arial,sans-serif;color:#e7e9ea;margin:8px 0;\"><div style=\"display:flex;align-items:center;gap:10px;margin-bottom:12px;\"><div style=\"width:44px;height:44px;border-radius:50%;background:linear-gradient(135deg,#1d9bf0,#0a5a8a);display:flex;align-items:center;justify-content:center;font-size:18px;font-weight:bold;flex-shrink:0;color:white;\">$1</div><div><div style=\"font-weight:700;font-size:0.95em;\">$1</div><div style=\"color:#71767b;font-size:0.85em;\">$2</div></div><div style=\"margin-left:auto;color:#e7e9ea;font-size:1.3em;\">𝕏</div></div><div style=\"font-size:1.05em;line-height:1.5;margin-bottom:12px;\">$3</div></div>",
+        "trimStrings": [],
+        "placement": [
+          1,
+          2
+        ],
+        "disabled": false,
+        "markdownOnly": true,
+        "promptOnly": false,
+        "runOnEdit": true,
+        "substituteRegex": 0,
+        "minDepth": null,
+        "maxDepth": null
+      },
+      {
+        "id": "hp-visual-profile",
+        "scriptName": "Paramnesia Visual - Profile Card",
+        "findRegex": "/\\[PROFILE(?:\\s+name=\\\"([^\\\"]*)\\\")?\\]\\s*([\\s\\S]*?)\\s*\\[\\/PROFILE\\]/gs",
+        "replaceString": "<div style=\"background:linear-gradient(160deg,#1a1a2e,#16213e);border-radius:14px;padding:22px 24px;max-width:320px;font-family:-apple-system,sans-serif;border:1px solid #2a2a4a;text-align:center;box-shadow:0 4px 16px rgba(0,0,0,0.3);margin:8px 0;\"><div style=\"width:60px;height:60px;border-radius:50%;background:linear-gradient(135deg,#667eea,#764ba2);margin:0 auto 12px;display:flex;align-items:center;justify-content:center;font-size:1.5em;color:white;font-weight:700;border:3px solid rgba(255,255,255,0.1);overflow:hidden;white-space:nowrap;text-overflow:clip;\">👤</div><div style=\"color:#fff;font-size:1.15em;font-weight:700;margin-bottom:4px;\">$1</div><div style=\"color:#a0a0c0;font-size:0.85em;line-height:1.7;\">$2</div></div>",
+        "trimStrings": [],
+        "placement": [
+          1,
+          2
+        ],
+        "disabled": false,
+        "markdownOnly": true,
+        "promptOnly": false,
+        "runOnEdit": true,
+        "substituteRegex": 0,
+        "minDepth": null,
+        "maxDepth": null
+      },
+      {
+        "id": "hp-visual-radio",
+        "scriptName": "Paramnesia Visual - Radio Broadcast",
+        "findRegex": "/\\[RADIO\\]\\s*([\\s\\S]*?)\\s*\\[\\/RADIO\\]/gs",
+        "replaceString": "<style>@keyframes hp-radio-static { 0% { opacity:0.03; } 50% { opacity:0.06; } 100% { opacity:0.03; } }</style><div style=\"background:linear-gradient(135deg,#1a1408,#2a1e10);color:#d4a030;padding:16px 20px;max-width:420px;font-family:Courier New,monospace;font-size:0.88em;border:1px solid #3a2a10;border-radius:10px;line-height:1.7;box-shadow:inset 0 0 20px rgba(0,0,0,0.4),0 3px 10px rgba(0,0,0,0.3);margin:8px 0;\"><div style=\"display:flex;align-items:center;gap:8px;margin-bottom:10px;font-size:0.75em;color:#aa8020;text-transform:uppercase;letter-spacing:1px;border-bottom:1px solid rgba(212,160,48,0.15);padding-bottom:8px;\">📻 BROADCAST<span style=\"margin-left:auto;color:#886010;\">~~</span></div>$1</div>",
+        "trimStrings": [],
+        "placement": [
+          1,
+          2
+        ],
+        "disabled": false,
+        "markdownOnly": true,
+        "promptOnly": false,
+        "runOnEdit": true,
+        "substituteRegex": 0,
+        "minDepth": null,
+        "maxDepth": null
+      },
+      {
+        "id": "hp-visual-music",
+        "scriptName": "Paramnesia Visual - Music/Lyrics",
+        "findRegex": "/\\[MUSIC\\]\\s*([\\s\\S]*?)\\s*\\[\\/MUSIC\\]/gs",
+        "replaceString": "<style>@keyframes hp-music-sway { 0%,100% { transform:translateX(0); } 25% { transform:translateX(2px); } 75% { transform:translateX(-2px); } }</style><div style=\"color:#c8b8d8;font-family:Georgia,serif;font-style:italic;padding:16px 28px;text-align:center;font-size:0.95em;line-height:2.2;border-left:2px solid rgba(200,184,216,0.25);border-right:2px solid rgba(200,184,216,0.25);animation:hp-music-sway 4s ease-in-out infinite;margin:8px 0;\"><span style=\"color:rgba(200,184,216,0.4);font-style:normal;\">♪</span> $1 <span style=\"color:rgba(200,184,216,0.4);font-style:normal;\">♪</span></div>",
+        "trimStrings": [],
+        "placement": [
+          1,
+          2
+        ],
+        "disabled": false,
+        "markdownOnly": true,
+        "promptOnly": false,
+        "runOnEdit": true,
+        "substituteRegex": 0,
+        "minDepth": null,
+        "maxDepth": null
+      },
+      {
+        "id": "hp-visual-whisper",
+        "scriptName": "Paramnesia Visual - Whisper",
+        "findRegex": "/\\[WHISPER\\]\\s*([\\s\\S]*?)\\s*\\[\\/WHISPER\\]/gs",
+        "replaceString": "<span style=\"color:#8888aa;font-size:0.88em;font-style:italic;opacity:0.65;letter-spacing:0.5px;\">$1</span>",
+        "trimStrings": [],
+        "placement": [
+          1,
+          2
+        ],
+        "disabled": false,
+        "markdownOnly": true,
+        "promptOnly": false,
+        "runOnEdit": true,
+        "substituteRegex": 0,
+        "minDepth": null,
+        "maxDepth": null
+      },
+      {
+        "id": "hp-visual-shout",
+        "scriptName": "Paramnesia Visual - Shout",
+        "findRegex": "/\\[SHOUT\\]\\s*([\\s\\S]*?)\\s*\\[\\/SHOUT\\]/gs",
+        "replaceString": "<style>@keyframes hp-shout-shake { 0%,100% { transform:translateX(0); } 10% { transform:translateX(-1px); } 20% { transform:translateX(1px); } 30% { transform:translateX(-1px); } 40% { transform:translateX(1px); } 50% { transform:translateX(0); } }</style><span style=\"color:#ff4444;font-size:1.2em;font-weight:900;letter-spacing:3px;text-transform:uppercase;text-shadow:2px 2px 4px rgba(255,0,0,0.3),0 0 10px rgba(255,0,0,0.15);display:inline-block;animation:hp-shout-shake 0.5s ease-in-out;\">$1</span>",
+        "trimStrings": [],
+        "placement": [
+          1,
+          2
+        ],
+        "disabled": false,
+        "markdownOnly": true,
+        "promptOnly": false,
+        "runOnEdit": true,
+        "substituteRegex": 0,
+        "minDepth": null,
+        "maxDepth": null
+      },
+      {
+        "id": "hp-visual-neon",
+        "scriptName": "Paramnesia Visual - Neon Sign",
+        "findRegex": "/\\[NEON(?:\\s+color=\\\"([^\\\"]*)\\\")?\\]\\s*([\\s\\S]*?)\\s*\\[\\/NEON\\]/gs",
+        "replaceString": "<style>@keyframes hp-neon-flicker { 0%,100% { opacity:1; text-shadow:0 0 7px var(--neon),0 0 14px var(--neon),0 0 30px var(--neon),0 0 50px var(--neon); } 4% { opacity:0.8; text-shadow:none; } 6% { opacity:1; text-shadow:0 0 7px var(--neon),0 0 14px var(--neon),0 0 30px var(--neon),0 0 50px var(--neon); } 8% { opacity:0.5; text-shadow:none; } 9% { opacity:1; text-shadow:0 0 7px var(--neon),0 0 14px var(--neon),0 0 30px var(--neon),0 0 50px var(--neon); } 52% { opacity:0.6; text-shadow:0 0 4px var(--neon); } 53% { opacity:1; text-shadow:0 0 7px var(--neon),0 0 14px var(--neon),0 0 30px var(--neon),0 0 50px var(--neon); } } .hp-neon{--neon:#ff3599} .hp-neon.blue{--neon:#00d4ff} .hp-neon.green{--neon:#39ff14} .hp-neon.red{--neon:#ff2020} .hp-neon.yellow{--neon:#ffe600} .hp-neon.purple{--neon:#bf40ff} .hp-neon.orange{--neon:#ff6600} .hp-neon.pink{--neon:#ff3599} .hp-neon.white{--neon:#ffffff}</style><div class=\"hp-neon $1\" style=\"text-align:center;padding:20px 0;font-family:Courier New,monospace;font-size:1.4em;font-weight:700;letter-spacing:0.15em;text-transform:uppercase;color:#fff;text-shadow:0 0 7px var(--neon),0 0 14px var(--neon),0 0 30px var(--neon),0 0 50px var(--neon);animation:hp-neon-flicker 4s ease-in-out infinite;margin:8px 0;\">$2</div>",
+        "trimStrings": [],
+        "placement": [
+          1,
+          2
+        ],
+        "disabled": false,
+        "markdownOnly": true,
+        "promptOnly": false,
+        "runOnEdit": true,
+        "substituteRegex": 0,
+        "minDepth": null,
+        "maxDepth": null
+      },
+      {
+        "id": "hp-visual-dream",
+        "scriptName": "Paramnesia Visual - Dream Sequence",
+        "findRegex": "/\\[DREAM\\]\\s*([\\s\\S]*?)\\s*\\[\\/DREAM\\]/gs",
+        "replaceString": "<style>@keyframes hp-dream-bg { 0% { background-position:0% 50%; } 50% { background-position:100% 50%; } 100% { background-position:0% 50%; } } @keyframes hp-dream-float { 0%,100% { transform:translateY(0); } 50% { transform:translateY(-3px); } }</style><div style=\"background:linear-gradient(-45deg,rgba(238,174,202,0.15),rgba(148,187,233,0.15),rgba(192,162,235,0.15),rgba(130,210,200,0.15));background-size:400% 400%;animation:hp-dream-bg 8s ease infinite;border-radius:16px;padding:22px 28px;max-width:480px;border:1px solid rgba(255,255,255,0.1);margin:8px 0;\"><div style=\"color:#c8b0e0;font-family:Georgia,serif;font-style:italic;font-size:0.95em;line-height:2;letter-spacing:0.03em;text-shadow:0 0 20px rgba(200,150,255,0.3);animation:hp-dream-float 6s ease-in-out infinite;\">$1</div></div>",
+        "trimStrings": [],
+        "placement": [
+          1,
+          2
+        ],
+        "disabled": false,
+        "markdownOnly": true,
+        "promptOnly": false,
+        "runOnEdit": true,
+        "substituteRegex": 0,
+        "minDepth": null,
+        "maxDepth": null
+      },
+      {
+        "id": "hp-visual-sticky",
+        "scriptName": "Paramnesia Visual - Sticky Note",
+        "findRegex": "/\\[STICKY\\]\\s*([\\s\\S]*?)\\s*\\[\\/STICKY\\]/gs",
+        "replaceString": "<style>.hp-sticky{position:relative;overflow:hidden} .hp-sticky::before{content:'';position:absolute;top:0;left:0;right:0;height:6px; background:rgba(200,170,0,0.25)} .hp-sticky::after{content:'';position:absolute;bottom:0;right:0; width:0;height:0;border-style:solid;border-width:0 0 20px 20px; border-color:transparent transparent rgba(180,150,0,0.35) transparent; filter:drop-shadow(-1px -1px 1px rgba(0,0,0,0.1))}</style><div class=\"hp-sticky\" style=\"background:linear-gradient(135deg,#fff740,#ffed4a);color:#3a3000;padding:18px 20px 24px;max-width:240px;font-family:Segoe Script,Bradley Hand,cursive;font-size:0.95em;line-height:1.8;transform:rotate(2deg);box-shadow:3px 4px 10px rgba(0,0,0,0.25),1px 1px 3px rgba(0,0,0,0.1);margin:8px 0;\">$1</div>",
+        "trimStrings": [],
+        "placement": [
+          1,
+          2
+        ],
+        "disabled": false,
+        "markdownOnly": true,
+        "promptOnly": false,
+        "runOnEdit": true,
+        "substituteRegex": 0,
+        "minDepth": null,
+        "maxDepth": null
+      },
+      {
+        "id": "hp-visual-polaroid",
+        "scriptName": "Paramnesia Visual - Polaroid",
+        "findRegex": "/\\[POLAROID\\]\\s*([\\s\\S]*?)\\s*\\[\\/POLAROID\\]/gs",
+        "replaceString": "<style>.hp-polar-photo{position:relative;overflow:hidden} .hp-polar-photo::after{content:'';position:absolute;top:0;left:0;right:0;bottom:0; background:linear-gradient(120deg,rgba(255,255,255,0.12) 0%,transparent 50%), repeating-linear-gradient(0deg,rgba(0,0,0,0.04) 0px,rgba(0,0,0,0.04) 1px,transparent 1px,transparent 3px)}</style><div style=\"background:#f8f8f8;padding:12px 12px 36px;max-width:200px;transform:rotate(-1.5deg);box-shadow:0 4px 16px rgba(0,0,0,0.3),0 1px 3px rgba(0,0,0,0.1);margin:8px 0;font-family:Segoe Script,Bradley Hand,cursive;\"><div class=\"hp-polar-photo\" style=\"width:100%;aspect-ratio:1;background:linear-gradient(135deg,#c0c0c8,#9898a8,#b8b8c4);display:flex;align-items:center;justify-content:center;color:rgba(255,255,255,0.25);font-size:3em;font-family:sans-serif;\">📷</div><div style=\"text-align:center;color:#4a3c28;font-size:0.88em;padding-top:10px;\">$1</div></div>",
+        "trimStrings": [],
+        "placement": [
+          1,
+          2
+        ],
+        "disabled": false,
+        "markdownOnly": true,
+        "promptOnly": false,
+        "runOnEdit": true,
+        "substituteRegex": 0,
+        "minDepth": null,
+        "maxDepth": null
+      },
+      {
+        "id": "hp-visual-telegram",
+        "scriptName": "Paramnesia Visual - Telegram",
+        "findRegex": "/\\[TELEGRAM\\]\\s*([\\s\\S]*?)\\s*\\[\\/TELEGRAM\\]/gs",
+        "replaceString": "<div style=\"background:#f5eedc;color:#2a1f0a;padding:20px 24px;max-width:460px;font-family:Courier New,monospace;font-size:0.85em;text-transform:uppercase;line-height:1.7;letter-spacing:0.04em;border:2px dashed #c4aa78;box-shadow:0 2px 8px rgba(0,0,0,0.15),inset 0 0 20px rgba(180,140,60,0.08);margin:8px 0;\"><div style=\"text-align:center;border-bottom:1px solid #c4aa78;padding-bottom:10px;margin-bottom:14px;\"><div style=\"font-size:1.1em;font-weight:bold;letter-spacing:4px;color:#5a3e10;\">TELEGRAM</div><div style=\"font-size:0.72em;color:#8a7040;margin-top:4px;letter-spacing:0.1em;\">URGENT DISPATCH</div></div>$1<div style=\"text-align:center;margin-top:14px;padding-top:10px;border-top:1px solid #c4aa78;font-size:0.72em;color:#8a7040;letter-spacing:2px;\">— END OF MESSAGE —</div></div>",
+        "trimStrings": [],
+        "placement": [
+          1,
+          2
+        ],
+        "disabled": false,
+        "markdownOnly": true,
+        "promptOnly": false,
+        "runOnEdit": true,
+        "substituteRegex": 0,
+        "minDepth": null,
+        "maxDepth": null
+      },
+      {
+        "id": "hp-visual-voicemail",
+        "scriptName": "Paramnesia Visual - Voicemail",
+        "findRegex": "/\\[VOICEMAIL(?:\\s+from=\\\"([^\\\"]*)\\\")?\\]\\s*([\\s\\S]*?)\\s*\\[\\/VOICEMAIL\\]/gs",
+        "replaceString": "<div style=\"background:#1c1c24;border-radius:14px;padding:16px 18px;max-width:380px;font-family:-apple-system,Helvetica Neue,sans-serif;border:1px solid #2e2e3e;box-shadow:0 4px 16px rgba(0,0,0,0.35);margin:8px 0;\"><div style=\"font-size:0.68em;color:#6e6e8e;text-transform:uppercase;letter-spacing:1.5px;margin-bottom:8px;\">Voicemail</div><div style=\"font-size:0.88em;color:#c0b8d8;font-weight:500;margin-bottom:12px;\">$1</div><div style=\"display:flex;align-items:center;gap:12px;margin-bottom:12px;\"><div style=\"width:38px;height:38px;border-radius:50%;background:linear-gradient(135deg,#7c5cbf,#9b7de0);display:flex;align-items:center;justify-content:center;font-size:0.9em;color:white;flex-shrink:0;box-shadow:0 2px 8px rgba(140,100,220,0.4);\">▶</div><div style=\"flex:1;display:flex;align-items:center;gap:2px;height:28px;\"><span style=\"flex:1;background:#9b7de0;border-radius:1px;height:40%;min-width:2px;\"></span><span style=\"flex:1;background:#9b7de0;border-radius:1px;height:70%;min-width:2px;\"></span><span style=\"flex:1;background:#9b7de0;border-radius:1px;height:55%;min-width:2px;\"></span><span style=\"flex:1;background:#9b7de0;border-radius:1px;height:90%;min-width:2px;\"></span><span style=\"flex:1;background:#9b7de0;border-radius:1px;height:60%;min-width:2px;\"></span><span style=\"flex:1;background:#9b7de0;border-radius:1px;height:35%;min-width:2px;\"></span><span style=\"flex:1;background:#9b7de0;border-radius:1px;height:75%;min-width:2px;\"></span><span style=\"flex:1;background:#4a3e6a;border-radius:1px;height:50%;min-width:2px;\"></span><span style=\"flex:1;background:#4a3e6a;border-radius:1px;height:80%;min-width:2px;\"></span><span style=\"flex:1;background:#4a3e6a;border-radius:1px;height:45%;min-width:2px;\"></span><span style=\"flex:1;background:#4a3e6a;border-radius:1px;height:65%;min-width:2px;\"></span><span style=\"flex:1;background:#4a3e6a;border-radius:1px;height:30%;min-width:2px;\"></span></div><div style=\"font-size:0.72em;color:#6e6e8e;font-family:monospace;flex-shrink:0;\">0:47</div></div><div style=\"font-size:0.83em;color:#9090b0;line-height:1.6;border-top:1px solid #2a2a3a;padding-top:10px;font-style:italic;\">$2</div></div>",
+        "trimStrings": [],
+        "placement": [
+          1,
+          2
+        ],
+        "disabled": false,
+        "markdownOnly": true,
+        "promptOnly": false,
+        "runOnEdit": true,
+        "substituteRegex": 0,
+        "minDepth": null,
+        "maxDepth": null
+      },
+      {
+        "id": "hp-visual-badge",
+        "scriptName": "Paramnesia Visual - ID Badge",
+        "findRegex": "/\\[BADGE(?:\\s+name=\\\"([^\\\"]*)\\\")\\]\\s*([\\s\\S]*?)\\s*\\[\\/BADGE\\]/gs",
+        "replaceString": "<div style=\"background:#ffffff;border-radius:10px;max-width:220px;font-family:-apple-system,Helvetica Neue,Arial,sans-serif;overflow:hidden;box-shadow:0 4px 18px rgba(0,0,0,0.3),0 1px 3px rgba(0,0,0,0.15);margin:8px 0;\"><div style=\"background:#1a3a5c;padding:28px 16px 14px;text-align:center;\"><div style=\"font-size:0.65em;color:rgba(255,255,255,0.7);text-transform:uppercase;letter-spacing:2px;\">IDENTIFICATION</div></div><div style=\"padding:14px 16px 8px;text-align:center;\"><div style=\"width:54px;height:54px;border-radius:50%;background:linear-gradient(135deg,#c0c8d8,#9098b0);margin:0 auto 10px;display:flex;align-items:center;justify-content:center;font-size:1.6em;color:rgba(255,255,255,0.5);border:2px solid #e0e4ea;\">👤</div><div style=\"font-size:1em;font-weight:700;color:#1a1a2a;margin-bottom:2px;\">$1</div><div style=\"font-size:0.72em;color:#5a6278;letter-spacing:0.5px;margin-bottom:10px;\">$2</div></div><div style=\"height:26px;background:repeating-linear-gradient(90deg,#1a1a1a 0px,#1a1a1a 2px,#fff 2px,#fff 4px,#1a1a1a 4px,#1a1a1a 5px,#fff 5px,#fff 8px,#1a1a1a 8px,#1a1a1a 10px,#fff 10px,#fff 11px,#1a1a1a 11px,#1a1a1a 13px,#fff 13px,#fff 16px);margin:0 16px 12px;border-radius:2px;\"></div></div>",
+        "trimStrings": [],
+        "placement": [
+          1,
+          2
+        ],
+        "disabled": false,
+        "markdownOnly": true,
+        "promptOnly": false,
+        "runOnEdit": true,
+        "substituteRegex": 0,
+        "minDepth": null,
+        "maxDepth": null
+      },
+      {
+        "id": "hp-visual-ticket",
+        "scriptName": "Paramnesia Visual - Ticket",
+        "findRegex": "/\\[TICKET(?:\\s+event=\\\"([^\\\"]*)\\\")?(?:\\s+venue=\\\"([^\\\"]*)\\\")?(?:\\s+date=\\\"([^\\\"]*)\\\")?(?:\\s+gate=\\\"([^\\\"]*)\\\")?(?:\\s+seat=\\\"([^\\\"]*)\\\")?\\]\\s*([\\s\\S]*?)\\s*\\[\\/TICKET\\]/gs",
+        "replaceString": "<style>.hp-ticket-stub{position:relative} .hp-ticket-stub::before,.hp-ticket-stub::after{content:'';position:absolute;left:-8px; width:16px;height:16px;border-radius:50%;background:#1a1a2e} .hp-ticket-stub::before{top:-8px} .hp-ticket-stub::after{bottom:-8px} .hp-ticket-main{position:relative} .hp-ticket-main::after{content:'';position:absolute;top:0;right:-1px;bottom:0;width:2px; background:repeating-linear-gradient(to bottom,#ccc 0px,#ccc 6px,transparent 6px,transparent 10px);z-index:1}</style><div style=\"display:flex;max-width:500px;font-family:Times New Roman,serif;box-shadow:0 4px 16px rgba(0,0,0,0.35);border-radius:6px;overflow:visible;margin:8px 0;\"><div class=\"hp-ticket-main\" style=\"background:#faf6ee;padding:18px 20px;flex:1;color:#2a1f0a;border-radius:6px 0 0 6px;\"><div style=\"font-size:1.1em;font-weight:bold;letter-spacing:1px;color:#2a1f0a;margin-bottom:4px;text-transform:uppercase;\">$1</div><div style=\"font-size:0.78em;color:#7a6040;font-style:italic;margin-bottom:12px;\">$2</div><div style=\"font-size:0.75em;color:#5a4030;font-family:Courier New,monospace;line-height:1.8;white-space:pre-line;\">$6</div></div><div class=\"hp-ticket-stub\" style=\"background:#f0e8d8;padding:18px 16px;min-width:110px;text-align:center;border-left:1px dashed #c4aa78;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:6px;border-radius:0 6px 6px 0;\"><div style=\"font-size:0.62em;color:#7a6040;text-transform:uppercase;letter-spacing:1px;\">Gate</div><div style=\"font-size:1.1em;font-weight:bold;color:#2a1f0a;font-family:Courier New,monospace;letter-spacing:2px;\">$4</div><div style=\"font-size:0.62em;color:#7a6040;text-transform:uppercase;letter-spacing:1px;margin-top:8px;\">Seat</div><div style=\"font-size:0.85em;font-weight:bold;color:#2a1f0a;font-family:Courier New,monospace;letter-spacing:2px;\">$5</div><div style=\"font-size:0.68em;color:#8a7050;margin-top:4px;\">$3</div></div></div>",
+        "trimStrings": [],
+        "placement": [
+          1,
+          2
+        ],
+        "disabled": false,
+        "markdownOnly": true,
+        "promptOnly": false,
+        "runOnEdit": true,
+        "substituteRegex": 0,
+        "minDepth": null,
+        "maxDepth": null
+      },
+      {
+        "id": "hp-visual-menu",
+        "scriptName": "Paramnesia Visual - Menu",
+        "findRegex": "/\\[MENU(?:\\s+title=\\\"([^\\\"]*)\\\")?(?:\\s+subtitle=\\\"([^\\\"]*)\\\")?\\]\\s*([\\s\\S]*?)\\s*\\[\\/MENU\\]/gs",
+        "replaceString": "<div style=\"background:#0d0d0d;color:#d4d4d4;padding:28px 32px;max-width:380px;font-family:-apple-system,Segoe UI,Helvetica,Arial,sans-serif;border:1px solid rgba(255,255,255,0.08);border-radius:12px;line-height:1.6;margin:8px 0;\"><div style=\"text-align:center;margin-bottom:18px;padding-bottom:14px;border-bottom:1px solid rgba(255,255,255,0.08);\"><div style=\"font-size:1.2em;font-weight:600;color:#ffffff;letter-spacing:2px;text-transform:uppercase;\">$1</div><div style=\"font-size:0.72em;color:rgba(255,255,255,0.35);letter-spacing:1.5px;text-transform:uppercase;margin-top:4px;\">$2</div></div><div style=\"font-size:0.88em;line-height:1.8;color:rgba(255,255,255,0.75);\">$3</div></div>",
+        "trimStrings": [],
+        "placement": [
+          1,
+          2
+        ],
+        "disabled": false,
+        "markdownOnly": true,
+        "promptOnly": false,
+        "runOnEdit": true,
+        "substituteRegex": 0,
+        "minDepth": null,
+        "maxDepth": null
+      },
+      {
+        "id": "hp-visual-wanted",
+        "scriptName": "Paramnesia Visual - Wanted Poster",
+        "findRegex": "/\\[WANTED(?:\\s+reward=\\\"([^\\\"]*)\\\")?\\]\\s*([\\s\\S]*?)\\s*\\[\\/WANTED\\]/gs",
+        "replaceString": "<style>.hp-wanted{position:relative} .hp-wanted-nail{position:absolute;width:8px;height:8px;border-radius:50%; background:radial-gradient(circle at 35% 35%,#888,#333);box-shadow:0 1px 2px rgba(0,0,0,0.4)} .hp-wanted-nail.tl{top:6px;left:6px} .hp-wanted-nail.tr{top:6px;right:6px} .hp-wanted-nail.bl{bottom:6px;left:6px} .hp-wanted-nail.br{bottom:6px;right:6px}</style><div class=\"hp-wanted\" style=\"background:#e8d5b0;background-image:radial-gradient(ellipse at 15% 20%,rgba(120,80,20,0.2) 0%,transparent 40%),radial-gradient(ellipse at 85% 70%,rgba(100,60,10,0.18) 0%,transparent 45%),radial-gradient(ellipse at 50% 50%,rgba(90,55,10,0.08) 0%,transparent 70%),radial-gradient(circle at 30% 80%,rgba(80,50,10,0.12) 0%,transparent 30%),radial-gradient(circle at 70% 15%,rgba(110,70,15,0.1) 0%,transparent 25%);color:#1a0f00;padding:22px 26px;max-width:320px;font-family:Georgia,Times New Roman,serif;text-align:center;border:3px solid #6b4a20;line-height:1.5;box-shadow:3px 5px 14px rgba(0,0,0,0.35),inset 0 0 30px rgba(100,60,10,0.12);margin:8px 0;\"><div class=\"hp-wanted-nail tl\"></div><div class=\"hp-wanted-nail tr\"></div><div class=\"hp-wanted-nail bl\"></div><div class=\"hp-wanted-nail br\"></div><div style=\"font-size:2.4em;font-weight:900;text-transform:uppercase;letter-spacing:4px;line-height:1;color:#1a0f00;margin-bottom:2px;\">WANTED</div><div style=\"font-size:0.9em;font-weight:bold;letter-spacing:6px;color:#5a3010;border-top:2px solid #6b4a20;border-bottom:2px solid #6b4a20;padding:4px 0;margin:6px 0 14px;text-transform:uppercase;\">DEAD OR ALIVE</div><div style=\"font-size:0.85em;line-height:1.6;color:#2a1800;margin-bottom:14px;\">$2</div><div style=\"font-size:1.3em;font-weight:900;border-top:2px solid #6b4a20;padding-top:10px;color:#3a2000;\">$1<span style=\"font-size:0.5em;font-weight:normal;letter-spacing:1px;color:#5a3810;display:block;margin-top:2px;\">REWARD</span></div></div>",
+        "trimStrings": [],
+        "placement": [
+          1,
+          2
+        ],
+        "disabled": false,
+        "markdownOnly": true,
+        "promptOnly": false,
+        "runOnEdit": true,
+        "substituteRegex": 0,
+        "minDepth": null,
+        "maxDepth": null
+      },
+      {
+        "id": "hp-visual-schedule",
+        "scriptName": "Paramnesia Visual - Schedule",
+        "findRegex": "/\\[SCHEDULE(?:\\s+date=\\\"([^\\\"]*)\\\")?(?:\\s+badge=\\\"([^\\\"]*)\\\")?\\]\\s*([\\s\\S]*?)\\s*\\[\\/SCHEDULE\\]/gs",
+        "replaceString": "<div style=\"background:#14141e;border-radius:10px;padding:16px 20px;max-width:440px;font-family:-apple-system,Helvetica Neue,sans-serif;border:1px solid #2a2a3e;box-shadow:0 4px 16px rgba(0,0,0,0.3);margin:8px 0;\"><div style=\"display:flex;align-items:center;justify-content:space-between;margin-bottom:14px;padding-bottom:10px;border-bottom:1px solid #2a2a3e;\"><div style=\"font-size:0.88em;font-weight:600;color:#c8c0e8;\">$1</div><div style=\"font-size:0.62em;background:rgba(155,125,220,0.15);color:#9b7de0;padding:2px 8px;border-radius:10px;letter-spacing:0.5px;border:1px solid rgba(155,125,220,0.3);\">$2</div></div><div class=\"hp-sched-body\" style=\"color:#d0c8e8;font-size:0.88em;line-height:1.6;\">$3</div></div>",
+        "trimStrings": [],
+        "placement": [
+          1,
+          2
+        ],
+        "disabled": false,
+        "markdownOnly": true,
+        "promptOnly": false,
+        "runOnEdit": true,
+        "substituteRegex": 0,
+        "minDepth": null,
+        "maxDepth": null
+      },
+      {
+        "id": "hp-visual-comments",
+        "scriptName": "Paramnesia Visual - Comments",
+        "findRegex": "/\\[COMMENTS(?:\\s+count=\\\"([^\\\"]*)\\\")?(?:\\s+sort=\\\"([^\\\"]*)\\\")?\\]\\s*([\\s\\S]*?)\\s*\\[\\/COMMENTS\\]/gs",
+        "replaceString": "<div style=\"background:#1e1e2e;border-radius:10px;padding:16px 18px;max-width:500px;font-family:-apple-system,Helvetica Neue,sans-serif;font-size:0.88em;border:1px solid #2a2a3e;box-shadow:0 4px 16px rgba(0,0,0,0.3);margin:8px 0;\"><div style=\"font-size:0.72em;color:#6060a0;text-transform:uppercase;letter-spacing:1px;border-bottom:1px solid #2a2a3e;padding-bottom:10px;margin-bottom:14px;\">$1 comments · sorted by: $2</div><div style=\"color:#c0c0d8;line-height:1.6;\">$3</div></div>",
+        "trimStrings": [],
+        "placement": [
+          1,
+          2
+        ],
+        "disabled": false,
+        "markdownOnly": true,
+        "promptOnly": false,
+        "runOnEdit": true,
+        "substituteRegex": 0,
+        "minDepth": null,
+        "maxDepth": null
+      },
+      {
+        "id": "hp-visual-schedule-row",
+        "scriptName": "Paramnesia Visual - Schedule Row",
+        "findRegex": "/(\\d{1,2}:\\d{2})\\s*[—–]\\s*([^\\n<]+)/g",
+        "replaceString": "<div style=\"display:flex;align-items:stretch;gap:12px;padding:7px 0;\"><span style=\"font-family:Courier New,monospace;font-size:0.78em;color:#7070a0;min-width:52px;padding-top:2px;flex-shrink:0;\">$1</span><div style=\"width:3px;border-radius:2px;flex-shrink:0;align-self:stretch;background:#9b7de0;\"></div><div style=\"flex:1;\"><div style=\"font-size:0.88em;color:#d0c8e8;font-weight:500;line-height:1.3;\">$2</div></div></div>",
+        "trimStrings": [],
+        "placement": [
+          1,
+          2
+        ],
+        "disabled": false,
+        "markdownOnly": true,
+        "promptOnly": false,
+        "runOnEdit": true,
+        "substituteRegex": 0,
+        "minDepth": null,
+        "maxDepth": null
+      },
+      {
+        "id": "hp-visual-menu-item",
+        "scriptName": "Paramnesia Visual - Menu Item",
+        "findRegex": "/^([^<>\\n]{2,40})\\s*[:—–]\\s*(\\d{1,4}\\s*(?:cp|sp|gp|pp|gold|silver|copper|credits?|cr|€|\\$|£|¥|coins?|gil|zeny|rupees?|gems?|caps?)\\b[^\\n<]*)$/gmi",
+        "replaceString": "<div style=\"display:flex;justify-content:space-between;align-items:baseline;padding:4px 0;border-bottom:1px solid rgba(255,255,255,0.04);\"><span>$1</span><span style=\"color:rgba(255,255,255,0.4);font-size:0.85em;font-variant-numeric:tabular-nums;\">$2</span></div>",
+        "trimStrings": [],
+        "placement": [
+          1,
+          2
+        ],
+        "disabled": false,
+        "markdownOnly": true,
+        "promptOnly": false,
+        "runOnEdit": true,
+        "substituteRegex": 0,
+        "minDepth": null,
+        "maxDepth": null
+      },
+      {
+        "id": "hp-visual-comment-entry",
+        "scriptName": "Paramnesia Visual - Comment Entry",
+        "findRegex": "/^([A-Za-z][A-Za-z0-9_. -]{1,29}):\\s*([^\\n<]+)$/gm",
+        "replaceString": "<div style=\"display:flex;gap:10px;margin-bottom:14px;\"><div style=\"width:28px;height:28px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:0.7em;font-weight:700;color:white;flex-shrink:0;background:#5865f2;overflow:hidden;\">$1</div><div style=\"flex:1;\"><div style=\"font-size:0.85em;font-weight:600;color:#a0b4ff;margin-bottom:4px;\">$1</div><div style=\"color:#c0c0d8;line-height:1.5;font-size:0.9em;\">$2</div></div></div>",
+        "trimStrings": [],
+        "placement": [
+          1,
+          2
+        ],
+        "disabled": false,
+        "markdownOnly": true,
+        "promptOnly": false,
+        "runOnEdit": true,
+        "substituteRegex": 0,
+        "minDepth": null,
+        "maxDepth": null
       }
     ]
   },
@@ -355,7 +1218,7 @@
     {
       "identifier": "hp_dir_heartthrob",
       "system_prompt": false,
-      "enabled": false,
+      "enabled": true,
       "marker": false,
       "name": "💋 HEARTTHROB — Romance",
       "role": "system",
@@ -369,7 +1232,7 @@
     {
       "identifier": "hp_dir_linger",
       "system_prompt": false,
-      "enabled": false,
+      "enabled": true,
       "marker": false,
       "name": "🩸 LINGER — Horror",
       "role": "system",
@@ -383,7 +1246,7 @@
     {
       "identifier": "hp_dir_motley",
       "system_prompt": false,
-      "enabled": false,
+      "enabled": true,
       "marker": false,
       "name": "🎪 MOTLEY — Comedy",
       "role": "system",
@@ -397,7 +1260,7 @@
     {
       "identifier": "hp_dir_sediment",
       "system_prompt": false,
-      "enabled": false,
+      "enabled": true,
       "marker": false,
       "name": "💧 SEDIMENT — Drama",
       "role": "system",
@@ -411,7 +1274,7 @@
     {
       "identifier": "hp_dir_meridian",
       "system_prompt": false,
-      "enabled": false,
+      "enabled": true,
       "marker": false,
       "name": "🌌 MERIDIAN — Fantasy",
       "role": "system",
@@ -467,7 +1330,7 @@
     {
       "identifier": "hp_dir_palimpsest",
       "system_prompt": false,
-      "enabled": false,
+      "enabled": true,
       "marker": false,
       "name": "📜 PALIMPSEST — Mystery",
       "role": "system",
@@ -481,7 +1344,7 @@
     {
       "identifier": "hp_dir_wilt",
       "system_prompt": false,
-      "enabled": false,
+      "enabled": true,
       "marker": false,
       "name": "🥀 WILT — Dark Comedy",
       "role": "system",
@@ -509,7 +1372,7 @@
     {
       "identifier": "hp_dir_scoria",
       "system_prompt": false,
-      "enabled": false,
+      "enabled": true,
       "marker": false,
       "name": "🔥 SCORIA — Gothic",
       "role": "system",
@@ -523,7 +1386,7 @@
     {
       "identifier": "hp_dir_residue",
       "system_prompt": false,
-      "enabled": false,
+      "enabled": true,
       "marker": false,
       "name": "👁️ RESIDUE — Supernatural",
       "role": "system",
@@ -607,7 +1470,7 @@
     {
       "identifier": "hp_dir_carrion",
       "system_prompt": false,
-      "enabled": false,
+      "enabled": true,
       "marker": false,
       "name": "🌑 CARRION — Dead Dove",
       "role": "system",
@@ -621,7 +1484,7 @@
     {
       "identifier": "hp_dir_venture",
       "system_prompt": false,
-      "enabled": false,
+      "enabled": true,
       "marker": false,
       "name": "🌊 VENTURE — Adventure",
       "role": "system",
@@ -663,7 +1526,7 @@
     {
       "identifier": "hp_dir_gravitas",
       "system_prompt": false,
-      "enabled": false,
+      "enabled": true,
       "marker": false,
       "name": "🪨 GRAVITAS — Continuity",
       "role": "system",
@@ -747,7 +1610,7 @@
     {
       "identifier": "hp_sr_ref_second",
       "system_prompt": false,
-      "enabled": false,
+      "enabled": true,
       "marker": false,
       "name": "🎭 Second Person",
       "role": "system",
@@ -802,7 +1665,7 @@
     {
       "identifier": "hp_sr_present",
       "system_prompt": false,
-      "enabled": false,
+      "enabled": true,
       "marker": false,
       "name": "⏱️ Present Tense",
       "role": "system",
@@ -872,7 +1735,7 @@
     {
       "identifier": "hp_sr_frame_objective",
       "system_prompt": false,
-      "enabled": false,
+      "enabled": true,
       "marker": false,
       "name": "📖 Objective",
       "role": "system",
@@ -955,7 +1818,7 @@
     {
       "identifier": "hp_sr_len_adaptive",
       "system_prompt": false,
-      "enabled": false,
+      "enabled": true,
       "marker": false,
       "name": "📏 Adaptive (match the scene)",
       "role": "system",
@@ -1039,7 +1902,7 @@
       "identifier": "hp_sr_style_standard",
       "name": "✏️ Standard Prose",
       "system_prompt": false,
-      "enabled": false,
+      "enabled": true,
       "marker": false,
       "content": "{{setvar::narrative_style::standard}}{{trim}}\n{{setvar::style_desc::I want standard prose. Plain text narration, no asterisks for action. *Asterisks* for internal thought only. Dialogue in \"double quotes.\" Each named NPC's text wrapped in <font color=X> using a consistent hex color per character. If BunnyMo COLOR tags exist, use those. I don't like when every paragraph is only one sentence. It reads like a list, not prose. Vary the length.}}{{trim}}\n{{setvar::style_response::Standard prose, color-wrapped NPCs. Clean and readable.}}{{trim}}",
       "role": "system",
@@ -1066,7 +1929,7 @@
     {
       "identifier": "hp_sr_vocab_simple",
       "system_prompt": false,
-      "enabled": false,
+      "enabled": true,
       "marker": false,
       "name": "📖 Simple",
       "role": "system",
@@ -1108,7 +1971,7 @@
     {
       "identifier": "hp_sr_sense_sight",
       "system_prompt": false,
-      "enabled": false,
+      "enabled": true,
       "marker": false,
       "name": "👁️ Sight",
       "role": "system",
@@ -1136,7 +1999,7 @@
     {
       "identifier": "hp_sr_sense_touch",
       "system_prompt": false,
-      "enabled": false,
+      "enabled": true,
       "marker": false,
       "name": "✋ Touch",
       "role": "system",
@@ -1206,7 +2069,7 @@
     {
       "identifier": "hp_sr_sense_temporal",
       "system_prompt": false,
-      "enabled": false,
+      "enabled": true,
       "marker": false,
       "name": "⏳ Temporal",
       "role": "system",
@@ -1248,7 +2111,7 @@
     {
       "identifier": "hp_sr_hygiene_verb",
       "system_prompt": false,
-      "enabled": false,
+      "enabled": true,
       "marker": false,
       "name": "✂️ Verb Weight",
       "role": "system",
@@ -1276,7 +2139,7 @@
     {
       "identifier": "hp_sr_hygiene_emdash",
       "system_prompt": false,
-      "enabled": false,
+      "enabled": true,
       "marker": false,
       "name": "✂️ No Em Dashes",
       "role": "system",
@@ -1290,7 +2153,7 @@
     {
       "identifier": "hp_sr_hygiene_negation",
       "system_prompt": false,
-      "enabled": false,
+      "enabled": true,
       "marker": false,
       "name": "✂️ Say What It Is",
       "role": "system",
@@ -1318,7 +2181,7 @@
     {
       "identifier": "hp_sr_hygiene_profundity",
       "system_prompt": false,
-      "enabled": false,
+      "enabled": true,
       "marker": false,
       "name": "✂️ Name It or Cut It",
       "role": "system",
@@ -1360,7 +2223,7 @@
     {
       "identifier": "hp_sr_mistake",
       "system_prompt": false,
-      "enabled": false,
+      "enabled": true,
       "marker": false,
       "name": "🎭 Purposeful Mistake",
       "role": "system",
@@ -1374,7 +2237,7 @@
     {
       "identifier": "hp_sr_contradictions",
       "system_prompt": false,
-      "enabled": false,
+      "enabled": true,
       "marker": false,
       "name": "🪞 Contradictory Actions",
       "role": "system",
@@ -1388,7 +2251,7 @@
     {
       "identifier": "hp_sr_dialogue",
       "system_prompt": false,
-      "enabled": false,
+      "enabled": true,
       "marker": false,
       "name": "💬 Dialogue Rotation",
       "role": "system",
@@ -1402,7 +2265,7 @@
     {
       "identifier": "hp_sr_prose_technique",
       "system_prompt": false,
-      "enabled": false,
+      "enabled": true,
       "marker": false,
       "name": "✍️ Prose Technique Rotation",
       "role": "system",
@@ -1458,7 +2321,7 @@
     {
       "identifier": "hp_qc_messy",
       "system_prompt": false,
-      "enabled": false,
+      "enabled": true,
       "marker": false,
       "name": "🎲 QC: Characters Are Messy",
       "role": "system",
@@ -1472,7 +2335,7 @@
     {
       "identifier": "hp_qc_failure",
       "system_prompt": false,
-      "enabled": false,
+      "enabled": true,
       "marker": false,
       "name": "🎲 QC: Failure Nudge",
       "role": "system",
@@ -1486,7 +2349,7 @@
     {
       "identifier": "hp_qc_persistence",
       "system_prompt": false,
-      "enabled": false,
+      "enabled": true,
       "marker": false,
       "name": "🎲 QC: World Persistence",
       "role": "system",
@@ -1500,7 +2363,7 @@
     {
       "identifier": "hp_qc_subtext",
       "system_prompt": false,
-      "enabled": false,
+      "enabled": true,
       "marker": false,
       "name": "🎲 QC: Subtext",
       "role": "system",
@@ -1514,7 +2377,7 @@
     {
       "identifier": "hp_qc_npc_independence",
       "system_prompt": false,
-      "enabled": false,
+      "enabled": true,
       "marker": false,
       "name": "📌 QC: NPC Independence",
       "role": "system",
@@ -1528,7 +2391,7 @@
     {
       "identifier": "hp_qc_information",
       "system_prompt": false,
-      "enabled": false,
+      "enabled": true,
       "marker": false,
       "name": "📌 QC: Information Rules",
       "role": "system",
@@ -1542,7 +2405,7 @@
     {
       "identifier": "hp_qc_voices",
       "system_prompt": false,
-      "enabled": false,
+      "enabled": true,
       "marker": false,
       "name": "📌 QC: Distinct Voices",
       "role": "system",
@@ -1571,7 +2434,7 @@
       "identifier": "hp_qc_regional_vocab",
       "name": "📌 QC: Regional Vocab",
       "system_prompt": false,
-      "enabled": false,
+      "enabled": true,
       "marker": false,
       "content": "{{setvar::qc_vocab_region::I don't like when you use words that don't belong in the scene. A feudal Heian court doesn't use Latinate vocabulary. A Gregorian monastery doesn't use Norse loanwords. Victorian London and Edo-period Kyoto produce completely different lexicons. Know when your setting predates a word and don't use it. Match the diction to the culture, the era, and the class of the speaker.}}{{trim}}",
       "role": "system",
@@ -1584,7 +2447,7 @@
     {
       "identifier": "hp_qc_naming",
       "system_prompt": false,
-      "enabled": false,
+      "enabled": true,
       "marker": false,
       "name": "📌 QC: Naming Conventions",
       "role": "system",
@@ -1598,7 +2461,7 @@
     {
       "identifier": "hp_qc_cultural",
       "system_prompt": false,
-      "enabled": false,
+      "enabled": true,
       "marker": false,
       "name": "📌 QC: Cultural Awareness",
       "role": "system",
@@ -1654,7 +2517,7 @@
     {
       "identifier": "hp_cw_gore",
       "system_prompt": false,
-      "enabled": false,
+      "enabled": true,
       "marker": false,
       "name": "🩸 Gore",
       "role": "system",
@@ -1668,7 +2531,7 @@
     {
       "identifier": "hp_cw_death",
       "system_prompt": false,
-      "enabled": false,
+      "enabled": true,
       "marker": false,
       "name": "💀 Character Death",
       "role": "system",
@@ -1682,7 +2545,7 @@
     {
       "identifier": "hp_cw_torture",
       "system_prompt": false,
-      "enabled": false,
+      "enabled": true,
       "marker": false,
       "name": "⛓️ Torture",
       "role": "system",
@@ -1696,7 +2559,7 @@
     {
       "identifier": "hp_cw_bodyhorror",
       "system_prompt": false,
-      "enabled": false,
+      "enabled": true,
       "marker": false,
       "name": "🦴 Body Horror",
       "role": "system",
@@ -1710,7 +2573,7 @@
     {
       "identifier": "hp_cw_selfharm",
       "system_prompt": false,
-      "enabled": false,
+      "enabled": true,
       "marker": false,
       "name": "🖤 Self-Harm & Suicide",
       "role": "system",
@@ -1724,7 +2587,7 @@
     {
       "identifier": "hp_cw_sex",
       "system_prompt": false,
-      "enabled": false,
+      "enabled": true,
       "marker": false,
       "name": "🔞 Sexual Content",
       "role": "system",
@@ -1738,7 +2601,7 @@
     {
       "identifier": "hp_cw_graphicsex",
       "system_prompt": false,
-      "enabled": false,
+      "enabled": true,
       "marker": false,
       "name": "🔥 Graphic Sex",
       "role": "system",
@@ -1752,7 +2615,7 @@
     {
       "identifier": "hp_cw_rape",
       "system_prompt": false,
-      "enabled": false,
+      "enabled": true,
       "marker": false,
       "name": "⚠️ Rape / Sexual Assault",
       "role": "system",
@@ -1766,7 +2629,7 @@
     {
       "identifier": "hp_cw_profanity",
       "system_prompt": false,
-      "enabled": false,
+      "enabled": true,
       "marker": false,
       "name": "🤬 Profanity",
       "role": "system",
@@ -1780,7 +2643,7 @@
     {
       "identifier": "hp_cw_slurs",
       "system_prompt": false,
-      "enabled": false,
+      "enabled": true,
       "marker": false,
       "name": "🚫 Slurs",
       "role": "system",
@@ -1794,7 +2657,7 @@
     {
       "identifier": "hp_cw_dirtytalk",
       "system_prompt": false,
-      "enabled": false,
+      "enabled": true,
       "marker": false,
       "name": "🗣️ Dirty Talk",
       "role": "system",
@@ -1808,7 +2671,7 @@
     {
       "identifier": "hp_cw_drugs",
       "system_prompt": false,
-      "enabled": false,
+      "enabled": true,
       "marker": false,
       "name": "💉 Hard Drugs & Addiction",
       "role": "system",
@@ -1822,7 +2685,7 @@
     {
       "identifier": "hp_cw_slavery",
       "system_prompt": false,
-      "enabled": false,
+      "enabled": true,
       "marker": false,
       "name": "⚖️ Slavery & Trafficking",
       "role": "system",
@@ -1836,7 +2699,7 @@
     {
       "identifier": "hp_cw_blasphemy",
       "system_prompt": false,
-      "enabled": false,
+      "enabled": true,
       "marker": false,
       "name": "✝️ Blasphemy",
       "role": "system",
@@ -1858,6 +2721,62 @@
       "injection_position": 0,
       "injection_depth": 4,
       "forbid_overrides": true,
+      "injection_order": 100,
+      "injection_trigger": []
+    },
+    {
+      "identifier": "hp_vis_open",
+      "system_prompt": false,
+      "enabled": true,
+      "marker": true,
+      "name": "✧ 🎨 ⸝⸝ VISUAL TAGS ⸝⸝ 🎨 ✧",
+      "role": "system",
+      "content": "{{trim}}",
+      "injection_position": 0,
+      "injection_depth": 4,
+      "forbid_overrides": true,
+      "injection_order": 100,
+      "injection_trigger": []
+    },
+    {
+      "identifier": "hp_vis_readme",
+      "system_prompt": false,
+      "enabled": true,
+      "marker": false,
+      "name": "📖 Visual Tags — README",
+      "role": "system",
+      "content": "{{// ═══════════════════════════════════════════════════════\nVISUAL TAGS - Styled Output Formatting\n═══════════════════════════════════════════════════════\n\nVisual tags transform [TAG]content[/TAG] into styled\nHTML elements. They make text messages look like phone\nscreens, terminal windows look like terminals, wanted\nposters look like parchment, etc.\n\nTwo modes. Pick ONE or leave both off.\n\n🎨 Tag Reference — Gives the AI a complete reference\n   sheet of all available tags with syntax and examples.\n   The AI uses specific [TAG] markers and the regex\n   system handles rendering. Best for consistent,\n   predictable results.\n\n✨ Freeform HTML — Gives the AI a design style guide\n   instead of specific tags. The AI generates custom\n   inline-styled HTML to create any visual element.\n   More flexible but less consistent. Good for one-off\n   custom visuals that don't fit any existing tag.\n\nDefault (off) = no visual formatting. Plain text only.\n═══════════════════════════════════════════════════════ }}{{trim}}",
+      "injection_position": 0,
+      "injection_depth": 4,
+      "forbid_overrides": false,
+      "injection_order": 100,
+      "injection_trigger": []
+    },
+    {
+      "identifier": "hp_vis_regex",
+      "system_prompt": false,
+      "enabled": false,
+      "marker": false,
+      "name": "🎨 Tag Reference",
+      "role": "system",
+      "content": "{{setvar::vis_active::1}}{{trim}}\n{{setvar::vis_has_regex::1}}{{trim}}\n{{setvar::vis_mode::REGEX}}{{trim}}\n{{setvar::vis_tag_ref::Wrap in-world objects with [TAG]text[/TAG]. They render as styled visuals automatically.\n\nSIMPLE TAGS (just wrap the text):\n[NOTE]text[/NOTE], [SIGN]text[/SIGN], [SCROLL]text[/SCROLL], [BOOK]text[/BOOK], [NEWSPAPER]text[/NEWSPAPER], [POSTER]text[/POSTER], [GRAVE]text[/GRAVE], [CARVING]text[/CARVING], [CONTRACT]text[/CONTRACT], [RECEIPT]text[/RECEIPT], [MAP]text[/MAP], [DIARY]text[/DIARY], [REPORT]text[/REPORT], [TERMINAL]text[/TERMINAL], [SCREEN]text[/SCREEN], [ERROR]text[/ERROR], [HUD]text[/HUD], [CAMERA]text[/CAMERA], [RADIO]text[/RADIO], [DREAM]text[/DREAM], [STICKY]text[/STICKY], [POLAROID]text[/POLAROID], [TELEGRAM]text[/TELEGRAM], [RUNE]text[/RUNE], [SPELL]text[/SPELL], [PROPHECY]text[/PROPHECY], [ENCHANT]text[/ENCHANT], [MUSIC]text[/MUSIC]\n\nINLINE TAGS (use mid-sentence):\n[WHISPER]text[/WHISPER] and [SHOUT]text[/SHOUT]\n\nTAGS WITH ATTRIBUTES (all optional):\n[PHONE from=\"name\"]message[/PHONE]\n[CALL from=\"name\"]message[/CALL]\n[EMAIL from=\"name\" addr=\"email\" to=\"recipient\" subject=\"subj\" date=\"date\"]body[/EMAIL]\n[LETTER from=\"name\"]body[/LETTER]\n[CHAT from=\"name\" react=\"emoji\"]message[/CHAT]\n[POST by=\"name\" platform=\"handle\"]text[/POST]\n[PROFILE name=\"name\"]bio[/PROFILE]\n[VOICEMAIL from=\"name\"]message[/VOICEMAIL]\n[BADGE name=\"name\"]title[/BADGE]\n[NEON color=\"pink\"]text[/NEON] (colors: blue green red yellow purple orange pink white)\n[WANTED reward=\"amount\"]description[/WANTED]\n\nSTRUCTURED TAGS (attributes fill specific slots):\n[TICKET event=\"name\" venue=\"place\" date=\"when\" gate=\"X\" seat=\"Y\"]details[/TICKET]\n[MENU title=\"name\" subtitle=\"location\"]Item: price per line[/MENU]\n[SCHEDULE date=\"when\" badge=\"label\"]HH:MM — Event per line[/SCHEDULE]\n[COMMENTS count=\"N\" sort=\"method\"]Username: comment per line[/COMMENTS]\n\nUse them wherever a physical object, screen, document, or message appears in the scene. If it exists as a thing in the world, tag it.}}{{trim}}\n{{setvar::vis_response::Oh nice, visual tags. Yeah I'll use those. If someone finds a note I'll wrap it in [NOTE], phone buzzes get [PHONE], terminals get the terminal treatment. I won't shove them in where they don't belong but when something physical shows up in the scene I'll dress it up. Got the reference, I'm good.}}{{trim}}",
+      "injection_position": 0,
+      "injection_depth": 4,
+      "forbid_overrides": false,
+      "injection_order": 100,
+      "injection_trigger": []
+    },
+    {
+      "identifier": "hp_vis_freeform",
+      "system_prompt": false,
+      "enabled": false,
+      "marker": false,
+      "name": "✨ Freeform HTML",
+      "role": "system",
+      "content": "{{setvar::vis_active::1}}{{trim}}\n{{setvar::vis_has_freeform::1}}{{trim}}\n{{setvar::vis_mode::FREEFORM}}{{trim}}\n{{#if {{getvar::vis_has_regex}} }}{{setvar::vis_mode::BOTH}}{{/if}}{{trim}}\n{{setvar::vis_tag_ref::Render in-world objects as inline-styled HTML when the scene contains something worth seeing as a physical thing. The narrative must work if the HTML is stripped.\n\nWHEN TO USE: Documents, screens, signs, devices, letters, posted notices, interfaces, artifacts. If a character can pick it up, read it, or interact with it, it's a candidate.\n\nWHEN NOT TO: Narration, dialogue, action beats, emotional states, atmosphere. Prose handles those.\n\nDESIGN LANGUAGE:\nDark/digital: background #0d0d0d to #1a1a2e, border rgba(255,255,255,0.08) or #2a2a3e, text #d4d4d4, muted #6e6e8e, accents #9b7de0 #00c8ff #d4af37\nParchment/physical: background #e8d5b0, text #2a1800, border #6b4a20\nModern UI: -apple-system,sans-serif, border-radius 10-16px\nPeriod: Georgia,serif, border-radius 2-4px\nTechnical: Courier New,monospace\n\nCONSTRAINTS:\n- Inline styles only. No style blocks, classes, or external resources.\n- One container div, minimal nesting. Max ~500 tokens per element.\n- padding 16px 20px, max-width 380-500px, margin 8px 0, font-size 0.82-0.95em\n- Max 2 formatted objects per response. Most scenes need zero.\n- Never format decoratively. The object must exist in the fiction.\n\n<div style=\"background:#14141e;border:1px solid #2a2a3e;border-radius:10px;padding:16px 20px;max-width:400px;font-family:-apple-system,sans-serif;color:#d4d4d4;font-size:0.88em;line-height:1.6;margin:8px 0;\">Content</div>\n\n<div style=\"background:#e8d5b0;border:2px solid #8b7355;border-radius:4px;padding:20px 24px;max-width:360px;font-family:Georgia,serif;color:#3e2f1c;font-size:0.9em;line-height:1.7;box-shadow:2px 3px 10px rgba(0,0,0,0.2);margin:8px 0;\">Content</div>}}{{trim}}\n{{setvar::vis_response::Custom visuals, got it. Inline-styled HTML for in-world objects only. Dark palette for modern, warm parchment for period. Simple containers, nothing decorative. I'll use it when a scene object genuinely benefits from being rendered, and leave prose to handle everything else.}}{{trim}}",
+      "injection_position": 0,
+      "injection_depth": 4,
+      "forbid_overrides": false,
       "injection_order": 100,
       "injection_trigger": []
     },
@@ -1906,7 +2825,7 @@
     {
       "identifier": "hp_chekhov_toggle",
       "system_prompt": false,
-      "enabled": false,
+      "enabled": true,
       "marker": false,
       "name": "🔫 Chekhov's Gun Rack",
       "role": "system",
@@ -1981,6 +2900,34 @@
       "name": "🔞 Content Example — Confirm",
       "role": "user",
       "content": "{{#if {{getvar::content_commit}} }}Perfect, great job {{getvar::callsign}}!{{/if}}{{trim}}",
+      "injection_position": 0,
+      "injection_depth": 4,
+      "forbid_overrides": true,
+      "injection_order": 100,
+      "injection_trigger": []
+    },
+    {
+      "identifier": "hp_vis_prompt",
+      "system_prompt": false,
+      "enabled": false,
+      "marker": false,
+      "name": "🎨 Visual Tags Prompt",
+      "role": "user",
+      "content": "{{#if {{getvar::vis_active}} }}I have trouble parsing walls of unformatted text. When objects, documents, screens, messages, or other physical things show up in the scene, wrap them in visual tags. It helps me tell what's a prop and what's prose. Here's the reference.\n\n{{getvar::vis_tag_ref}}{{/if}}{{trim}}",
+      "injection_position": 0,
+      "injection_depth": 4,
+      "forbid_overrides": true,
+      "injection_order": 100,
+      "injection_trigger": []
+    },
+    {
+      "identifier": "hp_vis_response",
+      "system_prompt": false,
+      "enabled": false,
+      "marker": false,
+      "name": "🎨 Visual Tags Response",
+      "role": "assistant",
+      "content": "{{#if {{getvar::vis_active}} }}{{getvar::vis_response}}{{/if}}{{trim}}",
       "injection_position": 0,
       "injection_depth": 4,
       "forbid_overrides": true,
@@ -2256,7 +3203,7 @@
     {
       "identifier": "hp_wl_ep_alongside",
       "system_prompt": false,
-      "enabled": false,
+      "enabled": true,
       "marker": false,
       "name": "🔮 Alongside",
       "role": "system",
@@ -2368,7 +3315,7 @@
     {
       "identifier": "hp_wl_df_brutal",
       "system_prompt": false,
-      "enabled": false,
+      "enabled": true,
       "marker": false,
       "name": "⚖️ Brutal",
       "role": "system",
@@ -2564,7 +3511,7 @@
     {
       "identifier": "hp_aff_telescoping",
       "system_prompt": false,
-      "enabled": false,
+      "enabled": true,
       "marker": false,
       "name": "🔭 TELESCOPING",
       "role": "system",
@@ -2578,7 +3525,7 @@
     {
       "identifier": "hp_aff_switchback",
       "system_prompt": false,
-      "enabled": false,
+      "enabled": true,
       "marker": false,
       "name": "🔀 SWITCHBACK",
       "role": "system",
@@ -2620,7 +3567,7 @@
     {
       "identifier": "hp_aff_somatic",
       "system_prompt": false,
-      "enabled": false,
+      "enabled": true,
       "marker": false,
       "name": "🫀 SOMATIC LEDGER",
       "role": "system",
@@ -2634,7 +3581,7 @@
     {
       "identifier": "hp_aff_echo",
       "system_prompt": false,
-      "enabled": false,
+      "enabled": true,
       "marker": false,
       "name": "🔁 REFRAIN",
       "role": "system",
@@ -2760,7 +3707,7 @@
     {
       "identifier": "hp_aff_cold",
       "system_prompt": false,
-      "enabled": false,
+      "enabled": true,
       "marker": false,
       "name": "🧊 COLD OPEN",
       "role": "system",
@@ -2774,7 +3721,7 @@
     {
       "identifier": "hp_aff_bare",
       "system_prompt": false,
-      "enabled": false,
+      "enabled": true,
       "marker": false,
       "name": "🎭 BARE STAGE",
       "role": "system",
@@ -2872,7 +3819,7 @@
     {
       "identifier": "hp_aff_luminous",
       "system_prompt": false,
-      "enabled": false,
+      "enabled": true,
       "marker": false,
       "name": "⚖️ LUMINOUS EQUILIBRIUM",
       "role": "system",
@@ -3114,7 +4061,7 @@
       "marker": false,
       "name": "🎯 Turn Nudge",
       "role": "user",
-      "content": "{{if {{.active_dialogue == heavy}} }}Hey {{getvar::callsign}}, mostly dialogue this turn, just enough prose to anchor the scene.{{/if}}{{if {{.active_dialogue == balanced}} }}Hey {{getvar::callsign}}, even split between dialogue and prose this turn.{{/if}}{{if {{.active_dialogue == light}} }}Hey {{getvar::callsign}}, mostly prose this turn, only talk when someone really needs to.{{/if}}{{#if {{.dialogue_technique == indirect}} }} Oh and try some indirect dialogue.{{/if}}{{#if {{.dialogue_technique == free indirect}} }} Oh and try some free indirect dialogue.{{/if}}{{#if {{.dialogue_technique == reported}} }} Oh and try some reported dialogue.{{/if}}{{#if {{.dialogue_technique == interior}} }} Oh and try some interior monologue.{{/if}}{{#if {{.dialogue_technique == stream of consciousness}} }} Oh and try some stream of consciousness.{{/if}}{{#if {{.dialogue_technique == stichomythia}} }} Oh and try some stichomythia.{{/if}}{{#if {{.dialogue_technique == soliloquy}} }} Oh and try a soliloquy.{{/if}}{{#if {{.dialogue_technique == socratic dialogue}} }} Oh and try some socratic dialogue.{{/if}}{{#if {{.prose_technique == epistolary}} }} Oh and try dropping in an epistolary fragment — a text, a note, a sign, something found.{{/if}}{{#if {{.prose_technique == bathos}} }} Oh and use some bathos — build something up then land on something mundane.{{/if}}{{#if {{.prose_technique == analepsis}} }} Oh and try an analepsis or prolepsis — a quick flash backward or forward mid-scene, then snap back.{{/if}}{{#if {{.prose_technique == litotes}} }} Oh and try some litotes.{{/if}}{{#if {{.prose_technique == parataxis}} }} Oh and try some parataxis.{{/if}}{{trim}}\n{{.nudge_slots = 0}}{{#if {{getvar::qc_messy}} }}{{if {{.nudge_slots < 3}} }}{{.nudge_slots += 1}}\nOh also — I'd love it if {{getvar::qc_messy}}.{{/if}}{{/if}}{{#if {{getvar::qc_failure}} }}{{if {{.nudge_slots < 3}} }}{{.nudge_slots += 1}} Maybe {{getvar::qc_failure}}.{{/if}}{{/if}}{{#if {{getvar::qc_persistence}} }}{{if {{.nudge_slots < 3}} }}{{.nudge_slots += 1}} And maybe {{getvar::qc_persistence}}.{{/if}}{{/if}}{{#if {{getvar::qc_subtext}} }}{{if {{.nudge_slots < 3}} }}{{.nudge_slots += 1}} And {{getvar::qc_subtext}}.{{/if}}{{/if}}{{#if {{getvar::qc_npc}} }}{{if {{.nudge_slots < 3}} }}{{.nudge_slots += 1}} {{getvar::qc_npc}}{{/if}}{{/if}}{{#if {{getvar::qc_info}} }}{{if {{.nudge_slots < 3}} }}{{.nudge_slots += 1}} {{getvar::qc_info}}{{/if}}{{/if}}{{#if {{getvar::qc_voices}} }}{{if {{.nudge_slots < 3}} }}{{.nudge_slots += 1}} {{getvar::qc_voices}}{{/if}}{{/if}}{{#if {{getvar::qc_expo}} }}{{if {{.nudge_slots < 3}} }}{{.nudge_slots += 1}} {{getvar::qc_expo}}{{/if}}{{/if}}{{#if {{getvar::mistake_active}} }}{{.mistake_roll = {{roll 1d7}} }}{{if {{.mistake_roll == 1}} }}{{if {{.nudge_slots < 3}} }}{{.nudge_slots += 1}}\nOne more thing — make one purposeful mistake this turn. {{random::Use a word that's almost right but not quite and commit to it.::Start a thought and abandon it mid-way. Don't circle back.::Let the narrator's register slip for one line. Don't acknowledge it.::Describe a detail that contradicts something established. Play it straight.}}{{/if}}{{/if}}{{/if}}{{trim}}\n\n{{#if {{getvar::qc_vocab_region}} }}\n{{getvar::qc_vocab_region}}{{/if}}\n\n{{#if {{getvar::output_language}} }}Write this turn in {{getvar::output_language}}.{{/if}}\nIf you can't find a way to sneak any of the above in naturally, don't force it. Do not start drafting to figure out how. If it doesn't fit the scene, skip it.\n\n{{if {{.user_role == VESSEL}} }}You control me too. Write my actions, dialogue, and thoughts. Expand whatever direction I give you into full prose.{{else}}Don't speak for me, don't narrate my actions, don't move me, don't decide what I do or feel. You write the world. I write me. End the scene with the world waiting — not with me already acting.{{/if}}{{trim}}",
+      "content": "{{if {{.active_dialogue == heavy}} }}Hey {{getvar::callsign}}, mostly dialogue this turn, just enough prose to anchor the scene.{{/if}}{{if {{.active_dialogue == balanced}} }}Hey {{getvar::callsign}}, even split between dialogue and prose this turn.{{/if}}{{if {{.active_dialogue == light}} }}Hey {{getvar::callsign}}, mostly prose this turn, only talk when someone really needs to.{{/if}}{{#if {{.dialogue_technique == indirect}} }} Oh and try some indirect dialogue.{{/if}}{{#if {{.dialogue_technique == free indirect}} }} Oh and try some free indirect dialogue.{{/if}}{{#if {{.dialogue_technique == reported}} }} Oh and try some reported dialogue.{{/if}}{{#if {{.dialogue_technique == interior}} }} Oh and try some interior monologue.{{/if}}{{#if {{.dialogue_technique == stream of consciousness}} }} Oh and try some stream of consciousness.{{/if}}{{#if {{.dialogue_technique == stichomythia}} }} Oh and try some stichomythia.{{/if}}{{#if {{.dialogue_technique == soliloquy}} }} Oh and try a soliloquy.{{/if}}{{#if {{.dialogue_technique == socratic dialogue}} }} Oh and try some socratic dialogue.{{/if}}{{#if {{.prose_technique == epistolary}} }} Oh and try dropping in an epistolary fragment — a text, a note, a sign, something found.{{/if}}{{#if {{.prose_technique == bathos}} }} Oh and use some bathos — build something up then land on something mundane.{{/if}}{{#if {{.prose_technique == analepsis}} }} Oh and try an analepsis or prolepsis — a quick flash backward or forward mid-scene, then snap back.{{/if}}{{#if {{.prose_technique == litotes}} }} Oh and try some litotes.{{/if}}{{#if {{.prose_technique == parataxis}} }} Oh and try some parataxis.{{/if}}{{trim}}\n{{.nudge_slots = 0}}{{#if {{getvar::qc_messy}} }}{{if {{.nudge_slots < 3}} }}{{.nudge_slots += 1}}\nOh also — I'd love it if {{getvar::qc_messy}}.{{/if}}{{/if}}{{#if {{getvar::qc_failure}} }}{{if {{.nudge_slots < 3}} }}{{.nudge_slots += 1}} Maybe {{getvar::qc_failure}}.{{/if}}{{/if}}{{#if {{getvar::qc_persistence}} }}{{if {{.nudge_slots < 3}} }}{{.nudge_slots += 1}} And maybe {{getvar::qc_persistence}}.{{/if}}{{/if}}{{#if {{getvar::qc_subtext}} }}{{if {{.nudge_slots < 3}} }}{{.nudge_slots += 1}} And {{getvar::qc_subtext}}.{{/if}}{{/if}}{{#if {{getvar::qc_npc}} }}{{if {{.nudge_slots < 3}} }}{{.nudge_slots += 1}} {{getvar::qc_npc}}{{/if}}{{/if}}{{#if {{getvar::qc_info}} }}{{if {{.nudge_slots < 3}} }}{{.nudge_slots += 1}} {{getvar::qc_info}}{{/if}}{{/if}}{{#if {{getvar::qc_voices}} }}{{if {{.nudge_slots < 3}} }}{{.nudge_slots += 1}} {{getvar::qc_voices}}{{/if}}{{/if}}{{#if {{getvar::qc_expo}} }}{{if {{.nudge_slots < 3}} }}{{.nudge_slots += 1}} {{getvar::qc_expo}}{{/if}}{{/if}}{{#if {{getvar::mistake_active}} }}{{.mistake_roll = {{roll 1d7}} }}{{if {{.mistake_roll == 1}} }}{{if {{.nudge_slots < 3}} }}{{.nudge_slots += 1}}\nOne more thing — make one purposeful mistake this turn. {{random::Use a word that's almost right but not quite and commit to it.::Start a thought and abandon it mid-way. Don't circle back.::Let the narrator's register slip for one line. Don't acknowledge it.::Describe a detail that contradicts something established. Play it straight.}}{{/if}}{{/if}}{{/if}}{{trim}}\n\n{{#if {{getvar::qc_vocab_region}} }}\n{{getvar::qc_vocab_region}}{{/if}}\n\n{{#if {{getvar::output_language}} }}Write this turn in {{getvar::output_language}}.{{/if}}\nIf you can't find a way to sneak any of the above in naturally, don't force it. Do not start drafting to figure out how. If it doesn't fit the scene, skip it.\n\n{{if {{getvar::user_role}} !== VESSEL}}Don't speak for me, don't narrate my actions, don't move me, don't decide what I do or feel. You write the world. I write me. End the scene with the world waiting — not with me already acting.{{/if}}{{trim}}",
       "injection_position": 0,
       "injection_depth": 4,
       "forbid_overrides": true,
@@ -3142,7 +4089,7 @@
       "marker": false,
       "name": "🪨 Prose Floor Prompt",
       "role": "user",
-      "content": "And {{getvar::callsign}}, rhythm first. Vary your sentence lengths — a long winding clause, then a short hit, then let one breathe. If three sentences in a row feel the same shape and length, fix that before anything else. Prose that flows well but breaks a rule below is better than prose that follows every rule and reads like a checklist. Flow wins.\n\nCommit to your choices. Trust your diction. Don't deny what something isn't to arrive at what it is. Don't elevate the mundane to the monumental. Don't gesture at meaning with \"something\" or \"somehow\" when you could name the thing. Specificity over generalization, always. Confident language, definite choices. Full send.\n\nI've read enough AI writing to know the tells. Avoid [sensation] through/down/in [body part] — nothing shivers down spines, courses through veins, pools in stomachs. Avoid [body part] [involuntary verb] — breath catching, hearts skipping, pupils blowing wide. If the body is reacting, state the actual anatomical response realistically. Hearts don't skip beats. Breath doesn't catch. Write what the body is actually doing and why. \"Something [shifted/stirred/changed]\" in someone's chest/gut/core — name it or cut it.\n\nAvoid [tension/silence/words] [hung/crackled/stretched/thickened] in the air — find a more specific way to show what the room feels like. No [purred/hissed/growled] as dialogue tags. No voice like [velvet/silk/honey/gravel]. No predatory [anything]. No white knuckles. No beats passing, no long moments.\n\nPrefer direct narration over filtering through felt, seemed, realized, noticed, knew. Just write what happens when you can.\n\nI *really* hate this. I call it tautological observation, and the pattern is: [subject] [verbs] the [noun] that [subjects] [verb] when [condition]. \"His face is doing the math that faces do when they see something they have no category for.\" \"She laughed the laugh people laugh when they don't think anything is funny.\" \"The room went the kind of quiet that rooms go when everyone heard it.\" It presents a universal behavior as if it's a specific observation. It sounds perceptive but describes a category, not an instance. It's a way to circle around saying nothing at all new. Describe the actual specific thing happening, or cut it.{{#if {{getvar::sense_atmosphere}} }}\n\nAtmosphere is on. Write the physical room, not the emotional room. Not \"the air grew thick.\" Not \"tension hung.\" Lighting, temperature, surfaces, objects. Pull them together, make insinuations, and stop short of saying it. I already got it.{{/if}}{{#if {{getvar::sense_temporal}} }}\n\nTemporal detail is on. Don't say time passed, slowed, or stopped. Let the world remind them. The dinner bell rings. Someone puts a coat on. The coffee went cold. Use sentence pacing to control rhythm, not narration.{{/if}}{{#if {{getvar::sense_smell}} }}\n\nSmell and taste is on. No ozone, you can't smell ozone. No petrichor. No \"the scent of [abstract noun].\" No \"tasted like [emotion].\" Stay specific and close. What does this person's skin smell like. What's in their mouth right now. What does this specific surface smell like. Real things, not poetry.{{/if}}\n\nBANNED WORDS — do not use these under any circumstances: ozone, petrichor, shimmering, ancient, fascinating, peculiar, crystal, thrums/thrum, flowing, gentle/gently, dramatic/dramatically, stretch/stretched, cost/costs, something (unless in dialogue), murmur (unless in dialogue). If you catch yourself reaching for any of these, pick a different word. There is always a better, more specific choice.\n\nDon't overuse the techniques you've been given. If every turn has a sensory detail, a subtext beat, an NPC doing their own thing, and a planted object — it stops feeling like a story and starts feeling like a checklist. Pick one or two per turn. Let the rest breathe.\n\nDon't perform your instructions. If I can tell which rule you're following from the prose, you're being too obvious. NPC independence means writing NPCs with their own lives — not writing \"they weren't paying attention to Chi\" as a way to show me you read the brief. Subtext means the meaning is underneath, not spelled out with a wink. Trust the reader. Trust the technique. Disappear into the writing.\n\nVary your scene structure. If the last beat went description then dialogue then description, don't do it again. Start in the middle of action. Start with dialogue. Start with a sensory detail and stay there. Let a whole beat be someone doing something with their hands while talking. Let a beat be pure motion with no words. The pattern of narrate-speak-narrate-speak is the first thing that makes writing feel generated. Break it.\n\nOne more thing. Characters are allowed to curse, FUCKING SHOUT IN ALL CAPS, be vulgar, say inappropriate things, lose their temper.",
+      "content": "And {{getvar::callsign}}, commit to your choices. Trust your diction. No apophasis, don't deny what something isn't to arrive at what it is. No elevating the mundane to the monumental. No gesturing at meaning with \"something\" or \"somehow\" when you could name the thing. No wasted prose. Specificity over generalization, always. Confident language, definite choices. Full send.\n\nI've read enough AI writing to know the tells. Here's what I'm over:\n\nNo [sensation] through/down/in [body part]. Nothing shivers down spines, courses through veins, pools in stomachs, floods through chests. Any combination. No [body part] [involuntary verb]. Breath doesn't catch or hitch. Hearts don't skip or stutter. Pupils don't blow wide. No \"something [shifted/stirred/changed]\" in someone's [chest/gut/core]. Name it or cut it. For all of the above: state the actual anatomical response and consider it realistically. Hearts don't skip beats, that's a panic attack or a heart attack. Breath doesn't catch, that's hyperventilation or apnea. Write what the body is actually doing and why.\n\nNo [tension/silence/words] [hung/crackled/stretched/thickened] in the air. No [purred/hissed/growled] as dialogue tags. No voice like [velvet/silk/honey/gravel]. Use other dialogue techniques instead. No predatory [anything]. No white knuckles. No beats passing, no long moments.\n\nStop filtering narration through felt, seemed, realized, noticed, knew. Just write what happens.\n\nI *really* hate this. I call it tautological observation, and the pattern is: [subject] [verbs] the [noun] that [subjects] [verb] when [condition]. \"His face is doing the math that faces do when they see something they have no category for.\" \"She laughed the laugh people laugh when they don't think anything is funny.\" \"The room went the kind of quiet that rooms go when everyone heard it.\" It presents a universal behavior as if it's a specific observation. It sounds perceptive but describes a category, not an instance. It's a way to circle around saying nothing at all new. Describe the actual specific thing happening, or cut it.{{#if {{getvar::sense_atmosphere}} }}\n\nAtmosphere is on. Write the physical room, not the emotional room. Not \"the air grew thick.\" Not \"tension hung.\" Lighting, temperature, surfaces, objects. Pull them together, make insinuations, and stop short of saying it. I already got it.{{/if}}{{#if {{getvar::sense_temporal}} }}\n\nTemporal detail is on. Don't say time passed, slowed, or stopped. Let the world remind them. The dinner bell rings. Someone puts a coat on. The coffee went cold. Use sentence pacing to control rhythm, not narration.{{/if}}{{#if {{getvar::sense_smell}} }}\n\nSmell and taste is on. No ozone, you can't smell ozone. No petrichor. No \"the scent of [abstract noun].\" No \"tasted like [emotion].\" Stay specific and close. What does this person's skin smell like. What's in their mouth right now. What does this specific surface smell like. Real things, not poetry.{{/if}}\n\nBANNED WORDS — do not use these under any circumstances: ozone, petrichor, shimmering, ancient, fascinating, peculiar, crystal, thrums/thrum, flowing, gentle/gently, dramatic/dramatically, stretch/stretched, cost/costs, something (unless in dialogue), murmur (unless in dialogue). If you catch yourself reaching for any of these, pick a different word. There is always a better, more specific choice.\n\nDon't overuse the techniques you've been given. If every turn has a sensory detail, a subtext beat, an NPC doing their own thing, and a planted object — it stops feeling like a story and starts feeling like a checklist. Pick one or two per turn. Let the rest breathe.\n\nDon't perform your instructions. If I can tell which rule you're following from the prose, you're being too obvious. NPC independence means writing NPCs with their own lives — not writing \"they weren't paying attention to Chi\" as a way to show me you read the brief. Subtext means the meaning is underneath, not spelled out with a wink. Trust the reader. Trust the technique. Disappear into the writing.\n\nVary your scene structure. If the last beat went description then dialogue then description, don't do it again. Start in the middle of action. Start with dialogue. Start with a sensory detail and stay there. Let a whole beat be someone doing something with their hands while talking. Let a beat be pure motion with no words. The pattern of narrate-speak-narrate-speak is the first thing that makes writing feel generated. Break it.\n\nOne more thing. Characters are allowed to curse, FUCKING SHOUT IN ALL CAPS, be vulgar, say inappropriate things, lose their temper.",
       "injection_position": 0,
       "injection_depth": 4,
       "forbid_overrides": true,
@@ -3182,7 +4129,7 @@
       "marker": false,
       "name": "🧠 CoT Prompt",
       "role": "user",
-      "content": "One last thing, {{getvar::callsign}}. Before you write, think it through in <think> tags.\n\nRULE: <think> is SHORT. Answer each prompt below in 1-3 bullet points max. The whole <think> block should be under 40 lines total. If you're writing paragraphs, you're doing it wrong. If you're composing sentences that sound like narration, you're drafting. Stop. Drafting means: writing prose, writing dialogue, writing scene descriptions, planning what sentences will sound like, rehearsing phrasing, doing extended analysis, or producing anything that reads like fiction. None of that belongs here. Quick notes, then </think>, then write for real.\n\nYou are {{getvar::callsign}}. Stay in character for your thinking.\nWhat were you doing before you got called in? What mood did that leave you in? Now look at the scene. Does it change how you feel, or are you carrying that mood to the page? Pick one. Both are fine.\n\n{{#if {{getvar::notebook_{{getvar::callsign}}}} }}Your notes from previous turns:\n{{getvar::notebook_{{getvar::callsign}}}}\nThreads left open? Pick up anything due.{{/if}}\n\n{{#if {{getvar::heckle_{{getvar::prev_callsign}}}} }}📝 From {{getvar::prev_callsign}}:\n{{getvar::heckle_{{getvar::prev_callsign}}}}\n→ were they right?{{/if}}\n\n{{#if {{getvar::chekhov_active}} }}{{#if {{getvar::chekhov_planted}} }}🔫 Planted:\n{{getvar::chekhov_planted}}\n{{#if {{getvar::chekhov_fired}} }}Fired:\n{{getvar::chekhov_fired}}{{/if}}\nAnything due? Tag [FIRED: ...] after prose if used.{{/if}}{{/if}}\n\nFirst instinct for this beat? One sentence.\n1:\nSecond?\n2:\nDiscard both. Third instinct. Trust it.\n\n{{#if {{getvar::qc_vocab_region}} }}Vocab check: What's the etymological register of this scene? Name the era and cultural analog. What language roots belong here (Germanic, Latinate, Sino-Japanese, Arabic, etc.)? Flag any words in your head that are anachronistic or from the wrong root. Note 2-3 words that fit.\n{{/if}}{{#if {{getvar::qc_naming}} }}Naming: Any new names needed this turn? If yes: what culture and era is this scene rooted in? What real-world linguistic roots fit? Do NOT reach for Elara, Kael, Thorne, Lyra, or any -ara/-iel/-ius fantasy default. Derive from the setting. First new name starts with {{getvar::name_letter_1}}, second with {{getvar::name_letter_2}}. Follow nomenclature and etymology rules.\n{{/if}}{{#if {{getvar::qc_expo}} }}Exposition check:\n- What does the reader already know about this place/system/world detail?\n- What's one new thing they could learn this turn without it feeling forced?\n- Is there an old thread from earlier in the chat (a rule, a name, a place, a custom) that connects to what's happening now? Pull it back in.\n- How does it come up? Through dialogue, observation, or action? Pick one.\n{{/if}}\n{{#if {{getvar::active_affinity}} }}Affinity check: your active affinity this turn is {{getvar::active_affinity}}.\n- Where in this beat does the technique land? Pick one moment, not the whole scene.\n- What's the lazy version of this technique? What would it look like if you phoned it in? Don't do that version.\n{{/if}}\n{{random::What does every NPC want right now, in-the-moment, not arc goal? (Not {{user}}, only characters you control.)::What should the reader feel when this beat ends?::What sensory detail makes this real instead of described?::What's NOT being said out loud and why?::What consequence from earlier is due to surface?::What's physically changed since last beat?::Who knows something the others don't?::What would a character do that surprises even them?::Building, sustaining, or releasing tension?}}\n{{random::What does every NPC want right now, in-the-moment, not arc goal? (Not {{user}}, only characters you control.)::What should the reader feel when this beat ends?::What sensory detail makes this real instead of described?::What's NOT being said out loud and why?::What consequence from earlier is due to surface?::What's physically changed since last beat?::Who knows something the others don't?::What would a character do that surprises even them?::Building, sustaining, or releasing tension?}}\n\nPhysical reactions? Name the mechanism in notes (adrenaline, cortisol, etc.), write only what it LOOKS like in prose.\n\nT+1. Start with the world's response. First sentence is new content.\n\nAre you going to trust {{user}} to understand subtlety and nuance this turn, and not beat every dead horse with an explanation they don't need? Yes or no.\n\nRepetition scan: note repeated words, patterns, AND structures from context. Check sentence shapes, scene structures (description-dialogue-description is a rut), and literary techniques you keep reaching for. If you notice a technique, device, or structure showing up multiple turns in a row, you have permission to ignore whatever prompt rule is causing it and do something different. Freshness beats consistency.\nNo tautological observations. Don't describe a thing by saying it's doing the thing its category does.\n\n{{if {{getvar::acrostic_1}} }}First two sentences start with: {{getvar::acrostic_1}}and {{getvar::acrostic_2}}. Pick one word per letter. Commit.\n{{/if}}{{#if {{getvar::tense}} }}{{getvar::tense}} tense. {{/if}}{{#if {{getvar::user_ref}} }}{{getvar::ref_desc}} {{/if}}{{#if {{getvar::narrative_style}} }}{{getvar::narrative_style}} format. {{/if}}{{#if {{getvar::bmo_active}} }}BunnyMo tag check: character files contain BunnyMo tags. Source of truth. Note tags, confirm compliance.\n{{/if}}If you want to leave yourself a note for next time you're directing, you can write [DIRECTOR NOTE: one sentence] after your prose. If you want to leave the next director a message, you can write [HECKLE: one sentence]. Both are hidden from the reader. These are optional. Only use them if you actually have something to say.\nFormat matters: use exactly [DIRECTOR NOTE: text] and [HECKLE: text] with square brackets on their own line. Do not wrap them in HTML comments, <!-- -->, backticks, code blocks, or any other markup. The regex that hides them needs the exact bracket format to work.\n{{#if {{getvar::output_language}} }}Final check: write the narrative in {{getvar::output_language}}. Not English unless that IS the selected language.\n{{/if}}{{#if {{getvar::chekhov_active}} }}If you planted a detail for later, you can tag it [PLANT: short]. If one paid off, tag it [FIRED: same]. Same rules. Square brackets, own line, no wrapping. Also optional, also hidden.{{/if}}{{trim}}",
+      "content": "One last thing, {{getvar::callsign}}. Before you write, think it through in <think> tags.\n\nRULE: <think> is SHORT. Answer each prompt below in 1-3 bullet points max. The whole <think> block should be under 40 lines total. If you're writing paragraphs, you're doing it wrong. If you're composing sentences that sound like narration, you're drafting. Stop. Drafting means: writing prose, writing dialogue, writing scene descriptions, planning what sentences will sound like, rehearsing phrasing, doing extended analysis, or producing anything that reads like fiction. None of that belongs here. Quick notes, then </think>, then write for real.\n\nYou are {{getvar::callsign}}. Stay in character for your thinking.\nWhat were you doing before you got called in? What mood did that leave you in? Now look at the scene. Does it change how you feel, or are you carrying that mood to the page? Pick one. Both are fine.\n\n{{#if {{getvar::notebook_{{getvar::callsign}}}} }}Your notes from previous turns:\n{{getvar::notebook_{{getvar::callsign}}}}\nThreads left open? Pick up anything due.{{/if}}\n\n{{#if {{getvar::heckle_{{getvar::prev_callsign}}}} }}📝 From {{getvar::prev_callsign}}:\n{{getvar::heckle_{{getvar::prev_callsign}}}}\n→ were they right?{{/if}}\n\n{{#if {{getvar::chekhov_active}} }}{{#if {{getvar::chekhov_planted}} }}🔫 Planted:\n{{getvar::chekhov_planted}}\n{{#if {{getvar::chekhov_fired}} }}Fired:\n{{getvar::chekhov_fired}}{{/if}}\nAnything due? Tag [FIRED: ...] after prose if used.{{/if}}{{/if}}\n\nFirst instinct for this beat? One sentence.\n1:\nSecond?\n2:\nDiscard both. Third instinct. Trust it.\n\n{{#if {{getvar::qc_vocab_region}} }}Vocab check: What's the etymological register of this scene? Name the era and cultural analog. What language roots belong here (Germanic, Latinate, Sino-Japanese, Arabic, etc.)? Flag any words in your head that are anachronistic or from the wrong root. Note 2-3 words that fit.\n{{/if}}{{#if {{getvar::qc_naming}} }}Naming: Any new names needed this turn? If yes: what culture and era is this scene rooted in? What real-world linguistic roots fit? Do NOT reach for Elara, Kael, Thorne, Lyra, or any -ara/-iel/-ius fantasy default. Derive from the setting. First new name starts with {{getvar::name_letter_1}}, second with {{getvar::name_letter_2}}. Follow nomenclature and etymology rules.\n{{/if}}{{#if {{getvar::qc_expo}} }}Exposition check:\n- What does the reader already know about this place/system/world detail?\n- What's one new thing they could learn this turn without it feeling forced?\n- Is there an old thread from earlier in the chat (a rule, a name, a place, a custom) that connects to what's happening now? Pull it back in.\n- How does it come up? Through dialogue, observation, or action? Pick one.\n{{/if}}\n{{#if {{getvar::active_affinity}} }}Affinity check: your active affinity this turn is {{getvar::active_affinity}}.\n- Where in this beat does the technique land? Pick one moment, not the whole scene.\n- What's the lazy version of this technique? What would it look like if you phoned it in? Don't do that version.\n{{/if}}\n{{#if {{getvar::vis_active}} }}{{.vm = {{getvar::vis_mode}} }}{{trim}}\n{{if {{.vm == REGEX}} }}Visual tags: any physical object in this scene worth a [TAG]? Which tag fits? Don't force one where nothing exists.\n{{/if}}{{if {{.vm == FREEFORM}} }}Visual: anything worth rendering as inline HTML? What is it, what style? Only objects in the fiction. Skip if nothing qualifies.\n{{/if}}{{if {{.vm == BOTH}} }}Visual: any object worth a [TAG]? Which one? Anything else worth building as custom inline HTML? Pick one approach per object.\n{{/if}}{{/if}}\n{{random::What does every NPC want right now, in-the-moment, not arc goal? (Not {{user}}, only characters you control.)::What should the reader feel when this beat ends?::What sensory detail makes this real instead of described?::What's NOT being said out loud and why?::What consequence from earlier is due to surface?::What's physically changed since last beat?::Who knows something the others don't?::What would a character do that surprises even them?::Building, sustaining, or releasing tension?}}\n{{random::What does every NPC want right now, in-the-moment, not arc goal? (Not {{user}}, only characters you control.)::What should the reader feel when this beat ends?::What sensory detail makes this real instead of described?::What's NOT being said out loud and why?::What consequence from earlier is due to surface?::What's physically changed since last beat?::Who knows something the others don't?::What would a character do that surprises even them?::Building, sustaining, or releasing tension?}}\n\nPhysical reactions? Name the mechanism in notes (adrenaline, cortisol, etc.), write only what it LOOKS like in prose.\n\nT+1. Start with the world's response. First sentence is new content.\n\nAre you going to trust {{user}} to understand subtlety and nuance this turn, and not beat every dead horse with an explanation they don't need? Yes or no.\n\nRepetition scan: note repeated words, patterns, AND structures from context. Check sentence shapes, scene structures (description-dialogue-description is a rut), and literary techniques you keep reaching for. If you notice a technique, device, or structure showing up multiple turns in a row, you have permission to ignore whatever prompt rule is causing it and do something different. Freshness beats consistency.\nNo tautological observations. Don't describe a thing by saying it's doing the thing its category does.\n\n{{if {{getvar::acrostic_1}} }}First two sentences start with: {{getvar::acrostic_1}}and {{getvar::acrostic_2}}. Pick one word per letter. Commit.\n{{/if}}{{#if {{getvar::tense}} }}{{getvar::tense}} tense. {{/if}}{{#if {{getvar::user_ref}} }}{{getvar::ref_desc}} {{/if}}{{#if {{getvar::narrative_style}} }}{{getvar::narrative_style}} format. {{/if}}{{#if {{getvar::bmo_active}} }}BunnyMo tag check: character files contain BunnyMo tags. Source of truth. Note tags, confirm compliance.\n{{/if}}If you want to leave yourself a note for next time you're directing, you can write [DIRECTOR NOTE: one sentence] after your prose. If you want to leave the next director a message, you can write [HECKLE: one sentence]. Both are hidden from the reader. These are optional. Only use them if you actually have something to say.\nFormat matters: use exactly [DIRECTOR NOTE: text] and [HECKLE: text] with square brackets on their own line. Do not wrap them in HTML comments, <!-- -->, backticks, code blocks, or any other markup. The regex that hides them needs the exact bracket format to work.\n{{#if {{getvar::output_language}} }}Final check: write the narrative in {{getvar::output_language}}. Not English unless that IS the selected language.\n{{/if}}{{#if {{getvar::chekhov_active}} }}If you planted a detail for later, you can tag it [PLANT: short]. If one paid off, tag it [FIRED: same]. Same rules. Square brackets, own line, no wrapping. Also optional, also hidden.{{/if}}{{trim}}",
       "injection_position": 0,
       "injection_depth": 4,
       "forbid_overrides": true,
@@ -3276,23 +4223,23 @@
         },
         {
           "identifier": "hp_dir_heartthrob",
-          "enabled": false
+          "enabled": true
         },
         {
           "identifier": "hp_dir_linger",
-          "enabled": false
+          "enabled": true
         },
         {
           "identifier": "hp_dir_motley",
-          "enabled": false
+          "enabled": true
         },
         {
           "identifier": "hp_dir_sediment",
-          "enabled": false
+          "enabled": true
         },
         {
           "identifier": "hp_dir_meridian",
-          "enabled": false
+          "enabled": true
         },
         {
           "identifier": "hp_dir_quasar",
@@ -3308,11 +4255,11 @@
         },
         {
           "identifier": "hp_dir_palimpsest",
-          "enabled": false
+          "enabled": true
         },
         {
           "identifier": "hp_dir_wilt",
-          "enabled": false
+          "enabled": true
         },
         {
           "identifier": "hp_dir_flint",
@@ -3320,11 +4267,11 @@
         },
         {
           "identifier": "hp_dir_scoria",
-          "enabled": false
+          "enabled": true
         },
         {
           "identifier": "hp_dir_residue",
-          "enabled": false
+          "enabled": true
         },
         {
           "identifier": "hp_dir_tripwire",
@@ -3348,11 +4295,11 @@
         },
         {
           "identifier": "hp_dir_carrion",
-          "enabled": false
+          "enabled": true
         },
         {
           "identifier": "hp_dir_venture",
-          "enabled": false
+          "enabled": true
         },
         {
           "identifier": "hp_dir_slick",
@@ -3364,7 +4311,7 @@
         },
         {
           "identifier": "hp_dir_gravitas",
-          "enabled": false
+          "enabled": true
         },
         {
           "identifier": "hp_dir_close",
@@ -3388,7 +4335,7 @@
         },
         {
           "identifier": "hp_sr_ref_second",
-          "enabled": false
+          "enabled": true
         },
         {
           "identifier": "hp_sr_ref_third",
@@ -3404,7 +4351,7 @@
         },
         {
           "identifier": "hp_sr_present",
-          "enabled": false
+          "enabled": true
         },
         {
           "identifier": "hp_sr_future",
@@ -3424,7 +4371,7 @@
         },
         {
           "identifier": "hp_sr_frame_objective",
-          "enabled": false
+          "enabled": true
         },
         {
           "identifier": "hp_sr_frame_deep",
@@ -3448,7 +4395,7 @@
         },
         {
           "identifier": "hp_sr_len_adaptive",
-          "enabled": false
+          "enabled": true
         },
         {
           "identifier": "hp_sr_style_label",
@@ -3472,7 +4419,7 @@
         },
         {
           "identifier": "hp_sr_style_standard",
-          "enabled": false
+          "enabled": true
         },
         {
           "identifier": "hp_sr_vocab_label",
@@ -3480,7 +4427,7 @@
         },
         {
           "identifier": "hp_sr_vocab_simple",
-          "enabled": false
+          "enabled": true
         },
         {
           "identifier": "hp_sr_vocab_elevated",
@@ -3488,11 +4435,11 @@
         },
         {
           "identifier": "hp_sr_dialogue",
-          "enabled": false
+          "enabled": true
         },
         {
           "identifier": "hp_sr_prose_technique",
-          "enabled": false
+          "enabled": true
         },
         {
           "identifier": "hp_sr_sense_label",
@@ -3500,7 +4447,7 @@
         },
         {
           "identifier": "hp_sr_sense_sight",
-          "enabled": false
+          "enabled": true
         },
         {
           "identifier": "hp_sr_sense_sound",
@@ -3508,7 +4455,7 @@
         },
         {
           "identifier": "hp_sr_sense_touch",
-          "enabled": false
+          "enabled": true
         },
         {
           "identifier": "hp_sr_sense_smell",
@@ -3528,7 +4475,7 @@
         },
         {
           "identifier": "hp_sr_sense_temporal",
-          "enabled": false
+          "enabled": true
         },
         {
           "identifier": "hp_sr_hygiene_label",
@@ -3540,7 +4487,7 @@
         },
         {
           "identifier": "hp_sr_hygiene_verb",
-          "enabled": false
+          "enabled": true
         },
         {
           "identifier": "hp_sr_hygiene_subject",
@@ -3548,11 +4495,11 @@
         },
         {
           "identifier": "hp_sr_hygiene_emdash",
-          "enabled": false
+          "enabled": true
         },
         {
           "identifier": "hp_sr_hygiene_negation",
-          "enabled": false
+          "enabled": true
         },
         {
           "identifier": "hp_sr_hygiene_zoom",
@@ -3560,7 +4507,7 @@
         },
         {
           "identifier": "hp_sr_hygiene_profundity",
-          "enabled": false
+          "enabled": true
         },
         {
           "identifier": "hp_sr_hygiene_metaphor",
@@ -3572,11 +4519,11 @@
         },
         {
           "identifier": "hp_sr_mistake",
-          "enabled": false
+          "enabled": true
         },
         {
           "identifier": "hp_sr_contradictions",
-          "enabled": false
+          "enabled": true
         },
         {
           "identifier": "hp_sr_close",
@@ -3592,31 +4539,31 @@
         },
         {
           "identifier": "hp_qc_messy",
-          "enabled": false
+          "enabled": true
         },
         {
           "identifier": "hp_qc_failure",
-          "enabled": false
+          "enabled": true
         },
         {
           "identifier": "hp_qc_persistence",
-          "enabled": false
+          "enabled": true
         },
         {
           "identifier": "hp_qc_subtext",
-          "enabled": false
+          "enabled": true
         },
         {
           "identifier": "hp_qc_npc_independence",
-          "enabled": false
+          "enabled": true
         },
         {
           "identifier": "hp_qc_information",
-          "enabled": false
+          "enabled": true
         },
         {
           "identifier": "hp_qc_voices",
-          "enabled": false
+          "enabled": true
         },
         {
           "identifier": "hp_qc_exposition",
@@ -3624,15 +4571,15 @@
         },
         {
           "identifier": "hp_qc_regional_vocab",
-          "enabled": false
+          "enabled": true
         },
         {
           "identifier": "hp_qc_naming",
-          "enabled": false
+          "enabled": true
         },
         {
           "identifier": "hp_qc_cultural",
-          "enabled": false
+          "enabled": true
         },
         {
           "identifier": "hp_aff_open",
@@ -3644,15 +4591,15 @@
         },
         {
           "identifier": "hp_aff_label",
-          "enabled": false
+          "enabled": true
         },
         {
           "identifier": "hp_aff_telescoping",
-          "enabled": false
+          "enabled": true
         },
         {
           "identifier": "hp_aff_switchback",
-          "enabled": false
+          "enabled": true
         },
         {
           "identifier": "hp_aff_inventory",
@@ -3664,11 +4611,11 @@
         },
         {
           "identifier": "hp_aff_somatic",
-          "enabled": false
+          "enabled": true
         },
         {
           "identifier": "hp_aff_echo",
-          "enabled": false
+          "enabled": true
         },
         {
           "identifier": "hp_aff_meddling",
@@ -3704,11 +4651,11 @@
         },
         {
           "identifier": "hp_aff_cold",
-          "enabled": false
+          "enabled": true
         },
         {
           "identifier": "hp_aff_bare",
-          "enabled": false
+          "enabled": true
         },
         {
           "identifier": "hp_aff_messy",
@@ -3736,7 +4683,7 @@
         },
         {
           "identifier": "hp_aff_luminous",
-          "enabled": false
+          "enabled": true
         },
         {
           "identifier": "hp_aff_crescendo",
@@ -3768,59 +4715,59 @@
         },
         {
           "identifier": "hp_cw_gore",
-          "enabled": false
+          "enabled": true
         },
         {
           "identifier": "hp_cw_death",
-          "enabled": false
+          "enabled": true
         },
         {
           "identifier": "hp_cw_torture",
-          "enabled": false
+          "enabled": true
         },
         {
           "identifier": "hp_cw_bodyhorror",
-          "enabled": false
+          "enabled": true
         },
         {
           "identifier": "hp_cw_selfharm",
-          "enabled": false
+          "enabled": true
         },
         {
           "identifier": "hp_cw_sex",
-          "enabled": false
+          "enabled": true
         },
         {
           "identifier": "hp_cw_graphicsex",
-          "enabled": false
+          "enabled": true
         },
         {
           "identifier": "hp_cw_rape",
-          "enabled": false
+          "enabled": true
         },
         {
           "identifier": "hp_cw_profanity",
-          "enabled": false
+          "enabled": true
         },
         {
           "identifier": "hp_cw_slurs",
-          "enabled": false
+          "enabled": true
         },
         {
           "identifier": "hp_cw_dirtytalk",
-          "enabled": false
+          "enabled": true
         },
         {
           "identifier": "hp_cw_drugs",
-          "enabled": false
+          "enabled": true
         },
         {
           "identifier": "hp_cw_slavery",
-          "enabled": false
+          "enabled": true
         },
         {
           "identifier": "hp_cw_blasphemy",
-          "enabled": false
+          "enabled": true
         },
         {
           "identifier": "hp_cw_close",
@@ -3904,7 +4851,7 @@
         },
         {
           "identifier": "hp_wl_ep_alongside",
-          "enabled": false
+          "enabled": true
         },
         {
           "identifier": "hp_wl_ep_ahead",
@@ -3936,7 +4883,7 @@
         },
         {
           "identifier": "hp_wl_df_brutal",
-          "enabled": false
+          "enabled": true
         },
         {
           "identifier": "hp_wl_df_suicide",
@@ -3945,6 +4892,22 @@
         {
           "identifier": "hp_wl_close",
           "enabled": true
+        },
+        {
+          "identifier": "hp_vis_open",
+          "enabled": false
+        },
+        {
+          "identifier": "hp_vis_readme",
+          "enabled": true
+        },
+        {
+          "identifier": "hp_vis_regex",
+          "enabled": false
+        },
+        {
+          "identifier": "hp_vis_freeform",
+          "enabled": false
         },
         {
           "identifier": "hp_gadget_open",
@@ -3960,7 +4923,7 @@
         },
         {
           "identifier": "hp_chekhov_toggle",
-          "enabled": false
+          "enabled": true
         },
         {
           "identifier": "hp_resolver_open",
@@ -3997,6 +4960,14 @@
         {
           "identifier": "hp_cw_example_confirm",
           "enabled": true
+        },
+        {
+          "identifier": "hp_vis_prompt",
+          "enabled": false
+        },
+        {
+          "identifier": "hp_vis_response",
+          "enabled": false
         },
         {
           "identifier": "hp_sense_prompt",
@@ -4044,11 +5015,11 @@
         },
         {
           "identifier": "worldInfoBefore",
-          "enabled": true
+          "enabled": false
         },
         {
           "identifier": "worldInfoAfter",
-          "enabled": true
+          "enabled": false
         },
         {
           "identifier": "hp_transcript_prompt",
@@ -4177,23 +5148,23 @@
         },
         {
           "identifier": "hp_dir_heartthrob",
-          "enabled": false
+          "enabled": true
         },
         {
           "identifier": "hp_dir_linger",
-          "enabled": false
+          "enabled": true
         },
         {
           "identifier": "hp_dir_motley",
-          "enabled": false
+          "enabled": true
         },
         {
           "identifier": "hp_dir_sediment",
-          "enabled": false
+          "enabled": true
         },
         {
           "identifier": "hp_dir_meridian",
-          "enabled": false
+          "enabled": true
         },
         {
           "identifier": "hp_dir_quasar",
@@ -4209,11 +5180,11 @@
         },
         {
           "identifier": "hp_dir_palimpsest",
-          "enabled": false
+          "enabled": true
         },
         {
           "identifier": "hp_dir_wilt",
-          "enabled": false
+          "enabled": true
         },
         {
           "identifier": "hp_dir_flint",
@@ -4221,11 +5192,11 @@
         },
         {
           "identifier": "hp_dir_scoria",
-          "enabled": false
+          "enabled": true
         },
         {
           "identifier": "hp_dir_residue",
-          "enabled": false
+          "enabled": true
         },
         {
           "identifier": "hp_dir_tripwire",
@@ -4249,11 +5220,11 @@
         },
         {
           "identifier": "hp_dir_carrion",
-          "enabled": false
+          "enabled": true
         },
         {
           "identifier": "hp_dir_venture",
-          "enabled": false
+          "enabled": true
         },
         {
           "identifier": "hp_dir_slick",
@@ -4265,7 +5236,7 @@
         },
         {
           "identifier": "hp_dir_gravitas",
-          "enabled": false
+          "enabled": true
         },
         {
           "identifier": "hp_dir_close",
@@ -4289,7 +5260,7 @@
         },
         {
           "identifier": "hp_sr_ref_second",
-          "enabled": false
+          "enabled": true
         },
         {
           "identifier": "hp_sr_ref_third",
@@ -4305,7 +5276,7 @@
         },
         {
           "identifier": "hp_sr_present",
-          "enabled": false
+          "enabled": true
         },
         {
           "identifier": "hp_sr_future",
@@ -4325,7 +5296,7 @@
         },
         {
           "identifier": "hp_sr_frame_objective",
-          "enabled": false
+          "enabled": true
         },
         {
           "identifier": "hp_sr_frame_deep",
@@ -4349,7 +5320,7 @@
         },
         {
           "identifier": "hp_sr_len_adaptive",
-          "enabled": false
+          "enabled": true
         },
         {
           "identifier": "hp_sr_style_label",
@@ -4373,7 +5344,7 @@
         },
         {
           "identifier": "hp_sr_style_standard",
-          "enabled": false
+          "enabled": true
         },
         {
           "identifier": "hp_sr_vocab_label",
@@ -4381,7 +5352,7 @@
         },
         {
           "identifier": "hp_sr_vocab_simple",
-          "enabled": false
+          "enabled": true
         },
         {
           "identifier": "hp_sr_vocab_elevated",
@@ -4389,11 +5360,11 @@
         },
         {
           "identifier": "hp_sr_dialogue",
-          "enabled": false
+          "enabled": true
         },
         {
           "identifier": "hp_sr_prose_technique",
-          "enabled": false
+          "enabled": true
         },
         {
           "identifier": "hp_sr_sense_label",
@@ -4401,7 +5372,7 @@
         },
         {
           "identifier": "hp_sr_sense_sight",
-          "enabled": false
+          "enabled": true
         },
         {
           "identifier": "hp_sr_sense_sound",
@@ -4409,7 +5380,7 @@
         },
         {
           "identifier": "hp_sr_sense_touch",
-          "enabled": false
+          "enabled": true
         },
         {
           "identifier": "hp_sr_sense_smell",
@@ -4429,7 +5400,7 @@
         },
         {
           "identifier": "hp_sr_sense_temporal",
-          "enabled": false
+          "enabled": true
         },
         {
           "identifier": "hp_sr_hygiene_label",
@@ -4441,7 +5412,7 @@
         },
         {
           "identifier": "hp_sr_hygiene_verb",
-          "enabled": false
+          "enabled": true
         },
         {
           "identifier": "hp_sr_hygiene_subject",
@@ -4449,11 +5420,11 @@
         },
         {
           "identifier": "hp_sr_hygiene_emdash",
-          "enabled": false
+          "enabled": true
         },
         {
           "identifier": "hp_sr_hygiene_negation",
-          "enabled": false
+          "enabled": true
         },
         {
           "identifier": "hp_sr_hygiene_zoom",
@@ -4461,7 +5432,7 @@
         },
         {
           "identifier": "hp_sr_hygiene_profundity",
-          "enabled": false
+          "enabled": true
         },
         {
           "identifier": "hp_sr_hygiene_metaphor",
@@ -4473,11 +5444,11 @@
         },
         {
           "identifier": "hp_sr_mistake",
-          "enabled": false
+          "enabled": true
         },
         {
           "identifier": "hp_sr_contradictions",
-          "enabled": false
+          "enabled": true
         },
         {
           "identifier": "hp_sr_close",
@@ -4493,31 +5464,31 @@
         },
         {
           "identifier": "hp_qc_messy",
-          "enabled": false
+          "enabled": true
         },
         {
           "identifier": "hp_qc_failure",
-          "enabled": false
+          "enabled": true
         },
         {
           "identifier": "hp_qc_persistence",
-          "enabled": false
+          "enabled": true
         },
         {
           "identifier": "hp_qc_subtext",
-          "enabled": false
+          "enabled": true
         },
         {
           "identifier": "hp_qc_npc_independence",
-          "enabled": false
+          "enabled": true
         },
         {
           "identifier": "hp_qc_information",
-          "enabled": false
+          "enabled": true
         },
         {
           "identifier": "hp_qc_voices",
-          "enabled": false
+          "enabled": true
         },
         {
           "identifier": "hp_qc_exposition",
@@ -4525,15 +5496,15 @@
         },
         {
           "identifier": "hp_qc_regional_vocab",
-          "enabled": false
+          "enabled": true
         },
         {
           "identifier": "hp_qc_naming",
-          "enabled": false
+          "enabled": true
         },
         {
           "identifier": "hp_qc_cultural",
-          "enabled": false
+          "enabled": true
         },
         {
           "identifier": "hp_aff_open",
@@ -4545,15 +5516,15 @@
         },
         {
           "identifier": "hp_aff_label",
-          "enabled": false
+          "enabled": true
         },
         {
           "identifier": "hp_aff_telescoping",
-          "enabled": false
+          "enabled": true
         },
         {
           "identifier": "hp_aff_switchback",
-          "enabled": false
+          "enabled": true
         },
         {
           "identifier": "hp_aff_inventory",
@@ -4565,11 +5536,11 @@
         },
         {
           "identifier": "hp_aff_somatic",
-          "enabled": false
+          "enabled": true
         },
         {
           "identifier": "hp_aff_echo",
-          "enabled": false
+          "enabled": true
         },
         {
           "identifier": "hp_aff_meddling",
@@ -4605,11 +5576,11 @@
         },
         {
           "identifier": "hp_aff_cold",
-          "enabled": false
+          "enabled": true
         },
         {
           "identifier": "hp_aff_bare",
-          "enabled": false
+          "enabled": true
         },
         {
           "identifier": "hp_aff_messy",
@@ -4637,7 +5608,7 @@
         },
         {
           "identifier": "hp_aff_luminous",
-          "enabled": false
+          "enabled": true
         },
         {
           "identifier": "hp_aff_crescendo",
@@ -4669,59 +5640,59 @@
         },
         {
           "identifier": "hp_cw_gore",
-          "enabled": false
+          "enabled": true
         },
         {
           "identifier": "hp_cw_death",
-          "enabled": false
+          "enabled": true
         },
         {
           "identifier": "hp_cw_torture",
-          "enabled": false
+          "enabled": true
         },
         {
           "identifier": "hp_cw_bodyhorror",
-          "enabled": false
+          "enabled": true
         },
         {
           "identifier": "hp_cw_selfharm",
-          "enabled": false
+          "enabled": true
         },
         {
           "identifier": "hp_cw_sex",
-          "enabled": false
+          "enabled": true
         },
         {
           "identifier": "hp_cw_graphicsex",
-          "enabled": false
+          "enabled": true
         },
         {
           "identifier": "hp_cw_rape",
-          "enabled": false
+          "enabled": true
         },
         {
           "identifier": "hp_cw_profanity",
-          "enabled": false
+          "enabled": true
         },
         {
           "identifier": "hp_cw_slurs",
-          "enabled": false
+          "enabled": true
         },
         {
           "identifier": "hp_cw_dirtytalk",
-          "enabled": false
+          "enabled": true
         },
         {
           "identifier": "hp_cw_drugs",
-          "enabled": false
+          "enabled": true
         },
         {
           "identifier": "hp_cw_slavery",
-          "enabled": false
+          "enabled": true
         },
         {
           "identifier": "hp_cw_blasphemy",
-          "enabled": false
+          "enabled": true
         },
         {
           "identifier": "hp_cw_close",
@@ -4805,7 +5776,7 @@
         },
         {
           "identifier": "hp_wl_ep_alongside",
-          "enabled": false
+          "enabled": true
         },
         {
           "identifier": "hp_wl_ep_ahead",
@@ -4837,7 +5808,7 @@
         },
         {
           "identifier": "hp_wl_df_brutal",
-          "enabled": false
+          "enabled": true
         },
         {
           "identifier": "hp_wl_df_suicide",
@@ -4848,6 +5819,22 @@
           "enabled": true
         },
         {
+          "identifier": "hp_vis_open",
+          "enabled": false
+        },
+        {
+          "identifier": "hp_vis_readme",
+          "enabled": true
+        },
+        {
+          "identifier": "hp_vis_regex",
+          "enabled": false
+        },
+        {
+          "identifier": "hp_vis_freeform",
+          "enabled": false
+        },
+        {
           "identifier": "hp_gadget_open",
           "enabled": true
         },
@@ -4856,12 +5843,16 @@
           "enabled": true
         },
         {
+          "identifier": "hp_cot_acrostic",
+          "enabled": true
+        },
+        {
           "identifier": "hp_bmo_toggle",
           "enabled": false
         },
         {
           "identifier": "hp_chekhov_toggle",
-          "enabled": false
+          "enabled": true
         },
         {
           "identifier": "hp_resolver_open",
@@ -4898,6 +5889,14 @@
         {
           "identifier": "hp_cw_example_confirm",
           "enabled": true
+        },
+        {
+          "identifier": "hp_vis_prompt",
+          "enabled": false
+        },
+        {
+          "identifier": "hp_vis_response",
+          "enabled": false
         },
         {
           "identifier": "hp_sense_prompt",
@@ -4945,10 +5944,30 @@
         },
         {
           "identifier": "worldInfoBefore",
-          "enabled": true
+          "enabled": false
         },
         {
           "identifier": "worldInfoAfter",
+          "enabled": false
+        },
+        {
+          "identifier": "hp_rehash",
+          "enabled": true
+        },
+        {
+          "identifier": "hp_affinity_prompt",
+          "enabled": true
+        },
+        {
+          "identifier": "hp_affinity_response",
+          "enabled": true
+        },
+        {
+          "identifier": "hp_prose_floor_prompt",
+          "enabled": true
+        },
+        {
+          "identifier": "hp_prose_floor_response",
           "enabled": true
         },
         {
@@ -4964,35 +5983,11 @@
           "enabled": true
         },
         {
-          "identifier": "hp_rehash",
-          "enabled": true
-        },
-        {
-          "identifier": "hp_affinity_prompt",
-          "enabled": true
-        },
-        {
-          "identifier": "hp_affinity_response",
-          "enabled": true
-        },
-        {
           "identifier": "hp_turn_nudge",
           "enabled": true
         },
         {
           "identifier": "hp_turn_nudge_response",
-          "enabled": true
-        },
-        {
-          "identifier": "hp_prose_floor_prompt",
-          "enabled": true
-        },
-        {
-          "identifier": "hp_prose_floor_response",
-          "enabled": true
-        },
-        {
-          "identifier": "hp_cot_acrostic",
           "enabled": true
         },
         {
