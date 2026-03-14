@@ -771,9 +771,9 @@ The fabricated conversation format also makes the preset significantly better at
 
 </div>
 
-# Special thanks to: Junigiri for the base idea that led to Affinities; and for letting me repurpose her Authorial style lorebooks!
-# Special thanks to: Mina for letting the facility use her indepth and hand-written linguistic research and diagnostics to make the facility more structured.
-## Three cheers for our honorary directors!
+### Special thanks to: Junigiri for the base idea that led to Affinities; and for letting me repurpose her Authorial style lorebooks!
+### Special thanks to: Mina for letting the facility use her indepth and hand-written linguistic research and diagnostics to make the facility more structured.
+***Three cheers for our honorary directors!***
 ---
 
 *A [HawThorne Directives](https://github.com/Coneja-Chibi/The-HawThorne-Directives) derivative? Fork? Upgraded? built by Chi-bi. The facility didn't authorize this. The facility doesn't know about this. The Directors have been briefed accordingly, which is to say: they haven't.*
